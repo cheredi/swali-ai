@@ -1,0 +1,13 @@
+{
+  "venvPath": "/Users/tatyanaamugo/Library/Caches/pypoetry/virtualenvs",
+  "venv": "swali-ai-zo4nACAT-py3.13",
+  "pythonVersion": "3.13",
+  "include": [
+    "backend",
+    "scripts",
+    "tests"
+  ],
+  "extraPaths": [
+    "backend"
+  ]
+}

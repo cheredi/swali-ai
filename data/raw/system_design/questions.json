@@ -1,0 +1,199 @@
+[
+  {
+    "id": "sd_url_shortener",
+    "title": "Design a URL Shortener (TinyURL)",
+    "difficulty": "medium",
+    "description": "Design a service that takes long URLs and creates short, unique aliases that redirect to the original URL.",
+    "key_requirements": [
+      "Generate short, unique URLs",
+      "Redirect short URLs to original",
+      "Handle high read traffic",
+      "URLs should expire (optional)",
+      "Analytics on clicks"
+    ],
+    "key_components": [
+      "URL generation (Base62 encoding, hash functions)",
+      "Database (key-value store, SQL)",
+      "Caching (Redis for hot URLs)",
+      "Load balancer",
+      "Analytics service"
+    ],
+    "scale_considerations": [
+      "100M URLs created per month",
+      "Read:Write ratio ~100:1",
+      "Billions of redirects per month"
+    ]
+  },
+  {
+    "id": "sd_twitter",
+    "title": "Design Twitter",
+    "difficulty": "hard",
+    "description": "Design a social media platform where users can post tweets, follow others, and see a feed of tweets.",
+    "key_requirements": [
+      "Post tweets (text, images)",
+      "Follow/unfollow users",
+      "View home timeline (feed)",
+      "View user timeline",
+      "Search tweets"
+    ],
+    "key_components": [
+      "Tweet service",
+      "User service",
+      "Timeline service (fan-out)",
+      "Search service (Elasticsearch)",
+      "Notification service",
+      "Media storage (S3, CDN)"
+    ],
+    "scale_considerations": [
+      "300M daily active users",
+      "500M tweets per day",
+      "Celebrity problem (millions of followers)"
+    ]
+  },
+  {
+    "id": "sd_chat",
+    "title": "Design a Chat System (WhatsApp/Messenger)",
+    "difficulty": "hard",
+    "description": "Design a real-time messaging system supporting 1-on-1 and group chats.",
+    "key_requirements": [
+      "1-on-1 messaging",
+      "Group chats",
+      "Message delivery status (sent, delivered, read)",
+      "Online/offline status",
+      "Push notifications",
+      "Message history"
+    ],
+    "key_components": [
+      "WebSocket servers for real-time",
+      "Message queue for async delivery",
+      "Presence service",
+      "Push notification service",
+      "Message storage (Cassandra for write-heavy)"
+    ],
+    "scale_considerations": [
+      "2B daily active users",
+      "100B messages per day",
+      "Millions of concurrent connections"
+    ]
+  },
+  {
+    "id": "sd_netflix",
+    "title": "Design Netflix/Video Streaming",
+    "difficulty": "hard",
+    "description": "Design a video streaming service that delivers content to millions of users.",
+    "key_requirements": [
+      "Video upload and processing",
+      "Video streaming (adaptive bitrate)",
+      "User recommendations",
+      "Content catalog",
+      "User profiles and history"
+    ],
+    "key_components": [
+      "Video encoding pipeline",
+      "CDN for video delivery",
+      "Recommendation engine",
+      "Search service",
+      "User service"
+    ],
+    "scale_considerations": [
+      "200M subscribers",
+      "Peak streaming load",
+      "Global content delivery"
+    ]
+  },
+  {
+    "id": "sd_uber",
+    "title": "Design Uber/Ride Sharing",
+    "difficulty": "hard",
+    "description": "Design a ride-sharing service that matches drivers with riders.",
+    "key_requirements": [
+      "Real-time driver location tracking",
+      "Match riders with nearby drivers",
+      "Trip management",
+      "Pricing and payments",
+      "ETA calculation"
+    ],
+    "key_components": [
+      "Location service (geospatial indexing)",
+      "Matching service",
+      "Trip service",
+      "Payment service",
+      "Mapping/routing service"
+    ],
+    "scale_considerations": [
+      "Millions of trips per day",
+      "Real-time location updates",
+      "High availability matching"
+    ]
+  },
+  {
+    "id": "sd_rate_limiter",
+    "title": "Design a Rate Limiter",
+    "difficulty": "medium",
+    "description": "Design a system to limit the number of requests a user can make to an API.",
+    "key_requirements": [
+      "Limit requests per user/IP",
+      "Different limits for different APIs",
+      "Return informative error when limited",
+      "Distributed rate limiting"
+    ],
+    "key_components": [
+      "Token bucket or sliding window algorithm",
+      "Redis for distributed state",
+      "Middleware integration"
+    ],
+    "scale_considerations": [
+      "Low latency (< 1ms decision)",
+      "Millions of users",
+      "Multiple API servers"
+    ]
+  },
+  {
+    "id": "sd_cache",
+    "title": "Design a Distributed Cache",
+    "difficulty": "medium",
+    "description": "Design a distributed caching system like Memcached or Redis.",
+    "key_requirements": [
+      "Get/Set operations",
+      "TTL support",
+      "Distributed across nodes",
+      "High availability"
+    ],
+    "key_components": [
+      "Consistent hashing",
+      "Replication",
+      "Eviction policies (LRU)",
+      "Client library with routing"
+    ],
+    "scale_considerations": [
+      "Millions of operations per second",
+      "Terabytes of data",
+      "Low latency (< 1ms)"
+    ]
+  },
+  {
+    "id": "sd_notification",
+    "title": "Design a Notification System",
+    "difficulty": "medium",
+    "description": "Design a system that sends notifications across multiple channels (push, SMS, email).",
+    "key_requirements": [
+      "Multi-channel (push, SMS, email)",
+      "User preferences",
+      "Template management",
+      "Delivery tracking",
+      "Rate limiting"
+    ],
+    "key_components": [
+      "Notification service",
+      "Channel adapters (APNS, FCM, Twilio)",
+      "Template engine",
+      "Queue for async delivery",
+      "Analytics"
+    ],
+    "scale_considerations": [
+      "Billions of notifications per day",
+      "Peak traffic handling",
+      "Delivery SLAs"
+    ]
+  }
+]
