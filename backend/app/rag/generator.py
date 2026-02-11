@@ -155,7 +155,7 @@ class RAGGenerator:
             answer=llm_response.content,
             sources=sources,
             model=llm_response.model,
-            tokens_used=llm_response.input_tokens + llm_response.output_tokens
+            tokens_used=llm_response.tokens_used
         )
     
     def generate_hints(
@@ -194,7 +194,14 @@ class RAGGenerator:
         doc = search_results["documents"][0][0]
         
         # Get appropriate hint prompt
-        prompt_template = get_prompt(f"hint_level_{hint_level}")
+        # We construct the name like "hint_level_1" which matches the registry keys
+        prompt_name = f"hint_level_{hint_level}"
+        try:
+            prompt_template = get_prompt(prompt_name)
+        except ValueError:
+            # Fallback to level 1 if requested level doesn't exist
+            prompt_template = get_prompt("hint_level_1")
+            
         formatted_prompt = prompt_template.format(
             problem_description=doc,
             student_attempt=student_attempt or "No attempt yet"
@@ -211,12 +218,13 @@ class RAGGenerator:
             answer=llm_response.content,
             sources=[{
                 "id": search_results["ids"][0][0],
-                "title": metadata.get("title"),
-                "type": metadata.get("type"),
-                "difficulty": metadata.get("difficulty")
+                "title": metadata.get("title", "Unknown"),
+                "type": metadata.get("type", "problem"),
+                "difficulty": metadata.get("difficulty", "N/A"),
+                "pattern": metadata.get("pattern_name") or metadata.get("pattern")
             }],
             model=llm_response.model,
-            tokens_used=llm_response.input_tokens + llm_response.output_tokens
+            tokens_used=llm_response.tokens_used
         )
 
 
