@@ -26,7 +26,7 @@ class EmbeddingService:
     """
     Service for generating text embeddings using sentence-transformers.
 
-    🎓 LEARNING NOTE: Singleton Pattern
+    LEARNING NOTE: Singleton Pattern
     We use a class-level model to avoid loading the model multiple times.
     Loading happens once, then the model stays in memory for fast inference.
     """
@@ -37,9 +37,9 @@ class EmbeddingService:
     def get_model(cls) -> SentenceTransformer:
         """Load model lazily (only when first needed)."""
         if cls._model is None:
-            print(f"📦 Loading embedding model: {settings.embedding_model}")
+            print(f"Loading embedding model: {settings.embedding_model}")
             cls._model = SentenceTransformer(settings.embedding_model)
-            print(f"✅ Model loaded! Dimension: {cls._model.get_sentence_embedding_dimension()}")
+            print(f"Model loaded! Dimension: {cls._model.get_sentence_embedding_dimension()}")
         return cls._model
 
     @classmethod
@@ -53,7 +53,7 @@ class EmbeddingService:
         Returns:
             A list of floats representing the embedding vector
 
-        🎓 LEARNING NOTE: Why List[float]?
+        LEARNING NOTE: Why List[float]?
         ChromaDB and most vector stores expect Python lists, not numpy arrays.
         We convert here to avoid issues downstream.
         """
@@ -110,7 +110,7 @@ if __name__ == "__main__":
     print("Generating embeddings for test texts...")
     embeddings = embed_batch(test_texts)
 
-    print("\n📊 Results:")
+    print("\n Results:")
     print(f"   Number of embeddings: {len(embeddings)}")
     print(f"   Embedding dimension: {len(embeddings[0])}")
 
@@ -124,6 +124,6 @@ if __name__ == "__main__":
     sim_1_2 = cosine_similarity(embeddings[0], embeddings[1])
     sim_1_3 = cosine_similarity(embeddings[0], embeddings[2])
 
-    print("\n🔍 Similarity Analysis:")
+    print("\n Similarity Analysis:")
     print(f"   Two Sum ↔ Add Two Numbers: {sim_1_2:.3f} (similar - both are number problems)")
     print(f"   Two Sum ↔ System Design:   {sim_1_3:.3f} (different domains)")

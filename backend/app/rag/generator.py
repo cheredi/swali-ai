@@ -91,7 +91,7 @@ class RAGGenerator:
            "Based on these problems: [context]
             Answer this question: [question]"
         
-        3. GENERATE: Claude produces the answer
+    3. GENERATE: The LLM (Gemini) produces the answer
            "To find duplicates, you can use a HashSet..."
         
         Args:
@@ -113,6 +113,9 @@ class RAGGenerator:
         context_parts = []
         sources = []
         
+        # LEARNING NOTE: Context window budgeting
+        # We trim each document to avoid overflowing the model's context.
+        # This keeps retrieval useful without sending too much text.
         for i, (doc_id, doc, metadata) in enumerate(zip(
             search_results["ids"][0],
             search_results["documents"][0],
@@ -137,14 +140,16 @@ class RAGGenerator:
         
         context = "\n\n---\n\n".join(context_parts)
         
-        # Step 2: AUGMENT - Get and format the prompt
+    # Step 2: AUGMENT - Get and format the prompt
+    # LEARNING NOTE: Prompt versions
+    # We can experiment with multiple prompt templates and A/B test them.
         prompt_template = get_prompt("answer_problem", prompt_version)
         formatted_prompt = prompt_template.format(
             context=context,
             question=question
         )
         
-        # Step 3: GENERATE - Call Claude
+        # Step 3: GENERATE - Call the LLM (Gemini)
         llm_response = self.llm_service.generate_with_retry(
             prompt=formatted_prompt,
             max_tokens=max_tokens,
@@ -175,6 +180,11 @@ class RAGGenerator:
         
         This mimics a good tutor who doesn't just give answers.
         """
+        # LEARNING NOTE: Normalizing hint levels
+        # We clamp hint_level to the supported range (1-3) so callers
+        # can pass any integer without breaking prompt lookup.
+        hint_level = self._normalize_hint_level(hint_level)
+
         # Find the specific problem
         search_results = self.vector_store.search(
             query=problem_title,
@@ -226,6 +236,21 @@ class RAGGenerator:
             model=llm_response.model,
             tokens_used=llm_response.tokens_used
         )
+
+    @staticmethod
+    def _normalize_hint_level(hint_level: int) -> int:
+        """
+        Clamp hint level to the supported range [1, 3].
+
+        LEARNING NOTE: Defensive programming
+        External clients can send unexpected values. Clamping protects
+        the system from invalid prompt names and keeps behavior predictable.
+        """
+        if hint_level < 1:
+            return 1
+        if hint_level > 3:
+            return 3
+        return hint_level
 
 
 # Quick test

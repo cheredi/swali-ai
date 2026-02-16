@@ -13,14 +13,17 @@ This is valuable because:
 """
 
 import json
+import time
+import httpx
 from pathlib import Path
-from typing import Any
+from typing import List, Dict, Any
+from bs4 import BeautifulSoup
 
 
 class NeetCodeCollector:
     """
     Collects the NeetCode 150 problem list with pattern categorization.
-
+    
     🎓 LEARNING NOTE: Pattern-Based Learning
     NeetCode organizes problems by algorithmic patterns:
     - Arrays & Hashing
@@ -39,11 +42,11 @@ class NeetCodeCollector:
     - Intervals
     - Math & Geometry
     - Bit Manipulation
-
+    
     This organization is GOLD for interview prep because
     patterns transfer across problems!
     """
-
+    
     # NeetCode 150 organized by pattern
     # This is a curated list that represents the core problems
     NEETCODE_150 = {
@@ -216,15 +219,15 @@ class NeetCodeCollector:
             {"title": "Reverse Integer", "leetcode_id": 7, "difficulty": "medium"},
         ],
     }
-
+    
     def __init__(self, output_dir: str = "./data/raw/neetcode"):
         self.output_dir = Path(output_dir)
         self.output_dir.mkdir(parents=True, exist_ok=True)
-
-    def generate_pattern_descriptions(self) -> dict[str, str]:
+    
+    def generate_pattern_descriptions(self) -> Dict[str, str]:
         """
         Generate descriptions for each pattern.
-
+        
         🎓 LEARNING NOTE: Pattern Descriptions
         These descriptions help users understand WHEN to apply each pattern.
         This is the key insight for interview prep!
@@ -239,7 +242,7 @@ Use Arrays & Hashing patterns when:
 
 Key techniques: Hash maps, sets, frequency counters
             """.strip(),
-
+            
             "two_pointers": """
 Use Two Pointers when:
 - Working with sorted arrays/strings
@@ -249,7 +252,7 @@ Use Two Pointers when:
 
 Key insight: Sorted input often enables two-pointer solutions
             """.strip(),
-
+            
             "sliding_window": """
 Use Sliding Window when:
 - Finding subarrays/substrings with specific properties
@@ -258,7 +261,7 @@ Use Sliding Window when:
 
 Key insight: If moving one boundary, consider what that does to the window
             """.strip(),
-
+            
             "stack": """
 Use Stack when:
 - Matching pairs (parentheses, tags)
@@ -268,7 +271,7 @@ Use Stack when:
 
 Key insight: Stack for "nearest smaller/larger" problems
             """.strip(),
-
+            
             "binary_search": """
 Use Binary Search when:
 - Input is sorted (or can be sorted)
@@ -278,7 +281,7 @@ Use Binary Search when:
 
 Key insight: Works on ANY monotonic function, not just sorted arrays!
             """.strip(),
-
+            
             "linked_list": """
 Use Linked List techniques when:
 - Pointer manipulation required
@@ -287,7 +290,7 @@ Use Linked List techniques when:
 
 Key techniques: Two pointers, dummy nodes, reversing, finding cycles
             """.strip(),
-
+            
             "trees": """
 Use Tree patterns when:
 - Hierarchical data structures
@@ -296,7 +299,7 @@ Use Tree patterns when:
 
 Key insight: Most tree problems reduce to: "What do I need from left subtree, right subtree, and current node?"
             """.strip(),
-
+            
             "heap": """
 Use Heap/Priority Queue when:
 - Need min/max element repeatedly
@@ -306,7 +309,7 @@ Use Heap/Priority Queue when:
 
 Key insight: Heaps give O(log n) insert/delete vs O(n) for sorted lists
             """.strip(),
-
+            
             "backtracking": """
 Use Backtracking when:
 - Generating all combinations/permutations
@@ -315,7 +318,7 @@ Use Backtracking when:
 
 Key insight: "Choose, Explore, Unchoose" - make a choice, recurse, undo the choice
             """.strip(),
-
+            
             "graphs": """
 Use Graph patterns when:
 - Data has relationships (edges)
@@ -325,7 +328,7 @@ Use Graph patterns when:
 
 Key techniques: DFS, BFS, Union-Find, Topological Sort
             """.strip(),
-
+            
             "dynamic_programming": """
 Use Dynamic Programming when:
 - Overlapping subproblems
@@ -334,7 +337,7 @@ Use Dynamic Programming when:
 
 Key insight: "What state do I need to make a decision?" → That's your DP state
             """.strip(),
-
+            
             "greedy": """
 Use Greedy when:
 - Local optimal leads to global optimal
@@ -343,7 +346,7 @@ Use Greedy when:
 
 Key insight: Prove greedy works OR find counterexample. Don't assume!
             """.strip(),
-
+            
             "intervals": """
 Use Interval patterns when:
 - Merging or comparing time ranges
@@ -352,7 +355,7 @@ Use Interval patterns when:
 
 Key insight: Sort by start time (usually), then scan with careful logic
             """.strip(),
-
+            
             "math_geometry": """
 Use Math/Geometry patterns when:
 - Matrix manipulation needed
@@ -361,7 +364,7 @@ Use Math/Geometry patterns when:
 
 Key techniques: Modular arithmetic, coordinate transforms, in-place matrix ops
             """.strip(),
-
+            
             "bit_manipulation": """
 Use Bit Manipulation when:
 - Working with binary representations
@@ -372,40 +375,40 @@ Use Bit Manipulation when:
 Key insight: XOR to find unique element, AND to check bits, shifts for powers of 2
             """.strip(),
         }
-
+    
     def save_neetcode_150(self) -> None:
         """
         Save the NeetCode 150 problem list with pattern info.
         """
         patterns = self.generate_pattern_descriptions()
-
-        output: dict[str, Any] = {
+        
+        output: Dict[str, Any] = {
             "name": "NeetCode 150",
             "description": "Curated list of 150 LeetCode problems organized by pattern",
             "patterns": {}
         }
-
+        
         for pattern_key, problems in self.NEETCODE_150.items():
             output["patterns"][pattern_key] = {
                 "name": pattern_key.replace("_", " ").title(),
                 "description": patterns.get(pattern_key, ""),
                 "problems": problems
             }
-
+        
         # Save to file
         output_file = self.output_dir / "neetcode_150.json"
         with open(output_file, "w") as f:
             json.dump(output, f, indent=2)
-
-        print(f"✅ Saved NeetCode 150 to: {output_file}")
+        
+        print(f" Saved NeetCode 150 to: {output_file}")
         print(f"   Total patterns: {len(output['patterns'])}")
         print(f"   Total problems: {sum(len(p) for p in self.NEETCODE_150.values())}")
-
-    def get_problems_by_pattern(self, pattern: str) -> list[dict]:
+    
+    def get_problems_by_pattern(self, pattern: str) -> List[Dict]:
         """Get all problems for a specific pattern."""
         return self.NEETCODE_150.get(pattern, [])
-
-    def get_all_patterns(self) -> list[str]:
+    
+    def get_all_patterns(self) -> List[str]:
         """Get list of all pattern names."""
         return list(self.NEETCODE_150.keys())
 
@@ -413,10 +416,10 @@ Key insight: XOR to find unique element, AND to check bits, shifts for powers of
 if __name__ == "__main__":
     print("🧪 Testing NeetCode Collector\n")
     collector = NeetCodeCollector()
-
+    
     # Save the NeetCode 150
     collector.save_neetcode_150()
-
+    
     # Show pattern distribution
     print("\n📊 Pattern distribution:")
     for pattern, problems in collector.NEETCODE_150.items():

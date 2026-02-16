@@ -1,6 +1,6 @@
 # Swali-AI
 
-A RAG-powered interview preparation system for mastering LeetCode, system design, and technical interviews.
+A production-grade RAG system for technical interview preparation.
 
 ## Features
 

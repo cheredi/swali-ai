@@ -30,7 +30,7 @@ class VectorStore:
     """
     Vector store interface using ChromaDB.
 
-    🎓 LEARNING NOTE: Collections
+    LEARNING NOTE: Collections
     ChromaDB organizes data into "collections" (like tables in SQL).
     Each collection stores documents with:
     - id: Unique identifier
@@ -60,8 +60,8 @@ class VectorStore:
             metadata={"description": "Interview preparation problems"}
         )
 
-        print(f"📚 Vector store initialized: {collection_name}")
-        print(f"   Current document count: {self.collection.count()}")
+        print(f"Vector store initialized: {collection_name}")
+        print(f"Current document count: {self.collection.count()}")
 
     def add_documents(
         self,
@@ -72,7 +72,7 @@ class VectorStore:
         """
         Add documents to the vector store.
 
-        🎓 LEARNING NOTE: Document Ingestion Pipeline
+       LEARNING NOTE: Document Ingestion Pipeline
         1. Take raw text documents
         2. Generate embeddings for each
         3. Store (id, embedding, text, metadata) together
@@ -83,7 +83,7 @@ class VectorStore:
             ids: List of unique IDs (must match documents length)
         """
         # Generate embeddings for all documents
-        print(f"🔄 Generating embeddings for {len(documents)} documents...")
+        print(f"Generating embeddings for {len(documents)} documents...")
         embeddings = EmbeddingService.embed_batch(documents)
 
         # Add to ChromaDB
@@ -93,7 +93,7 @@ class VectorStore:
             documents=documents,
             metadatas=metadatas
         )
-        print(f"✅ Added {len(documents)} documents to vector store")
+        print(f" Added {len(documents)} documents to vector store")
 
     def search(
         self,
@@ -105,7 +105,7 @@ class VectorStore:
         """
         Search for similar documents.
 
-        🎓 LEARNING NOTE: Semantic Search
+        LEARNING NOTE: Semantic Search
         Unlike keyword search, this finds documents by MEANING, not exact words.
 
         Query: "How do I find if an array has duplicate elements?"
@@ -143,7 +143,7 @@ class VectorStore:
         """
         Search using a pre-computed embedding.
 
-        🎓 LEARNING NOTE: When to use this?
+        LEARNING NOTE: When to use this?
         - Finding similar problems to one you've already embedded
         - Re-ranking results with modified embeddings
         - Query expansion (averaging multiple query embeddings)

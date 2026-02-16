@@ -12,6 +12,25 @@ cd backend && poetry run uvicorn main:app --reload
 # Access in browser: http://localhost:8000/docs
 ```
 
+### Finding Your Virtual Environment (Poetry)
+
+If you don't remember the virtual environment name, Poetry can tell you where it lives.
+
+```bash
+# Show the active virtualenv path (if any)
+cd /Users/tatyanaamugo/swali-ai
+poetry env info -p
+
+# List all Poetry environments for this project
+poetry env list
+```
+
+If the environment isn't created yet, run:
+
+```bash
+poetry install
+```
+
 ---
 
 ## Architecture Overview: The Complete RAG Pipeline
@@ -197,6 +216,29 @@ curl -X POST http://localhost:8000/api/chat/hint \
   -d '{"problem_title": "Two Sum", "hint_level": 1}'
 ```
 
+### Progressive Hints (How It Works)
+
+The backend supports hint levels 1–3:
+
+1. **Level 1**: Subtle nudge (no algorithm name)
+2. **Level 2**: Suggests a technique (e.g., HashMap, Two Pointers)
+3. **Level 3**: Step-by-step walkthrough (pseudocode level)
+
+There are two ways to request hints:
+
+- **Dedicated endpoint**: `POST /api/chat/hint`
+- **Unified endpoint**: `POST /api/chat/` with `hint_level > 0`
+
+When using the unified endpoint, you must pass `problem_context` (the title):
+
+```json
+{
+  "message": "I tried nested loops and it's too slow",
+  "hint_level": 2,
+  "problem_context": "Two Sum"
+}
+```
+
 ---
 
 ## Configuration
@@ -300,6 +342,8 @@ swali-ai/
 
 ## Next Steps
 
-1. **Progressive Hints** - Hint levels 1-3 with increasing detail
-2. **Similar Problem Search** - Find related problems
-3. **React Frontend** - Build the user interface
+1. **Progressive Hints** - Add a hint-level UI in the frontend and capture student attempts
+2. **Similar Problem Search** - Use `vectorstore.search_by_embedding()` to suggest related problems
+3. **Follow-up Questions** - Add an endpoint that uses `generate_followup` prompts
+4. **React Frontend** - Build the user interface (chat, hints, sources)
+5. **Evaluation** - Add simple metrics (answer quality, retrieval relevance)

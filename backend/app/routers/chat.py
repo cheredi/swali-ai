@@ -29,7 +29,7 @@ class ChatRequest(BaseModel):
     """Request to ask a question."""
     message: str
     hint_level: int = 0  # 0 = full answer, 1-3 = progressive hints
-    problem_context: str | None = None  # Optional: specific problem being worked on
+    problem_context: str | None = None  # Required when hint_level > 0
     
     class Config:
         json_schema_extra = {
@@ -102,7 +102,7 @@ async def chat(request: ChatRequest) -> ChatResponse:
     This endpoint:
     1. Takes a natural language question
     2. Retrieves relevant problems/concepts from ChromaDB
-    3. Sends question + context to Claude
+    3. Sends question + context to the LLM (Gemini)
     4. Returns the answer with sources
     
     Examples:
@@ -113,8 +113,19 @@ async def chat(request: ChatRequest) -> ChatResponse:
     try:
         generator = get_generator()
         
-        # If hint_level > 0 and we have problem context, generate hints
-        if request.hint_level > 0 and request.problem_context:
+    # LEARNING NOTE: Hint routing
+    # We only generate hints when the client passes BOTH:
+    # - hint_level > 0
+    # - problem_context (the specific problem title)
+    # Otherwise, we fall back to a full RAG answer.
+        if request.hint_level > 0:
+            if not request.problem_context:
+                raise HTTPException(
+                    status_code=400,
+                    detail="problem_context is required when hint_level > 0"
+                )
+
+            # If hint_level > 0 and we have problem context, generate hints
             response = generator.generate_hints(
                 problem_title=request.problem_context,
                 hint_level=request.hint_level,
