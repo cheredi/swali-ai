@@ -15,7 +15,7 @@ A RAG-powered interview preparation system for mastering LeetCode, system design
 - **Backend**: FastAPI + Python
 - **Frontend**: React + Vite
 - **Vector DB**: ChromaDB
-- **LLM**: Claude API (Anthropic)
+- **LLM**: Gemini API (Google)
 - **Embeddings**: sentence-transformers
 
 ## Quick Start
