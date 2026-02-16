@@ -1,2 +1,2 @@
 # swali-ai
-Production-grade RAG system for tehnial interview preparation
+Production-grade RAG system for tehcnial interview preparation
