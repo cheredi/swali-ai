@@ -239,6 +239,33 @@ When using the unified endpoint, you must pass `problem_context` (the title):
 }
 ```
 
+### Follow-up Questions (How It Works)
+
+Follow-ups test depth after a solution. They focus on:
+
+- Optimization tradeoffs
+- Edge cases or constraints changes
+- Related problems or patterns
+
+Call the new endpoint:
+
+```bash
+curl -X POST http://localhost:8000/api/chat/followup \
+  -H "Content-Type: application/json" \
+  -d '{"problem_title": "Two Sum", "solution_approach": "Used a HashMap to store complements."}'
+```
+
+Sample response:
+
+```json
+{
+  "questions": "1) How would you reduce space...\n2) What if the array is sorted...\n3) Which problems share this pattern...",
+  "sources": [{"title": "Two Sum", "difficulty": "easy"}],
+  "tokens_used": 120,
+  "model": "models/gemini-2.0-flash"
+}
+```
+
 ---
 
 ## Configuration
@@ -347,3 +374,276 @@ swali-ai/
 3. **Follow-up Questions** - Add an endpoint that uses `generate_followup` prompts
 4. **React Frontend** - Build the user interface (chat, hints, sources)
 5. **Evaluation** - Add simple metrics (answer quality, retrieval relevance)
+
+---
+
+## Change Log: Follow-up Questions (Step-by-step)
+
+1. **Added a generator method**
+  - Implemented `generate_followup_questions()` in `rag/generator.py`.
+  - **Why**: Keeps RAG orchestration in one place and reuses the prompt registry.
+
+2. **Grounded follow-ups in the problem**
+  - Reused vector search to fetch the problem description by title.
+  - **Why**: Follow-ups are stronger when tied to the exact problem context.
+
+3. **Added a dedicated API endpoint**
+  - Created `POST /api/chat/followup` in `routers/chat.py`.
+  - **Why**: Keeps the main chat endpoint clean and makes follow-ups explicit.
+
+4. **Returned sources and metadata**
+  - The response includes sources, tokens, and model name.
+  - **Why**: Transparency helps debugging and user trust.
+
+---
+
+## Phase 3: Data Expansion for AI/ML Interviews (Completed ✓)
+
+### Why We Added This
+
+The previous corpus was strong for coding + system design, but weak for AI/ML engineering interview prep.
+To improve coverage, we added a dedicated AI/ML data pipeline with three explicit layers:
+
+1. **Ingestion** (fetch and parse external sources)
+2. **Normalization** (convert into one unified schema)
+3. **Deduplication** (remove overlaps before embedding)
+
+### Sources Chosen (and why)
+
+1. **alexeygrigorev/data-science-interviews**
+  - High-volume, structured interview questions in markdown
+  - Strong coverage of ML theory, ML technical, and applied interview topics
+2. **khangich/machine-learning-interview**
+  - Focused ML engineering interview question lists and practical prompts
+
+These sources significantly increase AI/ML interview breadth while keeping ingestion maintainable.
+
+### New Files Added
+
+| File | Purpose | Significance |
+|------|---------|--------------|
+| `scripts/data_pipeline/ingestion.py` | Pulls and parses markdown sources into raw records | Isolates external-source parsing logic from the rest of the pipeline |
+| `scripts/data_pipeline/normalize.py` | Standardizes fields (`id`, `title`, `difficulty`, `tags`, etc.) | Gives stable schema for embeddings and filtering |
+| `scripts/data_pipeline/deduplicate.py` | Removes duplicate/near-duplicate question records | Reduces noisy retrieval and vector-store bloat |
+| `scripts/collect_ai_ml.py` | Orchestrates ingestion + normalization + dedup and writes dataset JSON | One command to refresh AI/ML corpus |
+
+### Backend Integration Changes
+
+`scripts/process_data.py` now includes:
+
+1. **`process_ai_ml_questions()`**
+  - Reads `data/raw/ai_ml/ai_ml_questions.json`
+  - Converts each question into embedding text
+  - Stores metadata with `type = ai_ml_question`
+
+2. **Updated pipeline order**
+  - `process_neetcode()`
+  - `process_system_design()`
+  - `process_ai_ml_questions()`
+
+3. **Stats update**
+  - Added `ai_ml_questions` to run summary output
+
+### Important Bug Fix During Implementation
+
+While embedding AI/ML questions, Chroma raised duplicate ID errors.
+
+- **Cause**: IDs were slug-based and truncated, causing collisions for long similar questions.
+- **Fix**: IDs now append a deterministic hash suffix from question text.
+- **Significance**: Stable and unique IDs are required for reliable vector-store insertion and updates.
+
+### Commands Used to Build the Expanded Corpus
+
+```bash
+cd /Users/tatyanaamugo/swali-ai
+poetry run python scripts/collect_ai_ml.py
+poetry run python scripts/process_data.py
+```
+
+### Current Corpus Size After Expansion
+
+- NeetCode problems: **138**
+- System design items: **16**
+- AI/ML interview questions: **261**
+- Total vector records: **415**
+
+### Learning Notes
+
+1. **Ingestion stability**
+  - Raw markdown endpoints are usually more stable than scraping rendered HTML.
+2. **Schema first, then vectors**
+  - Normalize fields before embeddings to keep retrieval metadata consistent.
+3. **Dedup before embedding**
+  - Deduping late wastes embedding time and pollutes retrieval results.
+4. **Deterministic IDs matter**
+  - They prevent collisions and make re-runs reproducible.
+
+---
+
+## Phase 4: Retrieval Experiments (Reranking + Embedding A/B + Metrics) (Completed ✓)
+
+### What We Added
+
+1. **Reranker module**
+  - File: `backend/app/rag/reranker.py`
+  - Adds a hybrid reranker that combines:
+    - semantic signal (vector distance)
+    - lexical overlap (query vs document/title terms)
+
+2. **Two-stage retrieval in generator**
+  - File: `backend/app/rag/generator.py`
+  - `generate_answer()` now:
+    - retrieves a larger candidate set (`top = n_context * 4`)
+    - reranks candidates
+    - keeps top `n_context` for prompting
+
+3. **Embedding A/B support in embedding service**
+  - File: `backend/app/rag/embeddings.py`
+  - Added model-cache methods for running multiple embedding models in one process:
+    - `get_model_by_name()`
+    - `embed_text_with_model()`
+    - `embed_batch_with_model()`
+
+4. **Vector-store experiment helpers**
+  - File: `backend/app/rag/vectorstore.py`
+  - Added:
+    - `add_documents_with_embeddings()` for precomputed vectors
+    - `get_all()` for exporting full collection content
+
+5. **Evaluation harness script**
+  - File: `scripts/run_retrieval_experiments.py`
+  - Runs 4 experiment tracks:
+    - baseline retrieval
+    - reranked retrieval
+    - embedding variant A
+    - embedding variant B
+  - Logs JSON outputs to `experiments/`
+
+### Why This Is Significant
+
+1. **Reranking improves top-k precision potential**
+  - Vector search alone can return semantically close but less useful items.
+  - Reranking is a standard production RAG pattern for quality at the top of results.
+
+2. **Embedding A/B creates measurable model decisions**
+  - Instead of guessing, we compare models on the same eval set and metrics.
+  - This gives evidence for embedding-model changes.
+
+3. **Metrics-first iteration loop**
+  - We now have a repeatable loop:
+    1) change retrieval strategy
+    2) run evaluation
+    3) compare metrics and logs
+
+### Commands to Run Experiments
+
+```bash
+cd /Users/tatyanaamugo/swali-ai
+poetry run python scripts/run_retrieval_experiments.py
+```
+
+### Latest Experiment Output (Example)
+
+- Baseline run: `experiments/run_20260218_103436.json`
+- Reranked run: `experiments/run_20260218_103439.json`
+- Embedding A run: `experiments/run_20260218_103445_embedA.json`
+- Embedding B run: `experiments/run_20260218_103445_embedB.json`
+
+### Latest Metrics Snapshot
+
+- **Baseline**: Recall@5 = 1.0, Precision@5 = 0.2, MRR = 0.8333
+- **Reranked**: Recall@5 = 1.0, Precision@5 = 0.2, MRR = 0.8333
+- **Embedding A (`all-MiniLM-L6-v2`)**: MRR = 0.8333
+- **Embedding B (`all-MiniLM-L12-v2`)**: MRR = 0.875
+
+### Learning Notes
+
+1. **No metric change from reranking can still be valid**
+  - On small eval sets, improvements may be invisible.
+  - Increase eval coverage to better see reranker impact.
+
+2. **Embedding B showed better MRR in this run**
+  - This suggests better ranking of the first relevant hit for some queries.
+
+3. **Evaluation quality depends on eval-case quality**
+  - The more representative your queries and expected IDs, the more trustworthy your decisions.
+
+---
+
+## Frontend Build: What Was Added and Why
+
+### UI Components (App.tsx)
+
+We replaced the default Vite counter with a RAG client that mirrors the backend.
+
+Key pieces:
+
+1. **Mode selector** (`answer` | `hint` | `followup`)
+  - **What it does**: Switches the request payload shape and endpoint.
+  - **Why**: Each backend flow expects different fields.
+
+2. **Request builder form**
+  - **Answer** uses `message` only.
+  - **Hint** uses `problem_title`, `hint_level`, `student_attempt`.
+  - **Follow-up** uses `problem_title`, `solution_approach`.
+  - **Why**: Keeps input validation client-side and avoids bad requests.
+
+3. **Explicit endpoint routing**
+  - `POST /api/chat` for answers
+  - `POST /api/chat/hint` for hints
+  - `POST /api/chat/followup` for follow-ups
+  - **Why**: Prevents mixing payload shapes across endpoints.
+
+4. **Response panel**
+  - Shows answer/questions, sources, model name, tokens used.
+  - **Why**: Helps you understand retrieval grounding and cost.
+
+### Styling (App.css + index.css)
+
+1. **Design system tokens**
+  - CSS variables for colors, fonts, shadows, surfaces.
+  - **Why**: Makes visual changes consistent and easier to theme.
+
+2. **Intentional layout**
+  - Two-panel grid: request builder + response output.
+  - **Why**: Mirrors the request/response mental model for RAG.
+
+3. **Animations and motion**
+  - Subtle entry animations and button hover lift.
+  - **Why**: Adds clarity without distracting from content.
+
+4. **Typography**
+  - Serif headline + geometric sans body.
+  - **Why**: Gives contrast and a learning-oriented tone.
+
+---
+
+## Backend Additions: What Was Added and Why
+
+### Follow-up Questions Endpoint
+
+1. **Generator method** (`generate_followup_questions()`)
+  - Retrieves the problem document, formats the follow-up prompt, and calls the LLM.
+  - **Why**: Keeps RAG orchestration centralized in `RAGGenerator`.
+
+2. **API endpoint** (`POST /api/chat/followup`)
+  - Accepts `problem_title` and `solution_approach`.
+  - Returns follow-up questions plus sources, tokens, and model.
+  - **Why**: Dedicated endpoint keeps main chat flow clean.
+
+### Progressive Hints Improvements
+
+1. **Hint level normalization**
+  - Clamps `hint_level` to 1-3 in `RAGGenerator`.
+  - **Why**: Prevents invalid prompt selection from client mistakes.
+
+2. **Input enforcement in chat router**
+  - Requires `problem_context` when `hint_level > 0`.
+  - **Why**: Avoids ambiguous hint generation without a target problem.
+
+### Chroma Path Debug Fix (Why Search Was Empty)
+
+1. **Symptom**: `GET /api/search` returned empty results.
+2. **Cause**: `CHROMA_PERSIST_DIR` was set to a relative path in `.env`.
+3. **Fix**: Remove the override so the backend uses the absolute default path.
+4. **Why**: The API server and data pipeline must read/write the same DB folder.

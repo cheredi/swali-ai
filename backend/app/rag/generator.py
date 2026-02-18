@@ -28,7 +28,8 @@ from dataclasses import dataclass
 from typing import Optional
 
 from app.rag.vectorstore import VectorStore
-from app.rag.llm import LLMService, LLMResponse, get_llm_service
+from app.rag.llm import LLMService, get_llm_service
+from app.rag.reranker import HybridReranker
 from app.prompts import get_prompt
 
 
@@ -66,10 +67,12 @@ class RAGGenerator:
     def __init__(
         self,
         collection_name: str = "problems",
-        llm_service: LLMService | None = None
+        llm_service: LLMService | None = None,
+        use_reranker: bool = True,
     ):
         self.vector_store = VectorStore(collection_name)
         self.llm_service = llm_service or get_llm_service()
+        self.reranker = HybridReranker() if use_reranker else None
     
     def generate_answer(
         self,
@@ -106,8 +109,18 @@ class RAGGenerator:
         # Step 1: RETRIEVE relevant context
         search_results = self.vector_store.search(
             query=question,
-            n_results=n_context
+            n_results=max(n_context * 4, n_context)
         )
+
+        # LEARNING NOTE: Two-stage retrieval
+        # Stage 1 retrieves a wider candidate pool from vector search.
+        # Stage 2 reranks candidates and keeps only top-n_context.
+        if self.reranker is not None:
+            search_results = self.reranker.rerank_search_results(
+                query=question,
+                search_results=search_results,
+                top_k=n_context,
+            )
         
         # Format context for the prompt
         context_parts = []
@@ -224,6 +237,62 @@ class RAGGenerator:
             temperature=0.5  # Less creative, more focused
         )
         
+        return RAGResponse(
+            answer=llm_response.content,
+            sources=[{
+                "id": search_results["ids"][0][0],
+                "title": metadata.get("title", "Unknown"),
+                "type": metadata.get("type", "problem"),
+                "difficulty": metadata.get("difficulty", "N/A"),
+                "pattern": metadata.get("pattern_name") or metadata.get("pattern")
+            }],
+            model=llm_response.model,
+            tokens_used=llm_response.tokens_used
+        )
+
+    def generate_followup_questions(
+        self,
+        problem_title: str,
+        solution_approach: str
+    ) -> RAGResponse:
+        """
+        Generate follow-up interview questions after a solution.
+
+        LEARNING NOTE: Follow-up questions
+        Interviews rarely end at "solve it." A good follow-up tests:
+        - Optimization thinking (time/space tradeoffs)
+        - Edge cases and constraints
+        - Connections to related problems or patterns
+        """
+        # Retrieve the problem description for grounding
+        search_results = self.vector_store.search(
+            query=problem_title,
+            n_results=1
+        )
+
+        if not search_results["ids"][0]:
+            return RAGResponse(
+                answer=f"I couldn't find a problem called '{problem_title}'.",
+                sources=[],
+                model="none",
+                tokens_used=0
+            )
+
+        metadata = search_results["metadatas"][0][0]
+        doc = search_results["documents"][0][0]
+
+        prompt_template = get_prompt("generate_followup")
+        formatted_prompt = prompt_template.format(
+            problem_description=doc,
+            solution_approach=solution_approach
+        )
+
+        llm_response = self.llm_service.generate_with_retry(
+            prompt=formatted_prompt,
+            max_tokens=250,
+            temperature=0.5
+        )
+
         return RAGResponse(
             answer=llm_response.content,
             sources=[{

@@ -62,6 +62,7 @@ class DataProcessor:
             "neetcode_problems": 0,
             "system_design_topics": 0,
             "system_design_questions": 0,
+            "ai_ml_questions": 0,
             "total_embedded": 0,
         }
     
@@ -247,6 +248,74 @@ class DataProcessor:
             self.vector_store.add_documents(documents, metadatas, ids)
         
         return len(documents)
+
+    def process_ai_ml_questions(self) -> int:
+        """
+        Process AI/ML interview question dataset.
+
+        LEARNING NOTE: Why separate AI/ML corpus?
+        -----------------------------------------
+        Coding interview prep and AI/ML interview prep overlap only partially.
+        A dedicated corpus gives better retrieval for ML system design,
+        statistics, model training, and experimentation questions.
+
+        Returns:
+            Number of AI/ML records processed
+        """
+        ai_ml_file = self.data_dir / "ai_ml" / "ai_ml_questions.json"
+
+        if not ai_ml_file.exists():
+            print(f"AI/ML dataset not found at {ai_ml_file}")
+            print("Run: poetry run python scripts/collect_ai_ml.py")
+            return 0
+
+        print("Loading AI/ML interview data...")
+        with open(ai_ml_file, encoding="utf-8") as file:
+            data = json.load(file)
+
+        documents = []
+        metadatas = []
+        ids = []
+
+        for item in data:
+            title = item.get("title", "")
+            description = item.get("description", title)
+            difficulty = item.get("difficulty", "medium")
+            tags = item.get("tags", [])
+            topic_family = item.get("topic_family", "ml_engineering")
+
+            embed_text = "\n".join(
+                [
+                    f"AI/ML Interview Question: {title}",
+                    f"Topic family: {topic_family}",
+                    f"Difficulty: {difficulty}",
+                    f"Tags: {', '.join(tags[:6])}",
+                    f"Question: {description}",
+                ]
+            )
+
+            item_id = item.get("id") or f"aiml_{len(ids)}"
+            metadata = {
+                "title": title,
+                "difficulty": difficulty,
+                "source": item.get("source", "ai_ml_interviews"),
+                "source_name": item.get("source_name"),
+                "source_url": item.get("source_url"),
+                "type": item.get("type", "ai_ml_question"),
+                "topic_family": topic_family,
+                "tags": ",".join(tags),
+            }
+
+            documents.append(embed_text)
+            metadatas.append(metadata)
+            ids.append(item_id)
+
+        if documents:
+            print(f"Generating embeddings for {len(documents)} AI/ML interview questions...")
+            self.vector_store.add_documents(documents, metadatas, ids)
+            self.stats["ai_ml_questions"] = len(documents)
+
+        return len(documents)
     
     def _create_topic_embed_text(self, topic_data: dict) -> str:
         """Create embed text for a system design topic."""
@@ -301,6 +370,7 @@ class DataProcessor:
         # Process each data source
         self.process_neetcode()
         self.process_system_design()
+        self.process_ai_ml_questions()
         
         # Calculate totals
         self.stats["total_embedded"] = self.vector_store.count()
@@ -312,6 +382,7 @@ class DataProcessor:
         print(f"   NeetCode problems:      {self.stats['neetcode_problems']}")
         print(f"   System Design topics:   {self.stats['system_design_topics']}")
         print(f"   System Design questions: {self.stats['system_design_questions']}")
+        print(f"   AI/ML questions:        {self.stats['ai_ml_questions']}")
         print(f"   ─────────────────────────")
         print(f"   Total in vector store:  {self.stats['total_embedded']}")
         print("="*60 + "\n")

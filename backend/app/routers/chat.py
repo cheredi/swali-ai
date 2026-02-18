@@ -73,6 +73,28 @@ class HintRequest(BaseModel):
         }
 
 
+class FollowupRequest(BaseModel):
+    """Request for follow-up interview questions."""
+    problem_title: str
+    solution_approach: str
+
+    class Config:
+        json_schema_extra = {
+            "example": {
+                "problem_title": "Two Sum",
+                "solution_approach": "I used a HashMap to track complements."
+            }
+        }
+
+
+class FollowupResponse(BaseModel):
+    """Response containing follow-up questions and sources."""
+    questions: str
+    sources: list[Source]
+    tokens_used: int
+    model: str
+
+
 # =============================================================================
 # Generator Instance
 # =============================================================================
@@ -204,4 +226,43 @@ async def get_hint(request: HintRequest) -> ChatResponse:
         raise HTTPException(
             status_code=500,
             detail=f"Failed to generate hint: {str(e)}"
+        )
+
+
+@router.post("/followup", response_model=FollowupResponse)
+async def get_followup_questions(request: FollowupRequest) -> FollowupResponse:
+    """
+    Generate follow-up questions after a solution.
+
+    LEARNING NOTE: Interview follow-ups
+    These questions probe depth of understanding, not just correctness.
+    They test optimization, edge cases, and related patterns.
+    """
+    try:
+        generator = get_generator()
+
+        response = generator.generate_followup_questions(
+            problem_title=request.problem_title,
+            solution_approach=request.solution_approach
+        )
+
+        return FollowupResponse(
+            questions=response.answer,
+            sources=[
+                Source(
+                    id=s["id"],
+                    title=s["title"],
+                    type=s.get("type"),
+                    difficulty=s.get("difficulty"),
+                    pattern=s.get("pattern")
+                )
+                for s in response.sources
+            ],
+            tokens_used=response.tokens_used,
+            model=response.model
+        )
+    except Exception as e:
+        raise HTTPException(
+            status_code=500,
+            detail=f"Failed to generate follow-up questions: {str(e)}"
         )

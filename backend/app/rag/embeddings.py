@@ -32,6 +32,7 @@ class EmbeddingService:
     """
 
     _model: SentenceTransformer = None
+    _models: dict[str, SentenceTransformer] = {}
 
     @classmethod
     def get_model(cls) -> SentenceTransformer:
@@ -41,6 +42,21 @@ class EmbeddingService:
             cls._model = SentenceTransformer(settings.embedding_model)
             print(f"Model loaded! Dimension: {cls._model.get_sentence_embedding_dimension()}")
         return cls._model
+
+    @classmethod
+    def get_model_by_name(cls, model_name: str) -> SentenceTransformer:
+        """
+        Load a specific embedding model lazily.
+
+        LEARNING NOTE: A/B experimentation
+        ---------------------------------
+        Keeping a model cache keyed by model name lets us compare retrieval
+        quality across embedding models in the same process.
+        """
+        if model_name not in cls._models:
+            print(f"Loading embedding model for experiment: {model_name}")
+            cls._models[model_name] = SentenceTransformer(model_name)
+        return cls._models[model_name]
 
     @classmethod
     def embed_text(cls, text: str) -> list[float]:
@@ -75,6 +91,20 @@ class EmbeddingService:
         - Batched: ~1 second
         """
         model = cls.get_model()
+        embeddings = model.encode(texts, convert_to_numpy=True, show_progress_bar=True)
+        return embeddings.tolist()
+
+    @classmethod
+    def embed_text_with_model(cls, text: str, model_name: str) -> list[float]:
+        """Embed one text using a specific model name."""
+        model = cls.get_model_by_name(model_name)
+        embedding = model.encode(text, convert_to_numpy=True)
+        return embedding.tolist()
+
+    @classmethod
+    def embed_batch_with_model(cls, texts: list[str], model_name: str) -> list[list[float]]:
+        """Embed a batch using a specific model name."""
+        model = cls.get_model_by_name(model_name)
         embeddings = model.encode(texts, convert_to_numpy=True, show_progress_bar=True)
         return embeddings.tolist()
 

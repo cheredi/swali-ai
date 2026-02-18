@@ -23,13 +23,24 @@ A production-grade RAG system for technical interview preparation.
 ```bash
 # Backend
 cd backend
-pip install -r requirements.txt
-uvicorn main:app --reload
+poetry install
+poetry run uvicorn main:app --reload
+
+# Build the vector DB (required for search and follow-ups)
+cd ..
+poetry run python scripts/collect_ai_ml.py
+poetry run python scripts/process_data.py
 
 # Frontend
 cd frontend
 npm install
 npm run dev
+```
+
+If your backend runs on a different host/port, set:
+
+```bash
+VITE_API_BASE_URL="http://localhost:8000" npm run dev
 ```
 
 ## Project Structure
@@ -50,3 +61,12 @@ swali-ai/
 ## License
 
 MIT
+
+## Experiments
+
+Run retrieval experiments (baseline, reranked, embedding A/B):
+
+```bash
+cd /Users/tatyanaamugo/swali-ai
+poetry run python scripts/run_retrieval_experiments.py
+```

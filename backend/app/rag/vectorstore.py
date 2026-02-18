@@ -95,6 +95,30 @@ class VectorStore:
         )
         print(f" Added {len(documents)} documents to vector store")
 
+    def add_documents_with_embeddings(
+        self,
+        documents: list[str],
+        metadatas: list[dict[str, Any]],
+        ids: list[str],
+        embeddings: list[list[float]],
+    ) -> None:
+        """
+        Add documents with pre-computed embeddings.
+
+        LEARNING NOTE: Why this method?
+        -------------------------------
+        Experiment pipelines often compute embeddings with different models.
+        This method allows direct insertion without re-embedding through the
+        default model.
+        """
+        self.collection.add(
+            ids=ids,
+            embeddings=embeddings,
+            documents=documents,
+            metadatas=metadatas,
+        )
+        print(f" Added {len(documents)} documents with pre-computed embeddings")
+
     def search(
         self,
         query: str,
@@ -169,6 +193,10 @@ class VectorStore:
                 "metadata": result["metadatas"][0]
             }
         return None
+
+    def get_all(self) -> dict[str, Any]:
+        """Return all documents, metadata, and IDs from the collection."""
+        return self.collection.get(include=["documents", "metadatas"])
 
     def delete_all(self) -> None:
         """Clear all documents (useful for re-indexing)."""

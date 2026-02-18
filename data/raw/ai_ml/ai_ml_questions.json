@@ -1,0 +1,3917 @@
+[
+  {
+    "id": "aiml_data-science-interviews-theory_what-is-supervised-machine-learning_3c014bcb6202",
+    "title": "What is supervised machine learning?",
+    "difficulty": "easy",
+    "description": "What is supervised machine learning?",
+    "tags": [
+      "supervised_machine learning",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-is-regression-which-models-can-you-use-to-solve-a-regre_196bf0763667",
+    "title": "What is regression? Which models can you use to solve a regression problem?",
+    "difficulty": "easy",
+    "description": "What is regression? Which models can you use to solve a regression problem?",
+    "tags": [
+      "linear_regression",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-is-linear-regression-when-do-we-use-it_bbcaf9d29f14",
+    "title": "What is linear regression? When do we use it?",
+    "difficulty": "easy",
+    "description": "What is linear regression? When do we use it?",
+    "tags": [
+      "linear_regression",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-are-the-main-assumptions-of-linear-regression_852a4b1e1130",
+    "title": "What are the main assumptions of linear regression?",
+    "difficulty": "medium",
+    "description": "What are the main assumptions of linear regression?",
+    "tags": [
+      "linear_regression",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-s-the-normal-distribution-why-do-we-care-about-it_cd811ff0302d",
+    "title": "What’s the normal distribution? Why do we care about it?",
+    "difficulty": "easy",
+    "description": "What’s the normal distribution? Why do we care about it?",
+    "tags": [
+      "linear_regression",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_how-do-we-check-if-a-variable-follows-the-normal-distributio_d6063203c8a7",
+    "title": "How do we check if a variable follows the normal distribution? ‍",
+    "difficulty": "medium",
+    "description": "How do we check if a variable follows the normal distribution? ‍",
+    "tags": [
+      "linear_regression",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-if-we-want-to-build-a-model-for-predicting-prices-are-p_5d14ec6a9031",
+    "title": "What if we want to build a model for predicting prices? Are prices distributed normally? Do we need to do any pre-processing for prices? ‍",
+    "difficulty": "medium",
+    "description": "What if we want to build a model for predicting prices? Are prices distributed normally? Do we need to do any pre-processing for prices? ‍",
+    "tags": [
+      "linear_regression",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-methods-for-solving-linear-regression-do-you-know_9731d71c28e6",
+    "title": "What methods for solving linear regression do you know? ‍",
+    "difficulty": "medium",
+    "description": "What methods for solving linear regression do you know? ‍",
+    "tags": [
+      "linear_regression",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-is-gradient-descent-how-does-it-work_20715748fb09",
+    "title": "What is gradient descent? How does it work? ‍",
+    "difficulty": "medium",
+    "description": "What is gradient descent? How does it work? ‍",
+    "tags": [
+      "linear_regression",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-is-the-normal-equation_257cee125771",
+    "title": "What is the normal equation? ‍",
+    "difficulty": "medium",
+    "description": "What is the normal equation? ‍",
+    "tags": [
+      "linear_regression",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-is-sgd-stochastic-gradient-descent-what-s-the-differenc_837afc9b3bb4",
+    "title": "What is SGD — stochastic gradient descent? What’s the difference with the usual gradient descent? ‍",
+    "difficulty": "medium",
+    "description": "What is SGD — stochastic gradient descent? What’s the difference with the usual gradient descent? ‍",
+    "tags": [
+      "linear_regression",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_which-metrics-for-evaluating-regression-models-do-you-know_21a6a169372f",
+    "title": "Which metrics for evaluating regression models do you know?",
+    "difficulty": "easy",
+    "description": "Which metrics for evaluating regression models do you know?",
+    "tags": [
+      "linear_regression",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-are-mse-and-rmse_7a9ddaff960b",
+    "title": "What are MSE and RMSE?",
+    "difficulty": "easy",
+    "description": "What are MSE and RMSE?",
+    "tags": [
+      "linear_regression",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-is-the-bias-variance-trade-off_bb94bc9daebd",
+    "title": "What is the bias-variance trade-off?",
+    "difficulty": "easy",
+    "description": "What is the bias-variance trade-off?",
+    "tags": [
+      "linear_regression",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-is-overfitting_4b70bcc02edf",
+    "title": "What is overfitting?",
+    "difficulty": "easy",
+    "description": "What is overfitting?",
+    "tags": [
+      "validation",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_how-to-validate-your-models_af235953c000",
+    "title": "How to validate your models?",
+    "difficulty": "easy",
+    "description": "How to validate your models?",
+    "tags": [
+      "validation",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_why-do-we-need-to-split-our-data-into-three-parts-train-vali_d176847231a8",
+    "title": "Why do we need to split our data into three parts: train, validation, and test?",
+    "difficulty": "easy",
+    "description": "Why do we need to split our data into three parts: train, validation, and test?",
+    "tags": [
+      "validation",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_can-you-explain-how-cross-validation-works_d23a56cdd726",
+    "title": "Can you explain how cross-validation works?",
+    "difficulty": "easy",
+    "description": "Can you explain how cross-validation works?",
+    "tags": [
+      "validation",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-is-k-fold-cross-validation_312d76d83742",
+    "title": "What is K-fold cross-validation?",
+    "difficulty": "easy",
+    "description": "What is K-fold cross-validation?",
+    "tags": [
+      "validation",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_how-do-we-choose-k-in-k-fold-cross-validation-what-s-your-fa_5872ea2d97c5",
+    "title": "How do we choose K in K-fold cross-validation? What’s your favorite K?",
+    "difficulty": "easy",
+    "description": "How do we choose K in K-fold cross-validation? What’s your favorite K?",
+    "tags": [
+      "validation",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-is-classification-which-models-would-you-use-to-solve-a_36ed70be3bff",
+    "title": "What is classification? Which models would you use to solve a classification problem?",
+    "difficulty": "easy",
+    "description": "What is classification? Which models would you use to solve a classification problem?",
+    "tags": [
+      "classification",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-is-logistic-regression-when-do-we-need-to-use-it_7a75245b1340",
+    "title": "What is logistic regression? When do we need to use it?",
+    "difficulty": "easy",
+    "description": "What is logistic regression? When do we need to use it?",
+    "tags": [
+      "classification",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_is-logistic-regression-a-linear-model-why_b316a70ed20c",
+    "title": "Is logistic regression a linear model? Why?",
+    "difficulty": "easy",
+    "description": "Is logistic regression a linear model? Why?",
+    "tags": [
+      "classification",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-is-sigmoid-what-does-it-do_d45bd126f5e1",
+    "title": "What is sigmoid? What does it do?",
+    "difficulty": "easy",
+    "description": "What is sigmoid? What does it do?",
+    "tags": [
+      "classification",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_how-do-we-evaluate-classification-models_479eadc8c589",
+    "title": "How do we evaluate classification models?",
+    "difficulty": "easy",
+    "description": "How do we evaluate classification models?",
+    "tags": [
+      "classification",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-is-accuracy_490f5a056788",
+    "title": "What is accuracy?",
+    "difficulty": "easy",
+    "description": "What is accuracy?",
+    "tags": [
+      "classification",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_is-accuracy-always-a-good-metric_9d134a35d5d8",
+    "title": "Is accuracy always a good metric?",
+    "difficulty": "easy",
+    "description": "Is accuracy always a good metric?",
+    "tags": [
+      "classification",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-is-the-confusion-table-what-are-the-cells-in-this-table_7cc1adfe3390",
+    "title": "What is the confusion table? What are the cells in this table?",
+    "difficulty": "easy",
+    "description": "What is the confusion table? What are the cells in this table?",
+    "tags": [
+      "classification",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-are-precision-recall-and-f1-score_fc20f91134dc",
+    "title": "What are precision, recall, and F1-score?",
+    "difficulty": "easy",
+    "description": "What are precision, recall, and F1-score?",
+    "tags": [
+      "classification",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-is-the-roc-curve-when-to-use-it_963d3f4f662e",
+    "title": "What is the ROC curve? When to use it? ‍",
+    "difficulty": "medium",
+    "description": "What is the ROC curve? When to use it? ‍",
+    "tags": [
+      "classification",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-is-auc-au-roc-when-to-use-it_646457a98256",
+    "title": "What is AUC (AU ROC)? When to use it? ‍",
+    "difficulty": "medium",
+    "description": "What is AUC (AU ROC)? When to use it? ‍",
+    "tags": [
+      "classification",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_how-to-interpret-the-au-roc-score_fd0d98c33259",
+    "title": "How to interpret the AU ROC score? ‍",
+    "difficulty": "medium",
+    "description": "How to interpret the AU ROC score? ‍",
+    "tags": [
+      "classification",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-is-the-pr-precision-recall-curve_be2fbfd6dc65",
+    "title": "What is the PR (precision-recall) curve? ‍",
+    "difficulty": "medium",
+    "description": "What is the PR (precision-recall) curve? ‍",
+    "tags": [
+      "classification",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-is-the-area-under-the-pr-curve-is-it-a-useful-metric-i_9e08da42470e",
+    "title": "What is the area under the PR curve? Is it a useful metric? ‍I",
+    "difficulty": "medium",
+    "description": "What is the area under the PR curve? Is it a useful metric? ‍I",
+    "tags": [
+      "classification",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_in-which-cases-au-pr-is-better-than-au-roc_f35e781946f5",
+    "title": "In which cases AU PR is better than AU ROC? ‍",
+    "difficulty": "medium",
+    "description": "In which cases AU PR is better than AU ROC? ‍",
+    "tags": [
+      "classification",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-do-we-do-with-categorical-variables_3e470ae980b1",
+    "title": "What do we do with categorical variables? ‍",
+    "difficulty": "medium",
+    "description": "What do we do with categorical variables? ‍",
+    "tags": [
+      "classification",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_why-do-we-need-one-hot-encoding_4bfbddff4ccf",
+    "title": "Why do we need one-hot encoding? ‍",
+    "difficulty": "medium",
+    "description": "Why do we need one-hot encoding? ‍",
+    "tags": [
+      "classification",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-is-curse-of-dimensionality_2982d3559b7d",
+    "title": "What is \"curse of dimensionality\"? ‍",
+    "difficulty": "medium",
+    "description": "What is \"curse of dimensionality\"? ‍",
+    "tags": [
+      "classification",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-happens-to-our-linear-regression-model-if-we-have-three_7b562369f50d",
+    "title": "What happens to our linear regression model if we have three columns in our data: x, y, z — and z is a sum of x and y? ‍",
+    "difficulty": "medium",
+    "description": "What happens to our linear regression model if we have three columns in our data: x, y, z — and z is a sum of x and y? ‍",
+    "tags": [
+      "regularization",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-happens-to-our-linear-regression-model-if-the-column-z-_13956b48c3c1",
+    "title": "What happens to our linear regression model if the column z in the data is a sum of columns x and y and some random noise? ‍",
+    "difficulty": "medium",
+    "description": "What happens to our linear regression model if the column z in the data is a sum of columns x and y and some random noise? ‍",
+    "tags": [
+      "regularization",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-is-regularization-why-do-we-need-it_41fce137871c",
+    "title": "What is regularization? Why do we need it?",
+    "difficulty": "easy",
+    "description": "What is regularization? Why do we need it?",
+    "tags": [
+      "regularization",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_which-regularization-techniques-do-you-know_4dea61c3d7f7",
+    "title": "Which regularization techniques do you know? ‍",
+    "difficulty": "medium",
+    "description": "Which regularization techniques do you know? ‍",
+    "tags": [
+      "regularization",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-kind-of-regularization-techniques-are-applicable-to-lin_e1b032cf96ba",
+    "title": "What kind of regularization techniques are applicable to linear models? ‍",
+    "difficulty": "medium",
+    "description": "What kind of regularization techniques are applicable to linear models? ‍",
+    "tags": [
+      "regularization",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_how-does-l2-regularization-look-like-in-a-linear-model_a7e3722f9085",
+    "title": "How does L2 regularization look like in a linear model? ‍",
+    "difficulty": "medium",
+    "description": "How does L2 regularization look like in a linear model? ‍",
+    "tags": [
+      "regularization",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_how-do-we-select-the-right-regularization-parameters_4852bc16cbe1",
+    "title": "How do we select the right regularization parameters?",
+    "difficulty": "easy",
+    "description": "How do we select the right regularization parameters?",
+    "tags": [
+      "regularization",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-s-the-effect-of-l2-regularization-on-the-weights-of-a-l_e0a37de7f354",
+    "title": "What’s the effect of L2 regularization on the weights of a linear model? ‍",
+    "difficulty": "medium",
+    "description": "What’s the effect of L2 regularization on the weights of a linear model? ‍",
+    "tags": [
+      "regularization",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_how-l1-regularization-looks-like-in-a-linear-model_ec2e880d0827",
+    "title": "How L1 regularization looks like in a linear model? ‍",
+    "difficulty": "medium",
+    "description": "How L1 regularization looks like in a linear model? ‍",
+    "tags": [
+      "regularization",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-s-the-difference-between-l2-and-l1-regularization_a95c1d048840",
+    "title": "What’s the difference between L2 and L1 regularization? ‍",
+    "difficulty": "medium",
+    "description": "What’s the difference between L2 and L1 regularization? ‍",
+    "tags": [
+      "regularization",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_can-we-have-both-l1-and-l2-regularization-components-in-a-li_a2fe3e1ba4c1",
+    "title": "Can we have both L1 and L2 regularization components in a linear model? ‍",
+    "difficulty": "medium",
+    "description": "Can we have both L1 and L2 regularization components in a linear model? ‍",
+    "tags": [
+      "regularization",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-s-the-interpretation-of-the-bias-term-in-linear-models_4aa6398093bd",
+    "title": "What’s the interpretation of the bias term in linear models? ‍",
+    "difficulty": "medium",
+    "description": "What’s the interpretation of the bias term in linear models? ‍",
+    "tags": [
+      "regularization",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_how-do-we-interpret-weights-in-linear-models_b0704316deda",
+    "title": "How do we interpret weights in linear models? ‍",
+    "difficulty": "medium",
+    "description": "How do we interpret weights in linear models? ‍",
+    "tags": [
+      "regularization",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_if-a-weight-for-one-variable-is-higher-than-for-another-can-_30d6a805e414",
+    "title": "If a weight for one variable is higher than for another — can we say that this variable is more important? ‍",
+    "difficulty": "medium",
+    "description": "If a weight for one variable is higher than for another — can we say that this variable is more important? ‍",
+    "tags": [
+      "regularization",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_when-do-we-need-to-perform-feature-normalization-for-linear-_96c8d83f1b74",
+    "title": "When do we need to perform feature normalization for linear models? When it’s okay not to do it? ‍",
+    "difficulty": "medium",
+    "description": "When do we need to perform feature normalization for linear models? When it’s okay not to do it? ‍",
+    "tags": [
+      "regularization",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-is-feature-selection-why-do-we-need-it_12ea92a6e12f",
+    "title": "What is feature selection? Why do we need it?",
+    "difficulty": "easy",
+    "description": "What is feature selection? Why do we need it?",
+    "tags": [
+      "feature_selection",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_is-feature-selection-important-for-linear-models_b1256f42752a",
+    "title": "Is feature selection important for linear models? ‍",
+    "difficulty": "medium",
+    "description": "Is feature selection important for linear models? ‍",
+    "tags": [
+      "feature_selection",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_which-feature-selection-techniques-do-you-know_9e5594ead10c",
+    "title": "Which feature selection techniques do you know? ‍",
+    "difficulty": "medium",
+    "description": "Which feature selection techniques do you know? ‍",
+    "tags": [
+      "feature_selection",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_can-we-use-l1-regularization-for-feature-selection_a68253a26339",
+    "title": "Can we use L1 regularization for feature selection? ‍",
+    "difficulty": "medium",
+    "description": "Can we use L1 regularization for feature selection? ‍",
+    "tags": [
+      "feature_selection",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_can-we-use-l2-regularization-for-feature-selection_5e6468fec193",
+    "title": "Can we use L2 regularization for feature selection? ‍",
+    "difficulty": "medium",
+    "description": "Can we use L2 regularization for feature selection? ‍",
+    "tags": [
+      "feature_selection",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-are-the-decision-trees_babe93a19150",
+    "title": "What are the decision trees?",
+    "difficulty": "easy",
+    "description": "What are the decision trees?",
+    "tags": [
+      "decision_trees",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_how-do-we-train-decision-trees_c1bc55581749",
+    "title": "How do we train decision trees? ‍",
+    "difficulty": "medium",
+    "description": "How do we train decision trees? ‍",
+    "tags": [
+      "decision_trees",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-are-the-main-parameters-of-the-decision-tree-model_f0e34bc911dc",
+    "title": "What are the main parameters of the decision tree model?",
+    "difficulty": "easy",
+    "description": "What are the main parameters of the decision tree model?",
+    "tags": [
+      "decision_trees",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_how-do-we-handle-categorical-variables-in-decision-trees_9327c3b2e5b5",
+    "title": "How do we handle categorical variables in decision trees? ‍",
+    "difficulty": "medium",
+    "description": "How do we handle categorical variables in decision trees? ‍",
+    "tags": [
+      "decision_trees",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-are-the-benefits-of-a-single-decision-tree-compared-to-_cf7c4c97bf46",
+    "title": "What are the benefits of a single decision tree compared to more complex models? ‍",
+    "difficulty": "medium",
+    "description": "What are the benefits of a single decision tree compared to more complex models? ‍",
+    "tags": [
+      "decision_trees",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_how-can-we-know-which-features-are-more-important-for-the-de_947dfc1298ff",
+    "title": "How can we know which features are more important for the decision tree model? ‍",
+    "difficulty": "medium",
+    "description": "How can we know which features are more important for the decision tree model? ‍",
+    "tags": [
+      "decision_trees",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-is-random-forest_376f00d7e719",
+    "title": "What is random forest?",
+    "difficulty": "easy",
+    "description": "What is random forest?",
+    "tags": [
+      "random_forest",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_why-do-we-need-randomization-in-random-forest_90a7e11e5972",
+    "title": "Why do we need randomization in random forest? ‍",
+    "difficulty": "medium",
+    "description": "Why do we need randomization in random forest? ‍",
+    "tags": [
+      "random_forest",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-are-the-main-parameters-of-the-random-forest-model_61364683b30e",
+    "title": "What are the main parameters of the random forest model? ‍",
+    "difficulty": "medium",
+    "description": "What are the main parameters of the random forest model? ‍",
+    "tags": [
+      "random_forest",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_how-do-we-select-the-depth-of-the-trees-in-random-forest_ec7b40cf8019",
+    "title": "How do we select the depth of the trees in random forest? ‍",
+    "difficulty": "medium",
+    "description": "How do we select the depth of the trees in random forest? ‍",
+    "tags": [
+      "random_forest",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_how-do-we-know-how-many-trees-we-need-in-random-forest_d7c301897ce9",
+    "title": "How do we know how many trees we need in random forest? ‍",
+    "difficulty": "medium",
+    "description": "How do we know how many trees we need in random forest? ‍",
+    "tags": [
+      "random_forest",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_is-it-easy-to-parallelize-training-of-a-random-forest-model-_3d7334d8fc51",
+    "title": "Is it easy to parallelize training of a random forest model? How can we do it? ‍",
+    "difficulty": "medium",
+    "description": "Is it easy to parallelize training of a random forest model? How can we do it? ‍",
+    "tags": [
+      "random_forest",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-are-the-potential-problems-with-many-large-trees_ec9e3493ed9b",
+    "title": "What are the potential problems with many large trees? ‍",
+    "difficulty": "medium",
+    "description": "What are the potential problems with many large trees? ‍",
+    "tags": [
+      "random_forest",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-if-instead-of-finding-the-best-split-we-randomly-select_715a3919d742",
+    "title": "What if instead of finding the best split, we randomly select a few splits and just select the best from them. Will it work?",
+    "difficulty": "hard",
+    "description": "What if instead of finding the best split, we randomly select a few splits and just select the best from them. Will it work?",
+    "tags": [
+      "random_forest",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-happens-when-we-have-correlated-features-in-our-data_052f9c91b396",
+    "title": "What happens when we have correlated features in our data? ‍",
+    "difficulty": "medium",
+    "description": "What happens when we have correlated features in our data? ‍",
+    "tags": [
+      "random_forest",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-is-gradient-boosting-trees_25a9f48d347e",
+    "title": "What is gradient boosting trees? ‍",
+    "difficulty": "medium",
+    "description": "What is gradient boosting trees? ‍",
+    "tags": [
+      "gradient_boosting",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-s-the-difference-between-random-forest-and-gradient-boo_0b2b16a6a7f0",
+    "title": "What’s the difference between random forest and gradient boosting? ‍",
+    "difficulty": "medium",
+    "description": "What’s the difference between random forest and gradient boosting? ‍",
+    "tags": [
+      "gradient_boosting",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_is-it-possible-to-parallelize-training-of-a-gradient-boostin_b94ed7c83dad",
+    "title": "Is it possible to parallelize training of a gradient boosting model? How to do it? ‍",
+    "difficulty": "medium",
+    "description": "Is it possible to parallelize training of a gradient boosting model? How to do it? ‍",
+    "tags": [
+      "gradient_boosting",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_feature-importance-in-gradient-boosting-trees-what-are-possi_d4dd2a9c228a",
+    "title": "Feature importance in gradient boosting trees — what are possible options? ‍",
+    "difficulty": "medium",
+    "description": "Feature importance in gradient boosting trees — what are possible options? ‍",
+    "tags": [
+      "gradient_boosting",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_are-there-any-differences-between-continuous-and-discrete-va_7401d88bcc0e",
+    "title": "Are there any differences between continuous and discrete variables when it comes to feature importance of gradient boosting models?",
+    "difficulty": "hard",
+    "description": "Are there any differences between continuous and discrete variables when it comes to feature importance of gradient boosting models?",
+    "tags": [
+      "gradient_boosting",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-are-the-main-parameters-in-the-gradient-boosting-model_2355bbc2656b",
+    "title": "What are the main parameters in the gradient boosting model? ‍",
+    "difficulty": "medium",
+    "description": "What are the main parameters in the gradient boosting model? ‍",
+    "tags": [
+      "gradient_boosting",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_how-do-you-approach-tuning-parameters-in-xgboost-or-lightgbm_f515b9674f34",
+    "title": "How do you approach tuning parameters in XGBoost or LightGBM?",
+    "difficulty": "hard",
+    "description": "How do you approach tuning parameters in XGBoost or LightGBM?",
+    "tags": [
+      "gradient_boosting",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_how-do-you-select-the-number-of-trees-in-the-gradient-boosti_17f534b3bdc3",
+    "title": "How do you select the number of trees in the gradient boosting model? ‍",
+    "difficulty": "medium",
+    "description": "How do you select the number of trees in the gradient boosting model? ‍",
+    "tags": [
+      "gradient_boosting",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_which-hyper-parameter-tuning-strategies-in-general-do-you-kn_65f08942fed7",
+    "title": "Which hyper-parameter tuning strategies (in general) do you know? ‍",
+    "difficulty": "medium",
+    "description": "Which hyper-parameter tuning strategies (in general) do you know? ‍",
+    "tags": [
+      "parameter_tuning",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-s-the-difference-between-grid-search-parameter-tuning-s_90cc947b14a1",
+    "title": "What’s the difference between grid search parameter tuning strategy and random search? When to use one or another? ‍",
+    "difficulty": "medium",
+    "description": "What’s the difference between grid search parameter tuning strategy and random search? When to use one or another? ‍",
+    "tags": [
+      "parameter_tuning",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-kind-of-problems-neural-nets-can-solve_811148f9aaab",
+    "title": "What kind of problems neural nets can solve?",
+    "difficulty": "easy",
+    "description": "What kind of problems neural nets can solve?",
+    "tags": [
+      "neural_networks",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_how-does-a-usual-fully-connected-feed-forward-neural-network_ada86129d489",
+    "title": "How does a usual fully-connected feed-forward neural network work? ‍",
+    "difficulty": "medium",
+    "description": "How does a usual fully-connected feed-forward neural network work? ‍",
+    "tags": [
+      "neural_networks",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_why-do-we-need-activation-functions_5de94539cbfa",
+    "title": "Why do we need activation functions?",
+    "difficulty": "easy",
+    "description": "Why do we need activation functions?",
+    "tags": [
+      "neural_networks",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-are-the-problems-with-sigmoid-as-an-activation-function_29f293d9eb99",
+    "title": "What are the problems with sigmoid as an activation function? ‍",
+    "difficulty": "medium",
+    "description": "What are the problems with sigmoid as an activation function? ‍",
+    "tags": [
+      "neural_networks",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-is-relu-how-is-it-better-than-sigmoid-or-tanh_dc1f2a75dafb",
+    "title": "What is ReLU? How is it better than sigmoid or tanh? ‍",
+    "difficulty": "medium",
+    "description": "What is ReLU? How is it better than sigmoid or tanh? ‍",
+    "tags": [
+      "neural_networks",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_how-we-can-initialize-the-weights-of-a-neural-network_4a6f0965ba20",
+    "title": "How we can initialize the weights of a neural network? ‍",
+    "difficulty": "medium",
+    "description": "How we can initialize the weights of a neural network? ‍",
+    "tags": [
+      "neural_networks",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-if-we-set-all-the-weights-of-a-neural-network-to-0_ac78708abbf1",
+    "title": "What if we set all the weights of a neural network to 0? ‍",
+    "difficulty": "medium",
+    "description": "What if we set all the weights of a neural network to 0? ‍",
+    "tags": [
+      "neural_networks",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-regularization-techniques-for-neural-nets-do-you-know_5691fa399a48",
+    "title": "What regularization techniques for neural nets do you know? ‍",
+    "difficulty": "medium",
+    "description": "What regularization techniques for neural nets do you know? ‍",
+    "tags": [
+      "neural_networks",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-is-dropout-why-is-it-useful-how-does-it-work_bb440d4e2f6f",
+    "title": "What is dropout? Why is it useful? How does it work? ‍",
+    "difficulty": "medium",
+    "description": "What is dropout? Why is it useful? How does it work? ‍",
+    "tags": [
+      "neural_networks",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-is-backpropagation-how-does-it-work-why-do-we-need-it_9df9c6c249ef",
+    "title": "What is backpropagation? How does it work? Why do we need it? ‍",
+    "difficulty": "medium",
+    "description": "What is backpropagation? How does it work? Why do we need it? ‍",
+    "tags": [
+      "optimization_in_neural networks",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_which-optimization-techniques-for-training-neural-nets-do-yo_8b7c530bbc00",
+    "title": "Which optimization techniques for training neural nets do you know? ‍",
+    "difficulty": "medium",
+    "description": "Which optimization techniques for training neural nets do you know? ‍",
+    "tags": [
+      "optimization_in_neural networks",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_how-do-we-use-sgd-stochastic-gradient-descent-for-training-a_c7a4a71f08b6",
+    "title": "How do we use SGD (stochastic gradient descent) for training a neural net? ‍",
+    "difficulty": "medium",
+    "description": "How do we use SGD (stochastic gradient descent) for training a neural net? ‍",
+    "tags": [
+      "optimization_in_neural networks",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-s-the-learning-rate_e30d40b3ef29",
+    "title": "What’s the learning rate?",
+    "difficulty": "easy",
+    "description": "What’s the learning rate?",
+    "tags": [
+      "optimization_in_neural networks",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-happens-when-the-learning-rate-is-too-large-too-small_c7a4cd6b7ba0",
+    "title": "What happens when the learning rate is too large? Too small?",
+    "difficulty": "easy",
+    "description": "What happens when the learning rate is too large? Too small?",
+    "tags": [
+      "optimization_in_neural networks",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_how-to-set-the-learning-rate_022a08e7e9eb",
+    "title": "How to set the learning rate? ‍",
+    "difficulty": "medium",
+    "description": "How to set the learning rate? ‍",
+    "tags": [
+      "optimization_in_neural networks",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-is-adam-what-s-the-main-difference-between-adam-and-sgd_4906f2854ffd",
+    "title": "What is Adam? What’s the main difference between Adam and SGD? ‍",
+    "difficulty": "medium",
+    "description": "What is Adam? What’s the main difference between Adam and SGD? ‍",
+    "tags": [
+      "optimization_in_neural networks",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_when-would-you-use-adam-and-when-sgd_61d0cbcbf2e4",
+    "title": "When would you use Adam and when SGD? ‍",
+    "difficulty": "medium",
+    "description": "When would you use Adam and when SGD? ‍",
+    "tags": [
+      "optimization_in_neural networks",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_do-we-want-to-have-a-constant-learning-rate-or-we-better-cha_049bb373f901",
+    "title": "Do we want to have a constant learning rate or we better change it throughout training? ‍",
+    "difficulty": "medium",
+    "description": "Do we want to have a constant learning rate or we better change it throughout training? ‍",
+    "tags": [
+      "optimization_in_neural networks",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_how-do-we-decide-when-to-stop-training-a-neural-net_2dba18cc6d7e",
+    "title": "How do we decide when to stop training a neural net?",
+    "difficulty": "easy",
+    "description": "How do we decide when to stop training a neural net?",
+    "tags": [
+      "optimization_in_neural networks",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-is-model-checkpointing_eaaff0c9c0ce",
+    "title": "What is model checkpointing? ‍",
+    "difficulty": "medium",
+    "description": "What is model checkpointing? ‍",
+    "tags": [
+      "optimization_in_neural networks",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_can-you-tell-us-how-you-approach-the-model-training-process_0e31bf58a6a1",
+    "title": "Can you tell us how you approach the model training process? ‍",
+    "difficulty": "medium",
+    "description": "Can you tell us how you approach the model training process? ‍",
+    "tags": [
+      "optimization_in_neural networks",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_how-we-can-use-neural-nets-for-computer-vision_04ab1b567cab",
+    "title": "How we can use neural nets for computer vision? ‍",
+    "difficulty": "medium",
+    "description": "How we can use neural nets for computer vision? ‍",
+    "tags": [
+      "neural_networks_for_computer vision",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-s-a-convolutional-layer_22221e6c54e1",
+    "title": "What’s a convolutional layer? ‍",
+    "difficulty": "medium",
+    "description": "What’s a convolutional layer? ‍",
+    "tags": [
+      "neural_networks_for_computer vision",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_why-do-we-actually-need-convolutions-can-t-we-use-fully-conn_efd1ea5831a3",
+    "title": "Why do we actually need convolutions? Can’t we use fully-connected layers for that? ‍",
+    "difficulty": "medium",
+    "description": "Why do we actually need convolutions? Can’t we use fully-connected layers for that? ‍",
+    "tags": [
+      "neural_networks_for_computer vision",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-s-pooling-in-cnn-why-do-we-need-it_ecc9fbba37cb",
+    "title": "What’s pooling in CNN? Why do we need it? ‍",
+    "difficulty": "medium",
+    "description": "What’s pooling in CNN? Why do we need it? ‍",
+    "tags": [
+      "neural_networks_for_computer vision",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_how-does-max-pooling-work-are-there-other-pooling-techniques_20e046ba6c36",
+    "title": "How does max pooling work? Are there other pooling techniques? ‍",
+    "difficulty": "medium",
+    "description": "How does max pooling work? Are there other pooling techniques? ‍",
+    "tags": [
+      "neural_networks_for_computer vision",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_are-cnns-resistant-to-rotations-what-happens-to-the-predicti_208685a87d91",
+    "title": "Are CNNs resistant to rotations? What happens to the predictions of a CNN if an image is rotated?",
+    "difficulty": "hard",
+    "description": "Are CNNs resistant to rotations? What happens to the predictions of a CNN if an image is rotated?",
+    "tags": [
+      "neural_networks_for_computer vision",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-are-augmentations-why-do-we-need-them_e4ed85b40171",
+    "title": "What are augmentations? Why do we need them?",
+    "difficulty": "easy",
+    "description": "What are augmentations? Why do we need them?",
+    "tags": [
+      "neural_networks_for_computer vision",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-kind-of-augmentations-do-you-know_350d8c358be6",
+    "title": "What kind of augmentations do you know?",
+    "difficulty": "easy",
+    "description": "What kind of augmentations do you know?",
+    "tags": [
+      "neural_networks_for_computer vision",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_how-to-choose-which-augmentations-to-use_a08a4790128c",
+    "title": "How to choose which augmentations to use? ‍",
+    "difficulty": "medium",
+    "description": "How to choose which augmentations to use? ‍",
+    "tags": [
+      "neural_networks_for_computer vision",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-kind-of-cnn-architectures-for-classification-do-you-kno_dca11d66c4a7",
+    "title": "What kind of CNN architectures for classification do you know?",
+    "difficulty": "hard",
+    "description": "What kind of CNN architectures for classification do you know?",
+    "tags": [
+      "neural_networks_for_computer vision",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-is-transfer-learning-how-does-it-work_3cb2af459201",
+    "title": "What is transfer learning? How does it work? ‍",
+    "difficulty": "medium",
+    "description": "What is transfer learning? How does it work? ‍",
+    "tags": [
+      "neural_networks_for_computer vision",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-is-object-detection-do-you-know-any-architectures-for-t_379eaef17e70",
+    "title": "What is object detection? Do you know any architectures for that?",
+    "difficulty": "hard",
+    "description": "What is object detection? Do you know any architectures for that?",
+    "tags": [
+      "neural_networks_for_computer vision",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-is-object-segmentation-do-you-know-any-architectures-fo_52ec974db0b2",
+    "title": "What is object segmentation? Do you know any architectures for that?",
+    "difficulty": "hard",
+    "description": "What is object segmentation? Do you know any architectures for that?",
+    "tags": [
+      "neural_networks_for_computer vision",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_how-can-we-use-machine-learning-for-text-classification_5801d6d53faa",
+    "title": "How can we use machine learning for text classification? ‍",
+    "difficulty": "medium",
+    "description": "How can we use machine learning for text classification? ‍",
+    "tags": [
+      "text_classification",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-is-bag-of-words-how-we-can-use-it-for-text-classificati_777a522ba7b4",
+    "title": "What is bag of words? How we can use it for text classification? ‍",
+    "difficulty": "medium",
+    "description": "What is bag of words? How we can use it for text classification? ‍",
+    "tags": [
+      "text_classification",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-are-the-advantages-and-disadvantages-of-bag-of-words_2689fbd5c928",
+    "title": "What are the advantages and disadvantages of bag of words? ‍",
+    "difficulty": "medium",
+    "description": "What are the advantages and disadvantages of bag of words? ‍",
+    "tags": [
+      "text_classification",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-are-n-grams-how-can-we-use-them_98c89aa752da",
+    "title": "What are N-grams? How can we use them? ‍",
+    "difficulty": "medium",
+    "description": "What are N-grams? How can we use them? ‍",
+    "tags": [
+      "text_classification",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_how-large-should-be-n-for-our-bag-of-words-when-using-n-gram_aa8bcac89e9b",
+    "title": "How large should be N for our bag of words when using N-grams? ‍",
+    "difficulty": "medium",
+    "description": "How large should be N for our bag of words when using N-grams? ‍",
+    "tags": [
+      "text_classification",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-is-tf-idf-how-is-it-useful-for-text-classification_1a7aa05a5acf",
+    "title": "What is TF-IDF? How is it useful for text classification? ‍",
+    "difficulty": "medium",
+    "description": "What is TF-IDF? How is it useful for text classification? ‍",
+    "tags": [
+      "text_classification",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_which-model-would-you-use-for-text-classification-with-bag-o_16b9930e9df2",
+    "title": "Which model would you use for text classification with bag of words features? ‍",
+    "difficulty": "medium",
+    "description": "Which model would you use for text classification with bag of words features? ‍",
+    "tags": [
+      "text_classification",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_would-you-prefer-gradient-boosting-trees-model-or-logistic-r_8049b2c25505",
+    "title": "Would you prefer gradient boosting trees model or logistic regression when doing text classification with bag of words? ‍",
+    "difficulty": "medium",
+    "description": "Would you prefer gradient boosting trees model or logistic regression when doing text classification with bag of words? ‍",
+    "tags": [
+      "text_classification",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-are-word-embeddings-why-are-they-useful-do-you-know-wor_9a9121065254",
+    "title": "What are word embeddings? Why are they useful? Do you know Word2Vec? ‍",
+    "difficulty": "medium",
+    "description": "What are word embeddings? Why are they useful? Do you know Word2Vec? ‍",
+    "tags": [
+      "text_classification",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_do-you-know-any-other-ways-to-get-word-embeddings_bab205a2d602",
+    "title": "Do you know any other ways to get word embeddings?",
+    "difficulty": "hard",
+    "description": "Do you know any other ways to get word embeddings?",
+    "tags": [
+      "text_classification",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_if-you-have-a-sentence-with-multiple-words-you-may-need-to-c_88ddc367cdbb",
+    "title": "If you have a sentence with multiple words, you may need to combine multiple word embeddings into one. How would you do it? ‍",
+    "difficulty": "medium",
+    "description": "If you have a sentence with multiple words, you may need to combine multiple word embeddings into one. How would you do it? ‍",
+    "tags": [
+      "text_classification",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_would-you-prefer-gradient-boosting-trees-model-or-logistic-r_7b521df5ddcb",
+    "title": "Would you prefer gradient boosting trees model or logistic regression when doing text classification with embeddings? ‍",
+    "difficulty": "medium",
+    "description": "Would you prefer gradient boosting trees model or logistic regression when doing text classification with embeddings? ‍",
+    "tags": [
+      "text_classification",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_how-can-you-use-neural-nets-for-text-classification_af9cf0cdb368",
+    "title": "How can you use neural nets for text classification?",
+    "difficulty": "hard",
+    "description": "How can you use neural nets for text classification?",
+    "tags": [
+      "text_classification",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_how-can-we-use-cnn-for-text-classification_ab3c12a3d406",
+    "title": "How can we use CNN for text classification?",
+    "difficulty": "hard",
+    "description": "How can we use CNN for text classification?",
+    "tags": [
+      "text_classification",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-is-unsupervised-learning_861c6a01c331",
+    "title": "What is unsupervised learning?",
+    "difficulty": "easy",
+    "description": "What is unsupervised learning?",
+    "tags": [
+      "clustering",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-is-clustering-when-do-we-need-it_24dafbb4a4db",
+    "title": "What is clustering? When do we need it?",
+    "difficulty": "easy",
+    "description": "What is clustering? When do we need it?",
+    "tags": [
+      "clustering",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_do-you-know-how-k-means-works_e1c25bbd01d3",
+    "title": "Do you know how K-means works? ‍",
+    "difficulty": "medium",
+    "description": "Do you know how K-means works? ‍",
+    "tags": [
+      "clustering",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_how-to-select-k-for-k-means_f382405d74a2",
+    "title": "How to select K for K-means? ‍",
+    "difficulty": "medium",
+    "description": "How to select K for K-means? ‍",
+    "tags": [
+      "clustering",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-are-the-other-clustering-algorithms-do-you-know_d2d8e9569294",
+    "title": "What are the other clustering algorithms do you know? ‍",
+    "difficulty": "medium",
+    "description": "What are the other clustering algorithms do you know? ‍",
+    "tags": [
+      "clustering",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_do-you-know-how-dbscan-works_08dfb936a976",
+    "title": "Do you know how DBScan works? ‍",
+    "difficulty": "medium",
+    "description": "Do you know how DBScan works? ‍",
+    "tags": [
+      "clustering",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_when-would-you-choose-k-means-and-when-dbscan_89baaf0a2fe3",
+    "title": "When would you choose K-means and when DBScan? ‍",
+    "difficulty": "medium",
+    "description": "When would you choose K-means and when DBScan? ‍",
+    "tags": [
+      "clustering",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-is-the-curse-of-dimensionality-why-do-we-care-about-it_88e94b32cecc",
+    "title": "What is the curse of dimensionality? Why do we care about it? ‍",
+    "difficulty": "medium",
+    "description": "What is the curse of dimensionality? Why do we care about it? ‍",
+    "tags": [
+      "dimensionality_reduction",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_do-you-know-any-dimensionality-reduction-techniques_db54dbdebc11",
+    "title": "Do you know any dimensionality reduction techniques? ‍",
+    "difficulty": "medium",
+    "description": "Do you know any dimensionality reduction techniques? ‍",
+    "tags": [
+      "dimensionality_reduction",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-s-singular-value-decomposition-how-is-it-typically-used_b125891dfb0a",
+    "title": "What’s singular value decomposition? How is it typically used for machine learning? ‍",
+    "difficulty": "medium",
+    "description": "What’s singular value decomposition? How is it typically used for machine learning? ‍",
+    "tags": [
+      "dimensionality_reduction",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-is-the-ranking-problem-which-models-can-you-use-to-solv_05ca562ff89a",
+    "title": "What is the ranking problem? Which models can you use to solve them? ‍",
+    "difficulty": "medium",
+    "description": "What is the ranking problem? Which models can you use to solve them? ‍",
+    "tags": [
+      "ranking_and search",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-are-good-unsupervised-baselines-for-text-information-re_218d219e2871",
+    "title": "What are good unsupervised baselines for text information retrieval? ‍",
+    "difficulty": "medium",
+    "description": "What are good unsupervised baselines for text information retrieval? ‍",
+    "tags": [
+      "ranking_and search",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_how-would-you-evaluate-your-ranking-algorithms-which-offline_033fcb7c8ae2",
+    "title": "How would you evaluate your ranking algorithms? Which offline metrics would you use? ‍",
+    "difficulty": "medium",
+    "description": "How would you evaluate your ranking algorithms? Which offline metrics would you use? ‍",
+    "tags": [
+      "ranking_and search",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-is-precision-and-recall-at-k_71d076bf5dfb",
+    "title": "What is precision and recall at k? ‍",
+    "difficulty": "medium",
+    "description": "What is precision and recall at k? ‍",
+    "tags": [
+      "ranking_and search",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-is-mean-average-precision-at-k_6beb89a2b328",
+    "title": "What is mean average precision at k? ‍",
+    "difficulty": "medium",
+    "description": "What is mean average precision at k? ‍",
+    "tags": [
+      "ranking_and search",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_how-can-we-use-machine-learning-for-search_41bc15ed6bcb",
+    "title": "How can we use machine learning for search? ‍",
+    "difficulty": "medium",
+    "description": "How can we use machine learning for search? ‍",
+    "tags": [
+      "ranking_and search",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_how-can-we-get-training-data-for-our-ranking-algorithms_f4475b4fb36d",
+    "title": "How can we get training data for our ranking algorithms? ‍",
+    "difficulty": "medium",
+    "description": "How can we get training data for our ranking algorithms? ‍",
+    "tags": [
+      "ranking_and search",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_can-we-formulate-the-search-problem-as-a-classification-prob_4a425dd23488",
+    "title": "Can we formulate the search problem as a classification problem? How? ‍",
+    "difficulty": "medium",
+    "description": "Can we formulate the search problem as a classification problem? How? ‍",
+    "tags": [
+      "ranking_and search",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_how-can-we-use-clicks-data-as-the-training-data-for-ranking-_2d7a5f404129",
+    "title": "How can we use clicks data as the training data for ranking algorithms?",
+    "difficulty": "hard",
+    "description": "How can we use clicks data as the training data for ranking algorithms?",
+    "tags": [
+      "ranking_and search",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_do-you-know-how-to-use-gradient-boosting-trees-for-ranking_c015615d5636",
+    "title": "Do you know how to use gradient boosting trees for ranking?",
+    "difficulty": "hard",
+    "description": "Do you know how to use gradient boosting trees for ranking?",
+    "tags": [
+      "ranking_and search",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_how-do-you-do-an-online-evaluation-of-a-new-ranking-algorith_bed87e7cbcb3",
+    "title": "How do you do an online evaluation of a new ranking algorithm? ‍",
+    "difficulty": "medium",
+    "description": "How do you do an online evaluation of a new ranking algorithm? ‍",
+    "tags": [
+      "ranking_and search",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-is-a-recommender-system_b5898d6e0675",
+    "title": "What is a recommender system?",
+    "difficulty": "easy",
+    "description": "What is a recommender system?",
+    "tags": [
+      "recommender_systems",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-are-good-baselines-when-building-a-recommender-system_9f0e761e6455",
+    "title": "What are good baselines when building a recommender system? ‍",
+    "difficulty": "medium",
+    "description": "What are good baselines when building a recommender system? ‍",
+    "tags": [
+      "recommender_systems",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-is-collaborative-filtering_91527be70f59",
+    "title": "What is collaborative filtering? ‍",
+    "difficulty": "medium",
+    "description": "What is collaborative filtering? ‍",
+    "tags": [
+      "recommender_systems",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_how-we-can-incorporate-implicit-feedback-clicks-etc-into-our_84f71af7a4f2",
+    "title": "How we can incorporate implicit feedback (clicks, etc) into our recommender systems? ‍",
+    "difficulty": "medium",
+    "description": "How we can incorporate implicit feedback (clicks, etc) into our recommender systems? ‍",
+    "tags": [
+      "recommender_systems",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-is-the-cold-start-problem_0b2fcf0270d1",
+    "title": "What is the cold start problem? ‍",
+    "difficulty": "medium",
+    "description": "What is the cold start problem? ‍",
+    "tags": [
+      "recommender_systems",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_possible-approaches-to-solving-the-cold-start-problem_2cb4046ff338",
+    "title": "Possible approaches to solving the cold start problem? ‍",
+    "difficulty": "hard",
+    "description": "Possible approaches to solving the cold start problem? ‍",
+    "tags": [
+      "recommender_systems",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-is-a-time-series_e9eeeaec7b21",
+    "title": "What is a time series?",
+    "difficulty": "easy",
+    "description": "What is a time series?",
+    "tags": [
+      "time_series",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_how-is-time-series-different-from-the-usual-regression-probl_7422984cfae7",
+    "title": "How is time series different from the usual regression problem?",
+    "difficulty": "easy",
+    "description": "How is time series different from the usual regression problem?",
+    "tags": [
+      "time_series",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_which-models-do-you-know-for-solving-time-series-problems_54f745cf94de",
+    "title": "Which models do you know for solving time series problems? ‍",
+    "difficulty": "medium",
+    "description": "Which models do you know for solving time series problems? ‍",
+    "tags": [
+      "time_series",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_if-there-s-a-trend-in-our-series-how-we-can-remove-it-and-wh_e07c26083ccf",
+    "title": "If there’s a trend in our series, how we can remove it? And why would we want to do it? ‍",
+    "difficulty": "medium",
+    "description": "If there’s a trend in our series, how we can remove it? And why would we want to do it? ‍",
+    "tags": [
+      "time_series",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_you-have-a-series-with-only-one-variable-y-measured-at-time-_a91ca9bbb061",
+    "title": "You have a series with only one variable “y” measured at time t. How do predict “y” at time t+1? Which approaches would you use? ‍",
+    "difficulty": "medium",
+    "description": "You have a series with only one variable “y” measured at time t. How do predict “y” at time t+1? Which approaches would you use? ‍",
+    "tags": [
+      "time_series",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_you-have-a-series-with-a-variable-y-and-a-set-of-features-ho_de5aa2f930af",
+    "title": "You have a series with a variable “y” and a set of features. How do you predict “y” at t+1? Which approaches would you use? ‍",
+    "difficulty": "medium",
+    "description": "You have a series with a variable “y” and a set of features. How do you predict “y” at t+1? Which approaches would you use? ‍",
+    "tags": [
+      "time_series",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_data-science-interviews-theory_what-are-the-problems-with-using-trees-for-solving-time-seri_73f557c451a3",
+    "title": "What are the problems with using trees for solving time series problems? ‍",
+    "difficulty": "medium",
+    "description": "What are the problems with using trees for solving time series problems? ‍",
+    "tags": [
+      "time_series",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "data_science_interviews_theory",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/theory.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_theory"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_what-is-the-normal-distribution-and-its-functions_d3f83e11c522",
+    "title": "What is the normal distribution and its functions?",
+    "difficulty": "medium",
+    "description": "What is the normal distribution and its functions?",
+    "tags": [
+      "basic_stats_questions",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_what-is-the-variance_681962f08bac",
+    "title": "What is the variance?",
+    "difficulty": "medium",
+    "description": "What is the variance?",
+    "tags": [
+      "basic_stats_questions",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_what-is-stddev_9e2b41115463",
+    "title": "What is stddev?",
+    "difficulty": "medium",
+    "description": "What is stddev?",
+    "tags": [
+      "basic_stats_questions",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_what-is-exponential-distribution_38211c5e204a",
+    "title": "What is exponential distribution?",
+    "difficulty": "medium",
+    "description": "What is exponential distribution?",
+    "tags": [
+      "basic_stats_questions",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_what-is-the-binomial-distribution_7668c90515d7",
+    "title": "What is the binomial distribution?",
+    "difficulty": "medium",
+    "description": "What is the binomial distribution?",
+    "tags": [
+      "basic_stats_questions",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_what-is-bernoulli-distribution_c0df148103c0",
+    "title": "What is Bernoulli distribution?",
+    "difficulty": "medium",
+    "description": "What is Bernoulli distribution?",
+    "tags": [
+      "basic_stats_questions",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_what-is-the-multinomial-distribution_61e983df568e",
+    "title": "What is the multinomial distribution?",
+    "difficulty": "medium",
+    "description": "What is the multinomial distribution?",
+    "tags": [
+      "basic_stats_questions",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_what-is-the-lognormal-distribution_0cbbae6f56ee",
+    "title": "What is the lognormal distribution?",
+    "difficulty": "medium",
+    "description": "What is the lognormal distribution?",
+    "tags": [
+      "basic_stats_questions",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_what-is-logistic-distribution_f798bf2eea13",
+    "title": "What is logistic distribution?",
+    "difficulty": "medium",
+    "description": "What is logistic distribution?",
+    "tags": [
+      "basic_stats_questions",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_p-value-and-test-hypothesis_ddcdee4c3a39",
+    "title": "P value and test hypothesis.",
+    "difficulty": "medium",
+    "description": "P value and test hypothesis.",
+    "tags": [
+      "basic_stats_questions",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_bias-coin-unbiased-coin-posterior-probability-observe-the-he_ad8c9f99393f",
+    "title": "Bias coin, unbiased coin posterior probability. Observe the head, what is the likelihood of",
+    "difficulty": "medium",
+    "description": "Bias coin, unbiased coin posterior probability. Observe the head, what is the likelihood of",
+    "tags": [
+      "basic_stats_questions",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_what-is-hypothesis-testing-chi-squared-test-determine-if-any_ef4fd0beaca4",
+    "title": "What is hypothesis testing? chi-squared test: determine if any statistically significant",
+    "difficulty": "medium",
+    "description": "What is hypothesis testing? chi-squared test: determine if any statistically significant",
+    "tags": [
+      "basic_stats_questions",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_what-is-the-gamma-distribution-and-its-functions_153478f22b33",
+    "title": "What is the gamma distribution and its functions?",
+    "difficulty": "medium",
+    "description": "What is the gamma distribution and its functions?",
+    "tags": [
+      "basic_stats_questions",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_poisson-distribution-and-its-function_320c9509d282",
+    "title": "Poisson distribution and its function.",
+    "difficulty": "medium",
+    "description": "Poisson distribution and its function.",
+    "tags": [
+      "basic_stats_questions",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_what-is-the-central-limit-theorem-and-why-is-it-important_a73a7cd199c9",
+    "title": "What is the Central Limit Theorem and why is it important?",
+    "difficulty": "medium",
+    "description": "What is the Central Limit Theorem and why is it important?",
+    "tags": [
+      "basic_stats_questions",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_what-is-sampling-how-many-sampling-methods-do-you-know_62a77b66710c",
+    "title": "What is sampling? How many sampling methods do you know?",
+    "difficulty": "medium",
+    "description": "What is sampling? How many sampling methods do you know?",
+    "tags": [
+      "basic_stats_questions",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_basic-bayes-theorem-p-a-b-p-b-a-p-a-p-b-conditional-prob-and_c15022f72b0f",
+    "title": "Basic Bayes Theorem. P(A|B) = P(B|A) * P(A) / P(B). Conditional prob and marginal prob",
+    "difficulty": "medium",
+    "description": "Basic Bayes Theorem. P(A|B) = P(B|A) * P(A) / P(B). Conditional prob and marginal prob",
+    "tags": [
+      "basic_stats_questions",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_what-is-an-example-of-a-data-set-with-a-non-gaussian-distrib_c3be36de9315",
+    "title": "What is an example of a data set with a non-Gaussian distribution?",
+    "difficulty": "medium",
+    "description": "What is an example of a data set with a non-Gaussian distribution?",
+    "tags": [
+      "basic_stats_questions",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_given-a-generator-of-unbiased-bernoulli-numbers-0-or-1-with-_9c00ad140196",
+    "title": "Given a generator of unbiased Bernoulli numbers (0 or 1 with p=0.5), create a biased Bernoulli trial generator (generate 0 or 1 with the specified 0 < p < 1)",
+    "difficulty": "medium",
+    "description": "Given a generator of unbiased Bernoulli numbers (0 or 1 with p=0.5), create a biased Bernoulli trial generator (generate 0 or 1 with the specified 0 < p < 1)",
+    "tags": [
+      "basic_stats_questions",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_explain-collinearity-how-is-it-possible-to-have-negative-coe_7e7648d2f67d",
+    "title": "Explain collinearity: how is it possible to have negative coefficient in glm?",
+    "difficulty": "medium",
+    "description": "Explain collinearity: how is it possible to have negative coefficient in glm?",
+    "tags": [
+      "machine_learning_fundamentals",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_assumptions-about-linear-regression-3-residual-errors-follow_d61ded74ce62",
+    "title": "Assumptions about linear regression: 3 residual errors follow a normal distribution and",
+    "difficulty": "medium",
+    "description": "Assumptions about linear regression: 3 residual errors follow a normal distribution and",
+    "tags": [
+      "machine_learning_fundamentals",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_explain-the-concept-of-bias-vs-variance_78cee75d701f",
+    "title": "Explain the concept of bias vs variance",
+    "difficulty": "medium",
+    "description": "Explain the concept of bias vs variance",
+    "tags": [
+      "machine_learning_fundamentals",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_assumptions-about-logistic-regression_a2cec67781df",
+    "title": "Assumptions about logistic regression?",
+    "difficulty": "medium",
+    "description": "Assumptions about logistic regression?",
+    "tags": [
+      "machine_learning_fundamentals",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_overfitting-how-to-avoid_ad7ed5a18116",
+    "title": "Overfitting how to avoid",
+    "difficulty": "medium",
+    "description": "Overfitting how to avoid",
+    "tags": [
+      "machine_learning_fundamentals",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_type-of-regularization-which-one-easier-to-use-l1-and-l2-l1-_b2e405c962be",
+    "title": "Type of regularization, which one easier to use: L1 and L2. L1 is easier.",
+    "difficulty": "medium",
+    "description": "Type of regularization, which one easier to use: L1 and L2. L1 is easier.",
+    "tags": [
+      "machine_learning_fundamentals",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_what-are-the-different-metrics-to-classify-the-dataset_f3af4c5b2612",
+    "title": "What are the different metrics to classify the dataset?",
+    "difficulty": "medium",
+    "description": "What are the different metrics to classify the dataset?",
+    "tags": [
+      "machine_learning_fundamentals",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_explain-bagging-vs-boosting_0a9ba47c1977",
+    "title": "explain bagging vs boosting",
+    "difficulty": "medium",
+    "description": "explain bagging vs boosting",
+    "tags": [
+      "machine_learning_fundamentals",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_is-random-forest-bagging-or-boosting_13f928a21b56",
+    "title": "Is random forest bagging or boosting?.",
+    "difficulty": "medium",
+    "description": "Is random forest bagging or boosting?.",
+    "tags": [
+      "machine_learning_fundamentals",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_how-to-handle-unbalanced-data_b50f0eb7899e",
+    "title": "how to handle unbalanced data.",
+    "difficulty": "medium",
+    "description": "how to handle unbalanced data.",
+    "tags": [
+      "machine_learning_fundamentals",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_how-do-you-inspect-missing-data-and-when-are-they-important_8b0415f6ccba",
+    "title": "how do you inspect missing data and when are they important",
+    "difficulty": "medium",
+    "description": "how do you inspect missing data and when are they important",
+    "tags": [
+      "machine_learning_fundamentals",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_how-to-compare-two-regressions_3c5a3d7bcde5",
+    "title": "how to compare two regressions.",
+    "difficulty": "medium",
+    "description": "how to compare two regressions.",
+    "tags": [
+      "machine_learning_fundamentals",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_what-is-k-mean-what-is-kmean-loss-function-what-kind-of-dist_23aa0d29f406",
+    "title": "What is k-mean? What is kmean loss function? what kind of distance metric would you choose, what if different features have a different dynamic range Kmeans is an algorithm to group similar data points into the same groups. The loss function used L2 norm: sum",
+    "difficulty": "medium",
+    "description": "What is k-mean? What is kmean loss function? what kind of distance metric would you choose, what if different features have a different dynamic range Kmeans is an algorithm to group similar data points into the same groups. The loss function used L2 norm: sum",
+    "tags": [
+      "machine_learning_fundamentals",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_general-ml-questions-like-generative-v-s_5dd482d753d0",
+    "title": "general ML questions like generative v.s.",
+    "difficulty": "medium",
+    "description": "general ML questions like generative v.s.",
+    "tags": [
+      "machine_learning_fundamentals",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_what-is-the-difference-between-type-i-vs-type-ii-error_a948641ab939",
+    "title": "What is the difference between type I vs type II error?",
+    "difficulty": "medium",
+    "description": "What is the difference between type I vs type II error?",
+    "tags": [
+      "machine_learning_fundamentals",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_what-is-the-linear-regression-what-do-the-terms-p-value-coef_4a6ff439db6a",
+    "title": "What is the linear regression? What do the terms p-value, coefficient, and r-squared",
+    "difficulty": "medium",
+    "description": "What is the linear regression? What do the terms p-value, coefficient, and r-squared",
+    "tags": [
+      "machine_learning_fundamentals",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_what-is-selection-bias-it-is-the-bias-introduced-by-the-sele_45d2f93e5f98",
+    "title": "What is selection bias? It is the bias introduced by the selection from groups that is not",
+    "difficulty": "medium",
+    "description": "What is selection bias? It is the bias introduced by the selection from groups that is not",
+    "tags": [
+      "machine_learning_fundamentals",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_what-is-regularization-how-does-it-solve-bias-variance-probl_2bc48e83727e",
+    "title": "What is regularization? How does it solve bias, variance problems?",
+    "difficulty": "medium",
+    "description": "What is regularization? How does it solve bias, variance problems?",
+    "tags": [
+      "machine_learning_fundamentals",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_what-is-the-learning-curve-tool_96bd5ad4f883",
+    "title": "What is the learning curve tool?",
+    "difficulty": "medium",
+    "description": "What is the learning curve tool?",
+    "tags": [
+      "machine_learning_fundamentals",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_what-is-the-meaning-of-the-contour-visualization-of-the-cost_930ca230402b",
+    "title": "What is the meaning of the contour visualization of the cost function in linear regression?",
+    "difficulty": "medium",
+    "description": "What is the meaning of the contour visualization of the cost function in linear regression?",
+    "tags": [
+      "machine_learning_fundamentals",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_explain-logistic-regression_5a21dcb9e60f",
+    "title": "Explain logistic regression?",
+    "difficulty": "medium",
+    "description": "Explain logistic regression?",
+    "tags": [
+      "machine_learning_fundamentals",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_how-does-the-optimization-algorithm-work-i-e-to-minimize-the_cf0bd9a6ed32",
+    "title": "How does the optimization algorithm work i.e to minimize the cost function?",
+    "difficulty": "medium",
+    "description": "How does the optimization algorithm work i.e to minimize the cost function?",
+    "tags": [
+      "machine_learning_fundamentals",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_explain-the-decision-tree_9157c947a80e",
+    "title": "Explain the decision tree",
+    "difficulty": "medium",
+    "description": "Explain the decision tree",
+    "tags": [
+      "machine_learning_fundamentals",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_explain-random-forest_fddf5d4f97a0",
+    "title": "explain random forest",
+    "difficulty": "medium",
+    "description": "explain random forest",
+    "tags": [
+      "machine_learning_fundamentals",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_explain-boosting_04ddb5eceeb0",
+    "title": "Explain boosting",
+    "difficulty": "medium",
+    "description": "Explain boosting",
+    "tags": [
+      "machine_learning_fundamentals",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_explain-pca-what-is-physical-intuition_73d7153c65a2",
+    "title": "Explain PCA. What is physical intuition?",
+    "difficulty": "medium",
+    "description": "Explain PCA. What is physical intuition?",
+    "tags": [
+      "machine_learning_fundamentals",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_explain-mlp-kind-of-fully-connected-feedforward-neural-netwo_92d2638f50d5",
+    "title": "Explain MLP: kind of fully connected feedforward neural network that use sigmoid or tanh as activation functions, widely used for classification task similar to logistic regression.",
+    "difficulty": "medium",
+    "description": "Explain MLP: kind of fully connected feedforward neural network that use sigmoid or tanh as activation functions, widely used for classification task similar to logistic regression.",
+    "tags": [
+      "machine_learning_fundamentals",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_what-is-cross-validation-the-purpose-is-to-estimate-how-a-mo_d8b81b3f3730",
+    "title": "what is cross-validation: the purpose is to estimate how a model performs on unseen data by partition data set into many sets and pick a model with higher",
+    "difficulty": "medium",
+    "description": "what is cross-validation: the purpose is to estimate how a model performs on unseen data by partition data set into many sets and pick a model with higher",
+    "tags": [
+      "machine_learning_fundamentals",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_svm-how-to-choose-the-model-and-how-to-determine-if-a-model-_21b4736c6855",
+    "title": "SVM: how to choose the model and how to determine if a model is better than another",
+    "difficulty": "medium",
+    "description": "SVM: how to choose the model and how to determine if a model is better than another",
+    "tags": [
+      "machine_learning_fundamentals",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_explain-how-you-select-the-best-model_ba932cd7c3f8",
+    "title": "Explain how you select the best model?",
+    "difficulty": "medium",
+    "description": "Explain how you select the best model?",
+    "tags": [
+      "machine_learning_fundamentals",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_explain-tpe-hyperparameter-optimization-explain-hyper-optimi_0c1d5572de71",
+    "title": "Explain TPE hyperparameter optimization. explain hyper optimization: BayesOptimization",
+    "difficulty": "medium",
+    "description": "Explain TPE hyperparameter optimization. explain hyper optimization: BayesOptimization",
+    "tags": [
+      "machine_learning_fundamentals",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_pros-and-cons-of-random-forest-and-why-pros-effective-better_626075027bc7",
+    "title": "pros and cons of random forest and why. Pros: effective, better than tree, effective feature importance. Cons: not easy to interpret, prone to out of range input issue, less",
+    "difficulty": "medium",
+    "description": "pros and cons of random forest and why. Pros: effective, better than tree, effective feature importance. Cons: not easy to interpret, prone to out of range input issue, less",
+    "tags": [
+      "machine_learning_fundamentals",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_how-gmm-works-em-algorithm_230372b15947",
+    "title": "How GMM works (EM algorithm)",
+    "difficulty": "medium",
+    "description": "How GMM works (EM algorithm)",
+    "tags": [
+      "machine_learning_fundamentals",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_when-using-the-gaussian-mixture-model-how-do-you-know-it-is-_ab69350fea90",
+    "title": "When using the Gaussian mixture model, how do you know it is applicable?",
+    "difficulty": "medium",
+    "description": "When using the Gaussian mixture model, how do you know it is applicable?",
+    "tags": [
+      "machine_learning_fundamentals",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_describe-some-criteria-for-model-selection-why-is-dimension-_3722f500b2e2",
+    "title": "Describe some criteria for model selection? Why is dimension reduction important?",
+    "difficulty": "medium",
+    "description": "Describe some criteria for model selection? Why is dimension reduction important?",
+    "tags": [
+      "machine_learning_fundamentals",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_how-do-you-choose-the-best-model-among-all-possible-models-e_1ecfcee5bed3",
+    "title": "How do you choose the best model among all possible models? explain neural network assumptions of linear regression models if you have a large number of predictors how do you handle them?",
+    "difficulty": "medium",
+    "description": "How do you choose the best model among all possible models? explain neural network assumptions of linear regression models if you have a large number of predictors how do you handle them?",
+    "tags": [
+      "machine_learning_fundamentals",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_what-is-the-bias-variance-tradeoff-how-is-xgboost-handling-b_00324c45213b",
+    "title": "What is the bias-variance tradeoff? How is XGBoost handling bias-variance tradeoff?",
+    "difficulty": "medium",
+    "description": "What is the bias-variance tradeoff? How is XGBoost handling bias-variance tradeoff?",
+    "tags": [
+      "machine_learning_fundamentals",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_how-do-you-find-an-anomaly-in-a-distribution-how-do-you-inve_921f4b22d81e",
+    "title": "How do you find an anomaly in a distribution? How do you investigate that a certain trend in distribution is due to anomaly?",
+    "difficulty": "medium",
+    "description": "How do you find an anomaly in a distribution? How do you investigate that a certain trend in distribution is due to anomaly?",
+    "tags": [
+      "machine_learning_fundamentals",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_explain-all-standard-activation-functions-tanh-relu-leakyrel_f73e01e51903",
+    "title": "Explain all standard activation functions? tanh, relu, leakyRelu, sigmoid, softmax, softplus",
+    "difficulty": "medium",
+    "description": "Explain all standard activation functions? tanh, relu, leakyRelu, sigmoid, softmax, softplus",
+    "tags": [
+      "deep_learning_fundamentals",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_how-does-a-neural-network-with-one-layer-and-one-input-and-o_dc3e713e37b6",
+    "title": "How does a neural network with one layer and one input and output compare to logistic regression? It’s the same with logistic regression if the NN is using sigmoid function and logistic regression.",
+    "difficulty": "medium",
+    "description": "How does a neural network with one layer and one input and output compare to logistic regression? It’s the same with logistic regression if the NN is using sigmoid function and logistic regression.",
+    "tags": [
+      "deep_learning_fundamentals",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_explain-rnn-problem-how-does-lstm-help-solve-it_8e2be1b02211",
+    "title": "Explain RNN Problem. How does LSTM help solve it?",
+    "difficulty": "medium",
+    "description": "Explain RNN Problem. How does LSTM help solve it?",
+    "tags": [
+      "deep_learning_fundamentals",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_netflix-question-when-you-split-a-population-for-a-b-testing_6e03eb706249",
+    "title": "Netflix question – When you split a population for A/B testing, what are some reasons you could see a significant difference in the control and variant groups?",
+    "difficulty": "medium",
+    "description": "Netflix question – When you split a population for A/B testing, what are some reasons you could see a significant difference in the control and variant groups?",
+    "tags": [
+      "companies_interview_questions:",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_google-question-find-the-width-of-the-confidence-interval_c259ff0c74a3",
+    "title": "Google question – Find the width of the confidence interval",
+    "difficulty": "medium",
+    "description": "Google question – Find the width of the confidence interval",
+    "tags": [
+      "companies_interview_questions:",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_facebook-question-if-you-draw-2-cards-from-a-shuffled-52-car_1ab068739171",
+    "title": "Facebook question – If you draw 2 cards from a shuffled 52 card deck, what is the probability that you’ll have a pair?",
+    "difficulty": "medium",
+    "description": "Facebook question – If you draw 2 cards from a shuffled 52 card deck, what is the probability that you’ll have a pair?",
+    "tags": [
+      "companies_interview_questions:",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_microsoft-question-generate-7-integers-with-equal-probabilit_89f2c5bb01b1",
+    "title": "Microsoft question – Generate 7 integers with equal probability from a function which returns 1/0 with probability p and (1-p).",
+    "difficulty": "medium",
+    "description": "Microsoft question – Generate 7 integers with equal probability from a function which returns 1/0 with probability p and (1-p).",
+    "tags": [
+      "companies_interview_questions:",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_given-an-unfair-coin-with-the-probability-of-heads-not-equal_3cbcac28b942",
+    "title": "Given an unfair coin with the probability of heads not equal to .5, what algorithm could",
+    "difficulty": "medium",
+    "description": "Given an unfair coin with the probability of heads not equal to .5, what algorithm could",
+    "tags": [
+      "companies_interview_questions:",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_groupon-question-you-are-on-a-number-line-and-you-can-jump-t_90097bb63b00",
+    "title": "Groupon question – You are on a number line and you can jump to one of the neighboring points with equal probability, with the exception of n=0 where you can’t go to negative numbers but have to come back to n=1. If you start at n=44, what is the expected number of steps to reach n=4444?",
+    "difficulty": "medium",
+    "description": "Groupon question – You are on a number line and you can jump to one of the neighboring points with equal probability, with the exception of n=0 where you can’t go to negative numbers but have to come back to n=1. If you start at n=44, what is the expected number of steps to reach n=4444?",
+    "tags": [
+      "companies_interview_questions:",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_ca-technologies-question-how-do-you-design-an-algorithm-for-_8460bc04c80f",
+    "title": "CA Technologies question – How do you design an algorithm for fraud detection?",
+    "difficulty": "medium",
+    "description": "CA Technologies question – How do you design an algorithm for fraud detection?",
+    "tags": [
+      "companies_interview_questions:",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_linkedin-question-come-up-with-some-of-the-factors-that-coul_e4640f18d612",
+    "title": "LinkedIn question – Come up with some of the factors that could be used to produce certain algorithms (‘people you may know,’ and an algorithm to discover when a person is starting to search for new job). PYMK: uses many features to calculate a connection probability among two people. Some examples are: companies position overlap (How",
+    "difficulty": "medium",
+    "description": "LinkedIn question – Come up with some of the factors that could be used to produce certain algorithms (‘people you may know,’ and an algorithm to discover when a person is starting to search for new job). PYMK: uses many features to calculate a connection probability among two people. Some examples are: companies position overlap (How",
+    "tags": [
+      "companies_interview_questions:",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_an-important-metric-goes-down-how-would-you-dig-into-the-cau_79cbe05d8c59",
+    "title": "An important metric goes down, how would you dig into the causes?",
+    "difficulty": "medium",
+    "description": "An important metric goes down, how would you dig into the causes?",
+    "tags": [
+      "companies_interview_questions:",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_amazon-question-estimate-the-cumulative-sum-of-the-top-10-mo_c21252a17648",
+    "title": "Amazon question – Estimate the cumulative sum of the top 10 most profitable products",
+    "difficulty": "medium",
+    "description": "Amazon question – Estimate the cumulative sum of the top 10 most profitable products",
+    "tags": [
+      "companies_interview_questions:",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_booking-question-how-can-we-automatically-propose-good-value_68d6d2252880",
+    "title": "Booking question – How can we automatically propose ‘good value deals’ to customers,",
+    "difficulty": "medium",
+    "description": "Booking question – How can we automatically propose ‘good value deals’ to customers,",
+    "tags": [
+      "companies_interview_questions:",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_if-you-have-a-customer-and-want-to-decide-whether-they-will-_163441a6e4f2",
+    "title": "If you have a customer and want to decide whether they will “buy today” or “not buy",
+    "difficulty": "medium",
+    "description": "If you have a customer and want to decide whether they will “buy today” or “not buy",
+    "tags": [
+      "companies_interview_questions:",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_linkedin-question-how-would-you-design-an-a-b-test-for-the-h_0c1007901749",
+    "title": "LinkedIn question – How would you design an A/B test for the homepage?",
+    "difficulty": "medium",
+    "description": "LinkedIn question – How would you design an A/B test for the homepage?",
+    "tags": [
+      "companies_interview_questions:",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_netflix-question-given-a-month-s-worth-of-login-data-from-ne_6e7dcb8d05e4",
+    "title": "Netflix question – Given a month’s worth of login data from Netflix such as account_id,",
+    "difficulty": "medium",
+    "description": "Netflix question – Given a month’s worth of login data from Netflix such as account_id,",
+    "tags": [
+      "companies_interview_questions:",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_booking-question-how-would-you-tag-a-listing-as-value-for-mo_01aa1dd3bd78",
+    "title": "Booking question – How would you tag a listing as value for money? How would you",
+    "difficulty": "medium",
+    "description": "Booking question – How would you tag a listing as value for money? How would you",
+    "tags": [
+      "companies_interview_questions:",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_apple-question-how-do-you-take-millions-of-users-with-100s-o_8a8622db0685",
+    "title": "Apple question – How do you take millions of users with 100s of transactions each,",
+    "difficulty": "medium",
+    "description": "Apple question – How do you take millions of users with 100s of transactions each,",
+    "tags": [
+      "companies_interview_questions:",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_facebook-question-how-many-high-schools-that-people-have-lis_82ed435d253d",
+    "title": "Facebook question – How many high schools that people have listed on their profiles are",
+    "difficulty": "medium",
+    "description": "Facebook question – How many high schools that people have listed on their profiles are",
+    "tags": [
+      "companies_interview_questions:",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_we-have-a-product-that-is-getting-used-differently-by-two-di_6030d56a1835",
+    "title": "We have a product that is getting used differently by two different groups. What is your",
+    "difficulty": "medium",
+    "description": "We have a product that is getting used differently by two different groups. What is your",
+    "tags": [
+      "companies_interview_questions:",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_intuit-question-how-would-you-design-a-ranking-system_bd3e167b2e70",
+    "title": "Intuit question – How would you design a ranking system?",
+    "difficulty": "medium",
+    "description": "Intuit question – How would you design a ranking system?",
+    "tags": [
+      "companies_interview_questions:",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_uber-question-explain-how-network-effects-might-influence-yo_f0ff2b31b3f1",
+    "title": "Uber question – Explain how network effects might influence your choice of how to",
+    "difficulty": "medium",
+    "description": "Uber question – Explain how network effects might influence your choice of how to",
+    "tags": [
+      "companies_interview_questions:",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_linkedin-question-what-product-metrics-do-you-construct-how-_c9a85b4a99e0",
+    "title": "LinkedIn question – What product metrics do you construct? How do you tell if your experiment is successful?",
+    "difficulty": "medium",
+    "description": "LinkedIn question – What product metrics do you construct? How do you tell if your experiment is successful?",
+    "tags": [
+      "companies_interview_questions:",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_what-trends-in-the-data-indicate-that-a-given-market-is-heal_f2cb863b8dd5",
+    "title": "What trends in the data indicate that a given market is healthy? What does price tell you?",
+    "difficulty": "medium",
+    "description": "What trends in the data indicate that a given market is healthy? What does price tell you?",
+    "tags": [
+      "companies_interview_questions:",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_facebook-question-given-a-series-of-tables-write-the-sql-cod_110e63c7f263",
+    "title": "Facebook question – Given a series of tables; write the SQL code you would need to count subpopulations through joins.",
+    "difficulty": "medium",
+    "description": "Facebook question – Given a series of tables; write the SQL code you would need to count subpopulations through joins.",
+    "tags": [
+      "companies_interview_questions:",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_pinterest-question-write-a-sql-query-to-count-the-number-of-_0d71031a35dd",
+    "title": "Pinterest question – Write a SQL query to count the number of unique users per day who logged in from both an iPhone and the web, where iPhone logs and weblogs are in",
+    "difficulty": "medium",
+    "description": "Pinterest question – Write a SQL query to count the number of unique users per day who logged in from both an iPhone and the web, where iPhone logs and weblogs are in",
+    "tags": [
+      "companies_interview_questions:",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_spotify-question-given-a-sample-set-of-tables-write-a-sql-qu_5667166333ec",
+    "title": "Spotify question – Given a sample set of tables, write a SQL query to get a summary metric from those tables.",
+    "difficulty": "medium",
+    "description": "Spotify question – Given a sample set of tables, write a SQL query to get a summary metric from those tables.",
+    "tags": [
+      "companies_interview_questions:",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_twitter-question-how-can-you-illustrate-a-tree-based-system-_e578b1af9ea8",
+    "title": "Twitter question – How can you illustrate a tree-based system with a SQL query?",
+    "difficulty": "medium",
+    "description": "Twitter question – How can you illustrate a tree-based system with a SQL query?",
+    "tags": [
+      "companies_interview_questions:",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_if-you-have-a-table-with-a-billion-rows-how-would-you-add-a-_8ab835d60dee",
+    "title": "If you have a table with a billion rows, how would you add a column inserting data from",
+    "difficulty": "medium",
+    "description": "If you have a table with a billion rows, how would you add a column inserting data from",
+    "tags": [
+      "companies_interview_questions:",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_facebook-question-there-is-a-table-that-tracks-every-time-a-_3983e4e5c7bf",
+    "title": "Facebook question – There is a table that tracks every time a user turns a feature on or off, with columns for user_id, action (“on” or “off), date, and time. How many users turned the feature on today? How many users have ever turned the feature on? In a table that tracks the status of every user every day, how would you add today’s data to it?",
+    "difficulty": "medium",
+    "description": "Facebook question – There is a table that tracks every time a user turns a feature on or off, with columns for user_id, action (“on” or “off), date, and time. How many users turned the feature on today? How many users have ever turned the feature on? In a table that tracks the status of every user every day, how would you add today’s data to it?",
+    "tags": [
+      "companies_interview_questions:",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_check-if-an-integer-is-a-palindrome-do-not-convert-the-integ_74cecbf66aeb",
+    "title": "Check if an integer is a palindrome (do not convert the integer to string)",
+    "difficulty": "medium",
+    "description": "Check if an integer is a palindrome (do not convert the integer to string)",
+    "tags": [
+      "companies_interview_questions:",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_given-2-sorted-arrays-of-integers-code-to-find-a-number-from_744699805c36",
+    "title": "Given 2 sorted arrays of integers, code to find a number from each array such that their",
+    "difficulty": "medium",
+    "description": "Given 2 sorted arrays of integers, code to find a number from each array such that their",
+    "tags": [
+      "companies_interview_questions:",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_amazon-question-write-a-python-function-that-displays-the-fi_e1285a7134cf",
+    "title": "Amazon question – Write a Python function that displays the first n Fibonacci numbers.",
+    "difficulty": "medium",
+    "description": "Amazon question – Write a Python function that displays the first n Fibonacci numbers.",
+    "tags": [
+      "companies_interview_questions:",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_cisco-question-merge-2-sorted-linked-list_a357471c7fa3",
+    "title": "Cisco question – Merge 2 sorted linked list",
+    "difficulty": "medium",
+    "description": "Cisco question – Merge 2 sorted linked list",
+    "tags": [
+      "companies_interview_questions:",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_ebay-question-given-a-function-roll-that-uniformly-returns-a_7a01cab361c2",
+    "title": "eBay question – Given a function roll() that uniformly returns a double between 0 and 1 and an array/list of numbers of length N (no duplicates), create a function shuffle() that returns a permutation of equal probability.",
+    "difficulty": "medium",
+    "description": "eBay question – Given a function roll() that uniformly returns a double between 0 and 1 and an array/list of numbers of length N (no duplicates), create a function shuffle() that returns a permutation of equal probability.",
+    "tags": [
+      "companies_interview_questions:",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_how-would-you-create-design-implement-a-certain-algorithm-fr_93d4950dad26",
+    "title": "How would you create/design/implement a certain algorithm from start to end?",
+    "difficulty": "medium",
+    "description": "How would you create/design/implement a certain algorithm from start to end?",
+    "tags": [
+      "companies_interview_questions:",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_linkedin-question-given-a-random-generator-that-produces-a-n_12f1f6b3ac87",
+    "title": "LinkedIn question – Given a random generator that produces a number 1 to 5 uniformly,",
+    "difficulty": "medium",
+    "description": "LinkedIn question – Given a random generator that produces a number 1 to 5 uniformly,",
+    "tags": [
+      "companies_interview_questions:",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  },
+  {
+    "id": "aiml_ml-interview-questions-list_generate-a-sorted-vector-from-two-sorted-vectors_1cb30b6938d3",
+    "title": "Generate a sorted vector from two sorted vectors.",
+    "difficulty": "medium",
+    "description": "Generate a sorted vector from two sorted vectors.",
+    "tags": [
+      "companies_interview_questions:",
+      "ai_ml_interview"
+    ],
+    "source": "ai_ml_interviews",
+    "source_name": "ml_interview_questions_list",
+    "source_url": "https://raw.githubusercontent.com/khangich/machine-learning-interview/master/questions.md",
+    "type": "ai_ml_question",
+    "topic_family": "ml_engineering"
+  }
+]

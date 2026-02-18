@@ -1,0 +1,46 @@
+{
+  "run_id": "20260218_103436",
+  "timestamp": "2026-02-18T10:34:36.986697",
+  "config": {
+    "k": 5,
+    "num_cases": 4,
+    "experiment": "baseline_retrieval",
+    "collection": "problems",
+    "embedding_model": "all-MiniLM-L6-v2",
+    "reranker": false
+  },
+  "summary": {
+    "run_id": "20260218_103436",
+    "num_cases": 4,
+    "avg_recall": 1.0,
+    "avg_precision": 0.2,
+    "avg_mrr": 0.8333333333333334
+  },
+  "notes": "Baseline vector retrieval",
+  "results": [
+    {
+      "query": "How do I solve two sum in linear time?",
+      "recall": 1.0,
+      "precision": 0.2,
+      "mrr": 0.3333333333333333
+    },
+    {
+      "query": "How can I detect a cycle in a linked list?",
+      "recall": 1.0,
+      "precision": 0.2,
+      "mrr": 1.0
+    },
+    {
+      "query": "Design a tinyurl style URL shortening system",
+      "recall": 1.0,
+      "precision": 0.2,
+      "mrr": 1.0
+    },
+    {
+      "query": "How do I check if an array has duplicates quickly?",
+      "recall": 1.0,
+      "precision": 0.2,
+      "mrr": 1.0
+    }
+  ]
+}
