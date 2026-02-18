@@ -34,6 +34,7 @@ google-generativeai = "^0.8.6"
 pytest = "^7.4.4"
 pytest-asyncio = "^0.23.3"
 pytest-cov = "^4.1.0"
+pre-commit = "^3.8.0"
 
 # Code Quality
 ruff = "^0.1.11"
@@ -58,6 +59,10 @@ start-api = "app.main:start"
 line-length = 100
 target-version = "py310"
 select = ["E", "F", "I", "N", "W", "UP"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
 
 [tool.pytest.ini_options]
 asyncio_mode = "auto"

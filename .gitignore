@@ -37,3 +37,6 @@ build/
 .coverage
 .coverage.*
 htmlcov/
+
+# Local personal learning notes (not committed)
+WALKTHROUGH.md
