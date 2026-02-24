@@ -1,72 +1,200 @@
 # Swali-AI
 
-A production-grade RAG system for technical interview preparation.
+Swali-AI is a Retrieval-Augmented Generation (RAG) interview practice system built to teach coding, system design, and AI/ML concepts with grounded answers, progressive hints, and follow-up questioning.
 
-## Features
+## Why this project exists
 
-- **Smart Q&A** - Get explanations for coding and system design problems
-- **Progressive Hints** - Nudges that guide without giving away the answer
--  **Adaptive Difficulty** - System learns from your performance
--  **Similar Problems** - Find related problems to reinforce learning
-- **Follow-up Questions** - Test your understanding deeper
+Most interview assistants are either:
+- generic LLM chat (ungrounded, inconsistent), or
+- static content libraries (no adaptive reasoning).
 
-## Tech Stack
+Swali-AI combines retrieval + generation so responses are grounded in a curated corpus and still feel like an interactive tutor.
 
-- **Backend**: FastAPI + Python
-- **Frontend**: React + Vite
-- **Vector DB**: ChromaDB
-- **LLM**: Gemini API (Google)
-- **Embeddings**: sentence-transformers
+## What makes it technically credible
 
-## Quick Start
+- Retrieval-first architecture (vector search before generation)
+- Two-stage ranking path (vector recall + optional hybrid reranking)
+- Progressive hint system with controlled depth (`hint_level` 1-3)
+- Follow-up generation grounded on retrieved problem context
+- Repeatable retrieval experiments with logged metrics
+- ADR-backed engineering decisions and architecture docs
+
+## Fast recruiter view (30 seconds)
+
+- Architecture docs: [docs/architecture.md](docs/architecture.md)
+- Key design decision: [docs/decisions/001-embedding-model-selection.md](docs/decisions/001-embedding-model-selection.md)
+- Retrieval experiment log: [experiments.md](experiments.md)
+- Data schema: [data/schema.md](data/schema.md)
+- Security posture: [security.md](security.md)
+
+## Architecture at a glance
+
+```mermaid
+flowchart TD
+	User[User] --> Frontend[Frontend\nReact + Vite]
+	Frontend --> API[FastAPI Backend]
+	API --> Chat[/api/chat + /api/chat/hint + /api/chat/followup]
+	API --> Search[/api/search]
+
+	Chat --> Generator[RAG Generator]
+	Generator --> VS[Vector Store]
+	Generator --> Prompts[Prompt Registry]
+	Generator --> LLM[LLM Service]
+	LLM --> Gemini[Gemini API]
+
+	VS --> Embeddings[Embedding Service]
+	VS --> Chroma[(ChromaDB)]
+	Generator --> Reranker[Hybrid Reranker]
+	Reranker --> VS
+
+	Raw[(Raw Data)] --> Pipeline[Ingestion + Normalize + Deduplicate]
+	Pipeline --> Chroma
+```
+
+For detailed sequence diagrams, see [docs/architecture.md](docs/architecture.md).
+
+## System capabilities
+
+- **Answer Mode**: grounded answers with source citations
+- **Hint Mode**: level-based coaching (nudge → technique → walkthrough)
+- **Follow-up Mode**: deeper interview-style probing from your approach
+- **Search Mode**: direct semantic retrieval inspection
+
+## Engineering decisions (and why)
+
+- **Default embedding model: `all-MiniLM-L6-v2`**
+	- chosen for fast local iteration and strong baseline quality
+	- documented in ADR: [docs/decisions/001-embedding-model-selection.md](docs/decisions/001-embedding-model-selection.md)
+
+- **RAG orchestration separated from routers**
+	- `routers/*` handle HTTP concerns
+	- `rag/generator.py` owns retrieval + prompt + generation flow
+
+- **Data pipeline modularized**
+	- ingestion, normalization, and dedup are split for maintainability and reproducibility
+
+## Evaluation and experiment results
+
+Experiment runner:
 
 ```bash
-# Backend
-cd backend
-poetry install
-poetry run uvicorn main:app --reload
+poetry run python scripts/run_retrieval_experiments.py
+```
 
-# Build the vector DB (required for search and follow-ups)
-cd ..
+Most recent logged summary (2026-02-18):
+
+| Experiment | Avg Recall | Avg Precision | Avg MRR |
+|---|---:|---:|---:|
+| Baseline retrieval | 1.0000 | 0.2000 | 0.8333 |
+| Hybrid reranked retrieval | 1.0000 | 0.2000 | 0.8333 |
+| Embedding A (`all-MiniLM-L6-v2`) | 1.0000 | 0.2000 | 0.8333 |
+| Embedding B (`all-MiniLM-L12-v2`) | 1.0000 | 0.2000 | 0.8750 |
+
+Takeaway: `all-MiniLM-L12-v2` outperformed the default on this small benchmark set, but default remains `L6` for speed/cost balance pending a larger benchmark.
+
+See full analysis and next steps in [experiments.md](experiments.md).
+
+## Quick start
+
+### 1) Install dependencies
+
+```bash
+poetry install --with dev
+cd frontend && npm install && cd ..
+```
+
+### 2) Build/refresh corpus and vector index
+
+```bash
 poetry run python scripts/collect_ai_ml.py
 poetry run python scripts/process_data.py
+```
 
-# Frontend
+### 3) Run backend
+
+```bash
+cd backend
+poetry run uvicorn main:app --reload
+```
+
+### 4) Run frontend
+
+```bash
 cd frontend
-npm install
 npm run dev
 ```
 
-If your backend runs on a different host/port, set:
+If backend is not on localhost:8000:
 
 ```bash
 VITE_API_BASE_URL="http://localhost:8000" npm run dev
 ```
 
-## Project Structure
+## Makefile shortcuts
 
+```bash
+make help
+make test
+make run-backend
+make run-frontend
+make process-data
+make experiments
 ```
-swali-ai/
-├── backend/           # FastAPI backend
-│   ├── rag/          # RAG engine components
-│   ├── services/     # Business logic
-│   └── models/       # Data models
-├── frontend/         # React frontend
-├── data/             # Problem corpus
-│   ├── raw/          # Scraped/collected data
-│   └── processed/    # Chunked & embedded
-└── scripts/          # Data collection scripts
+
+## API examples
+
+### Chat answer
+
+```bash
+curl -X POST http://localhost:8000/api/chat \
+	-H "Content-Type: application/json" \
+	-d '{"message":"How do I solve Two Sum in O(n)?"}'
 ```
+
+### Hint
+
+```bash
+curl -X POST http://localhost:8000/api/chat/hint \
+	-H "Content-Type: application/json" \
+	-d '{"problem_title":"Two Sum","hint_level":2,"student_attempt":"Tried nested loops"}'
+```
+
+### Follow-up
+
+```bash
+curl -X POST http://localhost:8000/api/chat/followup \
+	-H "Content-Type: application/json" \
+	-d '{"problem_title":"Two Sum","solution_approach":"Used a hash map to track complements"}'
+```
+
+## Repository map
+
+```text
+backend/app/
+	config.py              # central settings
+	routers/               # API layer
+	rag/                   # embeddings, vectorstore, reranker, generator, llm
+	prompts/               # prompt registry/templates
+
+scripts/
+	data_pipeline/         # ingestion/normalize/deduplicate
+	process_data.py        # index build
+	run_retrieval_experiments.py
+
+docs/
+	architecture.md
+	decisions/
+```
+
+## Testing and CI
+
+- Local: `poetry run pytest`
+- CI workflow: [.github/workflows/tests.yml](.github/workflows/tests.yml)
+
+## Contributing
+
+See [contributing.md](contributing.md) for setup, workflow, and PR checklist.
 
 ## License
 
 MIT
-
-## Experiments
-
-Run retrieval experiments (baseline, reranked, embedding A/B):
-
-```bash
-cd /Users/tatyanaamugo/swali-ai
-poetry run python scripts/run_retrieval_experiments.py
-```
