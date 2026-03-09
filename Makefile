@@ -1,4 +1,4 @@
-.PHONY: help install backend frontend test lint format pre-commit run-backend run-frontend process-data collect-ai-ml experiments
+.PHONY: help install backend frontend test lint format pre-commit run-backend run-frontend process-data collect-ai-ml collect-leetcode collect-external experiments
 
 help:
 	@echo "Common commands:"
@@ -10,6 +10,8 @@ help:
 	@echo "  make run-frontend     - Start Vite frontend"
 	@echo "  make process-data     - Build vector data"
 	@echo "  make collect-ai-ml    - Collect AI/ML dataset"
+	@echo "  make collect-leetcode - Collect additional LeetCode problems"
+	@echo "  make collect-external - Collect external corpus resources"
 	@echo "  make experiments      - Run retrieval experiments"
 	@echo "  make pre-commit       - Run pre-commit on all files"
 
@@ -40,6 +42,12 @@ process-data:
 
 collect-ai-ml:
 	poetry run python scripts/collect_ai_ml.py
+
+collect-leetcode:
+	poetry run python -c "from scripts.collect_leetcode import LeetCodeCollector; LeetCodeCollector().collect_problems(num_problems=80, delay=0.35)"
+
+collect-external:
+	poetry run python scripts/collect_external_corpus.py
 
 experiments:
 	poetry run python scripts/run_retrieval_experiments.py

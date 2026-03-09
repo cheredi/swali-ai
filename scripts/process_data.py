@@ -27,12 +27,18 @@ import sys
 from pathlib import Path
 from typing import Optional
 
-# Add backend to path for imports
-sys.path.insert(0, str(Path(__file__).parent.parent / "backend"))
+REPO_ROOT = Path(__file__).parent.parent
+
+# Add repo root and backend to path for imports
+sys.path.insert(0, str(REPO_ROOT))
+sys.path.insert(0, str(REPO_ROOT / "backend"))
 
 from app.rag.embeddings import EmbeddingService
 from app.rag.vectorstore import VectorStore
 from app.models.schemas import Problem, Difficulty, ProblemCategory
+from app.storage import get_store
+from scripts.collect_external_corpus import collect_external_corpus
+from scripts.data_pipeline.chunking import split_semantic_code_aware
 
 
 class DataProcessor:
@@ -60,11 +66,103 @@ class DataProcessor:
         # Track what we process
         self.stats = {
             "neetcode_problems": 0,
+            "leetcode_problems": 0,
             "system_design_topics": 0,
             "system_design_questions": 0,
             "ai_ml_questions": 0,
+            "external_resources": 0,
+            "approved_submissions": 0,
             "total_embedded": 0,
+            "total_chunks": 0,
         }
+
+    def _add_chunked_document(
+        self,
+        base_id: str,
+        base_text: str,
+        base_metadata: dict,
+        documents: list[str],
+        metadatas: list[dict],
+        ids: list[str],
+    ) -> None:
+        chunks = split_semantic_code_aware(
+            base_text,
+            chunk_size=900,
+            overlap=120,
+        )
+        if not chunks:
+            return
+        for chunk_index, chunk in enumerate(chunks):
+            chunk_id = f"{base_id}_chunk_{chunk_index}"
+            metadata = {
+                **base_metadata,
+                "chunk_index": chunk_index,
+                "chunk_count": len(chunks),
+            }
+            documents.append(chunk)
+            metadatas.append(metadata)
+            ids.append(chunk_id)
+            self.stats["total_chunks"] += 1
+
+    def process_leetcode(self) -> int:
+        """
+        Process optional LeetCode corpus from data/raw/leetcode/all_problems.json.
+
+        LEARNING NOTE: Coverage expansion
+        --------------------------------
+        NeetCode is curated and high-quality, but limited in breadth.
+        Adding LeetCode records increases variety for retrieval and practice sets.
+        """
+        leetcode_file = self.data_dir / "leetcode" / "all_problems.json"
+
+        if not leetcode_file.exists():
+            print(f"LeetCode dataset not found at {leetcode_file}")
+            print("Run: poetry run python scripts/collect_leetcode.py")
+            return 0
+
+        print("Loading LeetCode data...")
+        with open(leetcode_file, encoding="utf-8") as file:
+            data = json.load(file)
+
+        documents: list[str] = []
+        metadatas: list[dict] = []
+        ids: list[str] = []
+
+        for item in data:
+            title = item.get("title", "")
+            difficulty = item.get("difficulty", "medium")
+            description = item.get("description", "")
+            tags = item.get("tags", [])
+            examples = item.get("examples", [])
+
+            embed_text = "\n".join(
+                [
+                    f"Problem: {title}",
+                    f"Difficulty: {difficulty}",
+                    f"Tags: {', '.join(tags[:8])}",
+                    f"Description: {description[:900]}",
+                    f"Examples: {' | '.join(examples[:2])}",
+                ]
+            )
+
+            item_id = item.get("id") or f"lc_{len(ids)}"
+            metadata = {
+                "title": title,
+                "difficulty": difficulty,
+                "source": item.get("source", "leetcode"),
+                "source_url": item.get("source_url"),
+                "type": "coding_problem",
+                "tags": ",".join(tags),
+            }
+
+            self._add_chunked_document(item_id, embed_text, metadata, documents, metadatas, ids)
+
+        if documents:
+            print(f"Generating embeddings for {len(documents)} LeetCode problems...")
+            self.vector_store.add_documents(documents, metadatas, ids)
+            self.stats["leetcode_problems"] = len(documents)
+
+        return len(documents)
     
     def process_neetcode(self) -> int:
         """
@@ -124,9 +222,8 @@ class DataProcessor:
                     "type": "coding_problem"
                 }
                 
-                documents.append(embed_text)
-                metadatas.append(metadata)
-                ids.append(problem_id)
+                metadata["topic"] = pattern_key
+                self._add_chunked_document(problem_id, embed_text, metadata, documents, metadatas, ids)
         
         if documents:
             print(f"Generating embeddings for {len(documents)} NeetCode problems...")
@@ -220,9 +317,8 @@ class DataProcessor:
                 "topic": topic_key
             }
             
-            documents.append(concepts_text)
-            metadatas.append(metadata)
-            ids.append(topic_id)
+            metadata["topic"] = topic_key
+            self._add_chunked_document(topic_id, concepts_text, metadata, documents, metadatas, ids)
             self.stats["system_design_topics"] += 1
         
         # Process questions (design problems)
@@ -238,9 +334,8 @@ class DataProcessor:
                 "key_components": ",".join(question.get("key_components", []))
             }
             
-            documents.append(question_text)
-            metadatas.append(metadata)
-            ids.append(question_id)
+            metadata["topic"] = "system_design"
+            self._add_chunked_document(question_id, question_text, metadata, documents, metadatas, ids)
             self.stats["system_design_questions"] += 1
         
         if documents:
@@ -306,14 +401,155 @@ class DataProcessor:
                 "tags": ",".join(tags),
             }
 
-            documents.append(embed_text)
-            metadatas.append(metadata)
-            ids.append(item_id)
+            metadata["topic"] = topic_family
+            self._add_chunked_document(item_id, embed_text, metadata, documents, metadatas, ids)
 
         if documents:
             print(f"Generating embeddings for {len(documents)} AI/ML interview questions...")
             self.vector_store.add_documents(documents, metadatas, ids)
             self.stats["ai_ml_questions"] = len(documents)
+
+        return len(documents)
+
+    def process_external_corpus(self) -> int:
+        """Process external resources collected from configured sources."""
+        external_file = self.data_dir.parent / "external" / "external_corpus.json"
+
+        if not external_file.exists():
+            print("Collecting external resources...")
+            records = collect_external_corpus()
+            external_file.parent.mkdir(parents=True, exist_ok=True)
+            external_file.write_text(json.dumps(records, indent=2), encoding="utf-8")
+
+        print("Loading external corpus data...")
+        with open(external_file, encoding="utf-8") as file:
+            data = json.load(file)
+
+        documents: list[str] = []
+        metadatas: list[dict] = []
+        ids: list[str] = []
+
+        for item in data:
+            title = item.get("title", "External resource")
+            description = item.get("description", "")
+            if not description:
+                continue
+
+            difficulty = item.get("difficulty", "mixed")
+            topic = item.get("topic") or item.get("topic_family") or "interview_prep"
+            tags = item.get("tags", [])
+            if isinstance(tags, str):
+                tags = [tag.strip() for tag in tags.split(",") if tag.strip()]
+
+            embed_text = "\n".join(
+                [
+                    f"External Resource: {title}",
+                    f"Topic: {topic}",
+                    f"Difficulty: {difficulty}",
+                    f"Tags: {', '.join(tags[:10])}",
+                    f"Content: {description}",
+                ]
+            )
+
+            item_id = item.get("id") or f"ext_{len(ids)}"
+            metadata = {
+                "title": title,
+                "difficulty": difficulty,
+                "source": item.get("source", "external_resource"),
+                "source_name": item.get("source_name"),
+                "source_url": item.get("source_url"),
+                "type": item.get("type", "reference"),
+                "topic": topic,
+                "topic_family": topic,
+                "tags": ",".join(tags),
+            }
+            if item.get("company"):
+                metadata["company"] = item.get("company")
+
+            self._add_chunked_document(item_id, embed_text, metadata, documents, metadatas, ids)
+
+        if documents:
+            print(f"Generating embeddings for {len(documents)} external resource chunks...")
+            self.vector_store.add_documents(documents, metadatas, ids)
+            self.stats["external_resources"] = len(documents)
+
+        return len(documents)
+
+    def process_approved_submissions(self) -> int:
+        """Process approved user-contributed submissions into the corpus."""
+        print("Loading approved user submissions...")
+        store = get_store()
+        submissions = store.list_submissions(status="approved")
+
+        documents: list[str] = []
+        metadatas: list[dict] = []
+        ids: list[str] = []
+
+        for submission in submissions:
+            title = submission.get("title", "User submission")
+            content = submission.get("content", "")
+            if not content:
+                continue
+
+            metadata_json = submission.get("metadata_json") or "{}"
+            try:
+                submission_meta = json.loads(metadata_json)
+            except Exception:
+                submission_meta = {}
+
+            if not isinstance(submission_meta, dict):
+                submission_meta = {}
+
+            difficulty = submission_meta.get("difficulty", "mixed")
+            topic = submission_meta.get("topic") or submission_meta.get("topic_family") or "community"
+            tags = submission_meta.get("tags", [])
+            if isinstance(tags, str):
+                tags = [tag.strip() for tag in tags.split(",") if tag.strip()]
+            if not isinstance(tags, list):
+                tags = []
+
+            embed_text = "\n".join(
+                [
+                    f"Community Submission: {title}",
+                    f"Topic: {topic}",
+                    f"Difficulty: {difficulty}",
+                    f"Tags: {', '.join(tags[:10])}",
+                    f"Content: {content}",
+                ]
+            )
+
+            submission_id = submission.get("id") or f"usr_{len(ids)}"
+            metadata = {
+                "title": title,
+                "difficulty": difficulty,
+                "source": "user_submission",
+                "source_name": "community",
+                "source_url": None,
+                "type": submission_meta.get("type", "user_contributed"),
+                "topic": topic,
+                "topic_family": topic,
+                "tags": ",".join(tags),
+                "submission_id": submission_id,
+                "status": "approved",
+            }
+
+            company = submission_meta.get("company")
+            if company:
+                metadata["company"] = company
+
+            self._add_chunked_document(
+                f"usr_{submission_id}",
+                embed_text,
+                metadata,
+                documents,
+                metadatas,
+                ids,
+            )
+
+        if documents:
+            print(f"Generating embeddings for {len(documents)} approved submission chunks...")
+            self.vector_store.add_documents(documents, metadatas, ids)
+            self.stats["approved_submissions"] = len(documents)
 
         return len(documents)
     
@@ -369,8 +605,11 @@ class DataProcessor:
         
         # Process each data source
         self.process_neetcode()
+        self.process_leetcode()
         self.process_system_design()
         self.process_ai_ml_questions()
+        self.process_external_corpus()
+        self.process_approved_submissions()
         
         # Calculate totals
         self.stats["total_embedded"] = self.vector_store.count()
@@ -380,9 +619,13 @@ class DataProcessor:
         print("Processing Complete!")
         print("="*60)
         print(f"   NeetCode problems:      {self.stats['neetcode_problems']}")
+        print(f"   LeetCode problems:      {self.stats['leetcode_problems']}")
         print(f"   System Design topics:   {self.stats['system_design_topics']}")
         print(f"   System Design questions: {self.stats['system_design_questions']}")
         print(f"   AI/ML questions:        {self.stats['ai_ml_questions']}")
+        print(f"   External resources:     {self.stats['external_resources']}")
+        print(f"   Approved submissions:   {self.stats['approved_submissions']}")
+        print(f"   Total chunks created:   {self.stats['total_chunks']}")
         print(f"   ─────────────────────────")
         print(f"   Total in vector store:  {self.stats['total_embedded']}")
         print("="*60 + "\n")

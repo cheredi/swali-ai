@@ -191,6 +191,64 @@ Format each question clearly. These should feel like natural interview follow-up
 )
 
 
+GENERAL_PRACTICE_QUESTIONS = PromptTemplate(
+    name="general_practice_questions",
+    version="1.0",
+    description="Generate a balanced practice set for interview preparation",
+    template="""You are an expert technical interview coach.
+
+## Retrieved Context
+{context}
+
+## Focus Area
+{focus_area}
+
+## Instructions
+Generate exactly {question_count} interview practice questions.
+
+Requirements:
+1. Mix coding and system thinking when possible
+2. Include varied difficulty (easy/medium/hard) when context allows
+3. Make questions realistic and concise
+4. Add one line under each question: "Why this matters: ..."
+5. Keep format clean and numbered
+
+Do not output explanations outside the numbered list."""
+)
+
+
+JOB_ALIGNED_PRACTICE_QUESTIONS = PromptTemplate(
+    name="job_aligned_practice_questions",
+    version="1.0",
+    description="Generate interview questions aligned to a specific job description",
+    template="""You are an interview preparation coach tailoring practice to a target role.
+
+## Job Description
+{job_description}
+
+## Retrieved Context
+{context}
+
+## Optional Focus Area
+{focus_area}
+
+## Instructions
+Generate exactly {question_count} interview questions aligned to the role.
+
+For each question, use this format:
+1) Question
+   - Skill alignment: <what JD requirement this tests>
+   - Why this matters: <one short sentence>
+
+Additional requirements:
+- Cover both core requirements and practical problem-solving
+- Prioritize high-signal topics from the JD
+- Keep the language realistic for actual interviews
+- Do not output text outside the numbered list
+"""
+)
+
+
 # =============================================================================
 # System Design Prompts
 # =============================================================================
@@ -223,6 +281,52 @@ Remember: In real interviews, showing your thought process matters as much as th
 )
 
 
+QUERY_EXPANSION = PromptTemplate(
+    name="query_expansion",
+    version="1.0",
+    description="Generate paraphrased retrieval queries",
+    template="""You are improving retrieval recall for a technical interview assistant.
+
+Original question:
+{question}
+
+Return 2 alternative phrasings focused on technical keywords, API terms, and complexity notation.
+Output only bullet points, one query per line.
+""",
+)
+
+
+GRADE_ANSWER = PromptTemplate(
+    name="grade_answer",
+    version="1.0",
+    description="Score answer quality against interview rubric",
+    template="""You are an interview evaluator.
+
+Problem title:
+{problem_title}
+
+Candidate answer:
+{answer}
+
+Expected complexity (time): {expected_time_complexity}
+Expected complexity (space): {expected_space_complexity}
+Mode: {mode}
+
+Score 0.0-1.0 for these fields:
+- correctness
+- time_complexity
+- edge_cases
+- communication
+- overall
+
+Then provide concise feedback in 4-6 lines.
+
+Return strict JSON only with keys:
+correctness, time_complexity, edge_cases, communication, overall, feedback.
+""",
+)
+
+
 # =============================================================================
 # Prompt Registry
 # =============================================================================
@@ -234,7 +338,11 @@ PROMPT_REGISTRY = {
     "hint_level_2": HINT_LEVEL_2,
     "hint_level_3": HINT_LEVEL_3,
     "generate_followup": GENERATE_FOLLOWUP,
+    "general_practice_questions_v1": GENERAL_PRACTICE_QUESTIONS,
+    "job_aligned_practice_questions_v1": JOB_ALIGNED_PRACTICE_QUESTIONS,
     "system_design_guide": SYSTEM_DESIGN_GUIDE,
+    "query_expansion_v1": QUERY_EXPANSION,
+    "grade_answer_v1": GRADE_ANSWER,
 }
 
 

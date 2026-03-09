@@ -11,9 +11,15 @@ Flow:
 The frontend will call this endpoint when users ask questions.
 """
 
-from fastapi import APIRouter, HTTPException
-from pydantic import BaseModel
+import asyncio
 
+from fastapi import APIRouter, Depends, Header, HTTPException
+from pydantic import BaseModel
+from typing import Literal
+
+from app.auth import get_optional_user
+from app.services.cache_rate_limit import get_cache_rate_limiter
+from app.storage import get_store
 from app.rag.generator import RAGGenerator
 
 
@@ -30,6 +36,10 @@ class ChatRequest(BaseModel):
     message: str
     hint_level: int = 0  # 0 = full answer, 1-3 = progressive hints
     problem_context: str | None = None  # Required when hint_level > 0
+    topic: str | None = None
+    company: str | None = None
+    difficulty: str | None = None
+    session_id: str | None = None
     
     class Config:
         json_schema_extra = {
@@ -53,6 +63,8 @@ class ChatResponse(BaseModel):
     """Response containing the answer and sources."""
     answer: str
     sources: list[Source]
+    citations: list[dict] = []
+    query_variants: list[str] = []
     tokens_used: int
     model: str
 
@@ -95,6 +107,22 @@ class FollowupResponse(BaseModel):
     model: str
 
 
+class PracticeRequest(BaseModel):
+    """Request for practice question generation."""
+    mode: Literal["general", "job_aligned"] = "general"
+    focus_area: str = ""
+    job_description: str = ""
+    question_count: int = 8
+
+
+class PracticeResponse(BaseModel):
+    """Practice question response payload."""
+    questions: str
+    sources: list[Source]
+    tokens_used: int
+    model: str
+
+
 # =============================================================================
 # Generator Instance
 # =============================================================================
@@ -110,12 +138,40 @@ def get_generator() -> RAGGenerator:
     return _generator
 
 
+def _build_where_filter(request: ChatRequest) -> dict | None:
+    where: dict[str, str] = {}
+    if request.topic:
+        where["topic"] = request.topic
+    if request.company:
+        where["company"] = request.company
+    if request.difficulty:
+        where["difficulty"] = request.difficulty
+    return where or None
+
+
+def _source_list(raw_sources: list[dict]) -> list[Source]:
+    return [
+        Source(
+            id=s["id"],
+            title=s["title"],
+            type=s.get("type"),
+            difficulty=s.get("difficulty"),
+            pattern=s.get("pattern"),
+        )
+        for s in raw_sources
+    ]
+
+
 # =============================================================================
 # Endpoints
 # =============================================================================
 
 @router.post("/", response_model=ChatResponse)
-async def chat(request: ChatRequest) -> ChatResponse:
+async def chat(
+    request: ChatRequest,
+    current_user: dict | None = Depends(get_optional_user),
+    authorization: str | None = Header(default=None),
+) -> ChatResponse:
     """
     Ask a coding or system design question.
     
@@ -134,6 +190,17 @@ async def chat(request: ChatRequest) -> ChatResponse:
     """
     try:
         generator = get_generator()
+        cache_service = get_cache_rate_limiter()
+
+        user_key = current_user["id"] if current_user else (authorization or "anonymous")
+        allowed, remaining = await cache_service.check_rate_limit(user_key)
+        if not allowed:
+            raise HTTPException(status_code=429, detail="Rate limit exceeded. Please retry shortly.")
+
+        cache_key = request.model_dump_json()
+        cached = await cache_service.get_cached("chat", cache_key)
+        if cached:
+            return ChatResponse(**cached)
         
     # LEARNING NOTE: Hint routing
     # We only generate hints when the client passes BOTH:
@@ -148,34 +215,39 @@ async def chat(request: ChatRequest) -> ChatResponse:
                 )
 
             # If hint_level > 0 and we have problem context, generate hints
-            response = generator.generate_hints(
+            response = await asyncio.to_thread(
+                generator.generate_hints,
                 problem_title=request.problem_context,
                 hint_level=request.hint_level,
                 student_attempt=request.message
             )
         else:
             # Generate full answer
-            response = generator.generate_answer(
+            response = await generator.generate_answer_async(
                 question=request.message,
-                n_context=3
+                n_context=3,
+                where=_build_where_filter(request),
             )
-        
-        return ChatResponse(
+
+        chat_response = ChatResponse(
             answer=response.answer,
-            sources=[
-                Source(
-                    id=s["id"],
-                    title=s["title"],
-                    type=s.get("type"),
-                    difficulty=s.get("difficulty"),
-                    pattern=s.get("pattern")
-                )
-                for s in response.sources
-            ],
+            sources=_source_list(response.sources),
+            citations=response.citations,
+            query_variants=response.query_variants,
             tokens_used=response.tokens_used,
             model=response.model
         )
+
+        if current_user and request.session_id:
+            store = get_store()
+            await asyncio.to_thread(store.append_message, request.session_id, "user", request.message)
+            await asyncio.to_thread(store.append_message, request.session_id, "assistant", chat_response.answer)
+
+        await cache_service.set_cached("chat", cache_key, chat_response.model_dump(), ttl_seconds=180)
+        return chat_response
     
+    except HTTPException:
+        raise
     except Exception as e:
         raise HTTPException(
             status_code=500,
@@ -200,24 +272,18 @@ async def get_hint(request: HintRequest) -> ChatResponse:
     try:
         generator = get_generator()
         
-        response = generator.generate_hints(
+        response = await asyncio.to_thread(
+            generator.generate_hints,
             problem_title=request.problem_title,
             hint_level=request.hint_level,
             student_attempt=request.student_attempt
         )
-        
+
         return ChatResponse(
             answer=response.answer,
-            sources=[
-                Source(
-                    id=s["id"],
-                    title=s["title"],
-                    type=s.get("type"),
-                    difficulty=s.get("difficulty"),
-                    pattern=s.get("pattern")
-                )
-                for s in response.sources
-            ],
+            sources=_source_list(response.sources),
+            citations=response.citations,
+            query_variants=response.query_variants,
             tokens_used=response.tokens_used,
             model=response.model
         )
@@ -241,9 +307,10 @@ async def get_followup_questions(request: FollowupRequest) -> FollowupResponse:
     try:
         generator = get_generator()
 
-        response = generator.generate_followup_questions(
-            problem_title=request.problem_title,
-            solution_approach=request.solution_approach
+        response = await asyncio.to_thread(
+            generator.generate_followup_questions,
+            request.problem_title,
+            request.solution_approach,
         )
 
         return FollowupResponse(
@@ -265,4 +332,47 @@ async def get_followup_questions(request: FollowupRequest) -> FollowupResponse:
         raise HTTPException(
             status_code=500,
             detail=f"Failed to generate follow-up questions: {str(e)}"
+        )
+
+
+@router.post("/practice", response_model=PracticeResponse)
+async def get_practice_questions(request: PracticeRequest) -> PracticeResponse:
+    """Generate either general or job-aligned practice question sets."""
+    try:
+        generator = get_generator()
+
+        if request.mode == "job_aligned" and not request.job_description.strip():
+            raise HTTPException(
+                status_code=400,
+                detail="job_description is required when mode='job_aligned'",
+            )
+
+        response = await asyncio.to_thread(
+            generator.generate_practice_questions,
+            request.job_description,
+            request.focus_area,
+            request.question_count,
+        )
+
+        return PracticeResponse(
+            questions=response.answer,
+            sources=[
+                Source(
+                    id=s["id"],
+                    title=s["title"],
+                    type=s.get("type"),
+                    difficulty=s.get("difficulty"),
+                    pattern=s.get("pattern"),
+                )
+                for s in response.sources
+            ],
+            tokens_used=response.tokens_used,
+            model=response.model,
+        )
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(
+            status_code=500,
+            detail=f"Failed to generate practice questions: {str(e)}",
         )

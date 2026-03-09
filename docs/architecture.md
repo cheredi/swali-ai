@@ -5,7 +5,7 @@ Swali-AI is a Retrieval-Augmented Generation (RAG) interview learning platform.
 ## High-level Flow
 
 1. User asks a question from frontend.
-2. FastAPI receives request in router (`/api/chat`, `/api/search`).
+2. FastAPI receives request in router (`/api/chat`, `/api/search`, `/api/auth`, `/api/learning`).
 3. RAG generator retrieves context from ChromaDB.
 4. (Optional) reranker re-orders candidates.
 5. Prompt template combines context + user input.
@@ -21,6 +21,8 @@ flowchart TD
   API[FastAPI Backend\nbackend/main.py]
   ChatRouter[Chat Router\n/api/chat]
   SearchRouter[Search Router\n/api/search]
+  AuthRouter[Auth Router\n/api/auth]
+  LearningRouter[Learning Router\n/api/learning]
   Generator[RAG Generator\nbackend/app/rag/generator.py]
   PromptLayer[Prompt Registry\nbackend/app/prompts/__init__.py]
   LLMService[LLM Service\nbackend/app/rag/llm.py]
@@ -35,9 +37,15 @@ flowchart TD
   User --> Frontend --> API
   API --> ChatRouter
   API --> SearchRouter
+  API --> AuthRouter
+  API --> LearningRouter
 
   ChatRouter --> Generator
   SearchRouter --> VectorStore
+  AuthRouter --> AppStore[(SQLite App Store)]
+  LearningRouter --> AppStore
+  LearningRouter --> Generator
+  LearningRouter --> Sandbox[Piston Sandbox API]
 
   Generator --> VectorStore
   Generator --> PromptLayer
@@ -137,6 +145,8 @@ sequenceDiagram
 - Routers:
   - `backend/app/routers/search.py`
   - `backend/app/routers/chat.py`
+  - `backend/app/routers/auth.py`
+  - `backend/app/routers/learning.py`
 
 Responsibilities:
 - Request validation (Pydantic models)
@@ -174,12 +184,22 @@ Responsibilities:
 - `scripts/collect_*.py`
 - `scripts/data_pipeline/*`
 - `scripts/process_data.py`
+- `scripts/collect_external_corpus.py`
+
+### Product Services Layer
+- `backend/app/storage.py` (SQLite persistence for users/sessions/messages/grades/submissions)
+- `backend/app/auth.py` (JWT + password hashing + auth dependencies)
+- `backend/app/services/cache_rate_limit.py` (Redis-first cache + rate limiting)
+- `backend/app/services/scheduler.py` (SM-2 spaced repetition)
+- `backend/app/services/sandbox.py` (remote code execution)
 
 Responsibilities:
 - Collect raw data sources
 - Normalize schema
 - Deduplicate
 - Build vector index
+- Validate optional external JSON files strictly (fail fast on malformed records)
+- Ingest approved user submissions (`status='approved'`) into the retrieval corpus
 
 ## Design Principles
 - Ground generation in retrieved context.

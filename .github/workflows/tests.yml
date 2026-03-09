@@ -31,3 +31,6 @@ jobs:
 
       - name: Run tests
         run: poetry run pytest
+
+      - name: Run retrieval evaluation
+        run: poetry run python evaluation/run_eval.py

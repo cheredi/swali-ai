@@ -40,8 +40,9 @@ This is Google's Python SDK for Gemini. It provides:
 
 from typing import Optional
 from dataclasses import dataclass
+import asyncio
 
-import google.generativeai as genai
+import google.generativeai as genai  # type: ignore[attr-defined]
 
 from app.config import settings
 
@@ -237,6 +238,45 @@ class LLMService:
                     print(f"API error: {e}. Retrying in {wait_time}s...")
                     time.sleep(wait_time)
         
+        raise Exception(f"Failed after {max_retries} attempts: {last_error}")
+
+    async def generate_async(
+        self,
+        prompt: str,
+        system_prompt: str | None = None,
+        max_tokens: int = 1024,
+        temperature: float = 0.7,
+    ) -> LLMResponse:
+        return await asyncio.to_thread(
+            self.generate,
+            prompt,
+            system_prompt,
+            max_tokens,
+            temperature,
+        )
+
+    async def generate_with_retry_async(
+        self,
+        prompt: str,
+        system_prompt: str | None = None,
+        max_tokens: int = 1024,
+        temperature: float = 0.7,
+        max_retries: int = 3,
+    ) -> LLMResponse:
+        last_error = None
+        for attempt in range(max_retries):
+            try:
+                return await self.generate_async(
+                    prompt=prompt,
+                    system_prompt=system_prompt,
+                    max_tokens=max_tokens,
+                    temperature=temperature,
+                )
+            except Exception as error:
+                last_error = error
+                if attempt < max_retries - 1:
+                    wait_time = 2**attempt
+                    await asyncio.sleep(wait_time)
         raise Exception(f"Failed after {max_retries} attempts: {last_error}")
 
 

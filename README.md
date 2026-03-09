@@ -33,8 +33,10 @@ Swali-AI combines retrieval + generation so responses are grounded in a curated 
 flowchart TD
 	User[User] --> Frontend[Frontend\nReact + Vite]
 	Frontend --> API[FastAPI Backend]
-	API --> Chat[/api/chat + /api/chat/hint + /api/chat/followup]
+	API --> Chat[/api/chat + /api/chat/hint + /api/chat/followup + /api/chat/practice]
 	API --> Search[/api/search]
+	API --> Auth[/api/auth/*]
+	API --> Learning[/api/learning/*]
 
 	Chat --> Generator[RAG Generator]
 	Generator --> VS[Vector Store]
@@ -58,7 +60,47 @@ For detailed sequence diagrams, see [docs/architecture.md](docs/architecture.md)
 - **Answer Mode**: grounded answers with source citations
 - **Hint Mode**: level-based coaching (nudge → technique → walkthrough)
 - **Follow-up Mode**: deeper interview-style probing from your approach
+- **Practice Mode**: `general` and `job_aligned` interview-question generation
 - **Search Mode**: direct semantic retrieval inspection
+- **Auth + Learning APIs**: JWT auth, sessions/history, grading, spaced repetition, sandbox, submissions
+
+## Current API surface (2026-03)
+
+- **Chat**
+	- `POST /api/chat/`
+	- `POST /api/chat/hint`
+	- `POST /api/chat/followup`
+	- `POST /api/chat/practice`
+- **Search**
+	- `GET /api/search/`
+	- `GET /api/search/stats`
+- **Auth**
+	- `POST /api/auth/register`
+	- `POST /api/auth/login`
+	- `GET /api/auth/me`
+- **Learning**
+	- `POST /api/learning/sessions`
+	- `POST /api/learning/sessions/message`
+	- `GET /api/learning/sessions/{session_id}/history`
+	- `POST /api/learning/spaced-repetition/review`
+	- `GET /api/learning/spaced-repetition/due`
+	- `POST /api/learning/grade`
+	- `POST /api/learning/mock-interview`
+	- `POST /api/learning/sandbox/execute`
+	- `POST /api/learning/content/submit`
+	- `GET /api/learning/content/submissions`
+	- `POST /api/learning/content/review`
+
+## Frontend status vs backend
+
+- Implemented in UI:
+	- Landing + practice flow (`/practice`) with `general` and `job_aligned` modes
+	- Calls `POST /api/chat/practice`
+- Not yet wired in UI (backend ready):
+	- Auth flows (`/api/auth/*`)
+	- Learning workflows (`/api/learning/*`)
+	- Full chat modes (`/api/chat`, `/api/chat/hint`, `/api/chat/followup`) in the new routed UI
+	- Search/filter exploration (`/api/search` with metadata filters)
 
 ## Engineering decisions (and why)
 
@@ -107,8 +149,20 @@ cd frontend && npm install && cd ..
 
 ```bash
 poetry run python scripts/collect_ai_ml.py
+poetry run python scripts/collect_external_corpus.py
 poetry run python scripts/process_data.py
 ```
+
+`scripts/process_data.py` now indexes:
+- NeetCode + LeetCode + System Design + AI/ML corpora
+- External corpus records from `data/raw/external/external_corpus.json`
+- Approved user submissions from `content_submissions` (`status='approved'`)
+
+Optional local source files for fuller external coverage:
+- `data/raw/external/kaggle_software_engineering_interview_questions.json`
+- `data/raw/external/leetcode_discuss_threads.json`
+- `data/raw/external/neetcode_explanations.json`
+- `data/raw/external/ddia_highlights.json`
 
 ### 3) Run backend
 
@@ -138,6 +192,7 @@ make test
 make run-backend
 make run-frontend
 make process-data
+make collect-external
 make experiments
 ```
 

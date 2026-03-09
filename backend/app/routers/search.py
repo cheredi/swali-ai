@@ -94,7 +94,9 @@ async def search_problems(
     difficulty: str | None = Query(
         None,
         description="Filter by difficulty: easy, medium, or hard"
-    )
+    ),
+    topic: str | None = Query(None, description="Filter by topic/pattern"),
+    company: str | None = Query(None, description="Filter by company tag"),
 ) -> SearchResponse:
     """
     Search for problems by semantic meaning.
@@ -118,15 +120,19 @@ async def search_problems(
         
         # Build metadata filter
         where: dict | None = None
-        if type_filter or difficulty:
+        if type_filter or difficulty or topic or company:
             where = {}
             if type_filter:
                 where["type"] = type_filter
             if difficulty:
                 where["difficulty"] = difficulty
+            if topic:
+                where["topic"] = topic
+            if company:
+                where["company"] = company
         
         # Perform semantic search
-        results = vector_store.search(
+        results = await vector_store.search_hybrid_async(
             query=q,
             n_results=limit,
             where=where
