@@ -32,5 +32,8 @@ jobs:
       - name: Run tests
         run: poetry run pytest
 
+      - name: Build vector index
+        run: poetry run python scripts/process_data.py
+
       - name: Run retrieval evaluation
         run: poetry run python evaluation/run_eval.py
