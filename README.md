@@ -31,25 +31,25 @@ Swali-AI combines retrieval + generation so responses are grounded in a curated 
 
 ```mermaid
 flowchart TD
-	User[User] --> Frontend[Frontend\nReact + Vite]
-	Frontend --> API[FastAPI Backend]
-	API --> Chat[/api/chat + /api/chat/hint + /api/chat/followup + /api/chat/practice]
-	API --> Search[/api/search]
-	API --> Auth[/api/auth/*]
-	API --> Learning[/api/learning/*]
+	User["User"] --> Frontend["Frontend<br/>React + Vite"]
+	Frontend --> API["FastAPI Backend"]
+	API --> Chat["/api/chat, /api/chat/hint, /api/chat/followup, /api/chat/practice"]
+	API --> Search["/api/search"]
+	API --> Auth["/api/auth/*"]
+	API --> Learning["/api/learning/*"]
 
-	Chat --> Generator[RAG Generator]
-	Generator --> VS[Vector Store]
-	Generator --> Prompts[Prompt Registry]
-	Generator --> LLM[LLM Service]
-	LLM --> Gemini[Gemini API]
+	Chat --> Generator["RAG Generator"]
+	Generator --> VS["Vector Store"]
+	Generator --> Prompts["Prompt Registry"]
+	Generator --> LLM["LLM Service"]
+	LLM --> Gemini["Gemini API"]
 
-	VS --> Embeddings[Embedding Service]
+	VS --> Embeddings["Embedding Service"]
 	VS --> Chroma[(ChromaDB)]
-	Generator --> Reranker[Hybrid Reranker]
+	Generator --> Reranker["Hybrid Reranker"]
 	Reranker --> VS
 
-	Raw[(Raw Data)] --> Pipeline[Ingestion + Normalize + Deduplicate]
+	Raw[(Raw Data)] --> Pipeline["Ingestion + Normalize + Deduplicate"]
 	Pipeline --> Chroma
 ```
 
