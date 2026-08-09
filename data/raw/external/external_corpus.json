@@ -1,0 +1,1974 @@
+[
+  {
+    "id": "ext_34cc71d000c6",
+    "title": "System Design Primer \u2014 overview",
+    "description": "*[English](README.md) \u2219 [\u65e5\u672c\u8a9e](README-ja.md) \u2219 [\u7b80\u4f53\u4e2d\u6587](README-zh-Hans.md) \u2219 [\u7e41\u9ad4\u4e2d\u6587](README-zh-TW.md) | [\u0627\u0644\u0639\u064e\u0631\u064e\u0628\u0650\u064a\u064e\u0651\u0629\u200e](https://github.com/donnemartin/system-design-primer/issues/170) \u2219 [\u09ac\u09be\u0982\u09b2\u09be](https://github.com/donnemartin/system-design-primer/issues/220) \u2219 [Portugu\u00eas do Brasil](https://github.com/donnemartin/system-design-primer/issues/40) \u2219 [Deutsch](https://github.com/donnemartin/system-design-primer/issues/186) \u2219 [\u03b5\u03bb\u03bb\u03b7\u03bd\u03b9\u03ba\u03ac](https://github.com/donnemartin/system-design-primer/issues/130) \u2219 [\u05e2\u05d1\u05e8\u05d9\u05ea](https://github.com/donnemartin/system-design-primer/issues/272) \u2219 [Italiano](https://github.com/donnemartin/system-design-primer/issues/104) \u2219 [\ud55c\uad6d\uc5b4](https://github.com/donnemartin/system-design-primer/issues/102) \u2219 [\u0641\u0627\u0631\u0633\u06cc](https://github.com/donnemartin/system-design-primer/issues/110) \u2219 [Polski](https://github.com/donnemartin/system-design-primer/issues/68) \u2219 [\u0440\u0443\u0441\u0441\u043a\u0438\u0439 \u044f\u0437\u044b\u043a](https://github.com/donnemartin/system-design-primer/issues/87) \u2219 [Espa\u00f1ol](https://github.com/donnemartin/system-design-primer/issues/136) \u2219 [\u0e20\u0e32\u0e29\u0e32\u0e44\u0e17\u0e22](https://github.com/donnemartin/system-design-primer/issues/187) \u2219 [T\u00fcrk\u00e7e](https://github.com/donnemartin/system-design-primer/issues/39) \u2219 [ti\u1ebfng Vi\u1ec7t](https://github.com/donnemartin/system-design-primer/issues/127) \u2219 [Fran\u00e7ais](https://github.com/donnemartin/system-design-primer/issues/250) | [Add Translation](https://github.com/donnemartin/system-design-primer/issues/28)*\n\n**Help [translate](TRANSLATIONS.md) this guide!**\n\n# The System Design Primer\n\n<p align=\"center\">\n  <img src=\"images/jj3A5N8.png\">\n  <br/>\n</p>",
+    "difficulty": "mixed",
+    "tags": [
+      "system_design",
+      "architecture",
+      "distributed_systems"
+    ],
+    "source": "system_design_primer",
+    "source_name": "System Design Primer",
+    "source_url": "https://raw.githubusercontent.com/donnemartin/system-design-primer/master/README.md#overview",
+    "type": "reference",
+    "topic": "system_design",
+    "topic_family": "system_design"
+  },
+  {
+    "id": "ext_d6ccfb1d2763",
+    "title": "System Design Primer \u2014 Motivation",
+    "description": "> Learn how to design large-scale systems.\n>\n> Prep for the system design interview.",
+    "difficulty": "mixed",
+    "tags": [
+      "system_design",
+      "architecture",
+      "distributed_systems"
+    ],
+    "source": "system_design_primer",
+    "source_name": "System Design Primer",
+    "source_url": "https://raw.githubusercontent.com/donnemartin/system-design-primer/master/README.md#motivation",
+    "type": "reference",
+    "topic": "system_design",
+    "topic_family": "system_design"
+  },
+  {
+    "id": "ext_22108f194b5d",
+    "title": "System Design Primer \u2014 Learn how to design large-scale systems",
+    "description": "Learning how to design scalable systems will help you become a better engineer.\n\nSystem design is a broad topic.  There are a **vast number of resources scattered throughout the web** on system design principles.\n\nThis repo is an **organized collection** of resources to help you learn how to build systems at scale.",
+    "difficulty": "mixed",
+    "tags": [
+      "system_design",
+      "architecture",
+      "distributed_systems"
+    ],
+    "source": "system_design_primer",
+    "source_name": "System Design Primer",
+    "source_url": "https://raw.githubusercontent.com/donnemartin/system-design-primer/master/README.md#learn_how_to_design_large_scale_systems",
+    "type": "reference",
+    "topic": "system_design",
+    "topic_family": "system_design"
+  },
+  {
+    "id": "ext_568210b48172",
+    "title": "System Design Primer \u2014 Learn from the open source community",
+    "description": "This is a continually updated, open source project.\n\n[Contributions](#contributing) are welcome!",
+    "difficulty": "mixed",
+    "tags": [
+      "system_design",
+      "architecture",
+      "distributed_systems"
+    ],
+    "source": "system_design_primer",
+    "source_name": "System Design Primer",
+    "source_url": "https://raw.githubusercontent.com/donnemartin/system-design-primer/master/README.md#learn_from_the_open_source_community",
+    "type": "reference",
+    "topic": "system_design",
+    "topic_family": "system_design"
+  },
+  {
+    "id": "ext_d02792c8f250",
+    "title": "System Design Primer \u2014 Prep for the system design interview",
+    "description": "In addition to coding interviews, system design is a **required component** of the **technical interview process** at many tech companies.\n\n**Practice common system design interview questions** and **compare** your results with **sample solutions**: discussions, code, and diagrams.\n\nAdditional topics for interview prep:\n\n* [Study guide](#study-guide)\n* [How to approach a system design interview question](#how-to-approach-a-system-design-interview-question)\n* [System design interview questions, **with solutions**](#system-design-interview-questions-with-solutions)\n* [Object-oriented design interview questions, **with solutions**](#object-oriented-design-interview-questions-with-solutions)\n* [Additional system design interview questions](#additional-system-design-interview-questions)",
+    "difficulty": "mixed",
+    "tags": [
+      "system_design",
+      "architecture",
+      "distributed_systems"
+    ],
+    "source": "system_design_primer",
+    "source_name": "System Design Primer",
+    "source_url": "https://raw.githubusercontent.com/donnemartin/system-design-primer/master/README.md#prep_for_the_system_design_interview",
+    "type": "reference",
+    "topic": "system_design",
+    "topic_family": "system_design"
+  },
+  {
+    "id": "ext_9a8693e2b53e",
+    "title": "System Design Primer \u2014 Anki flashcards",
+    "description": "<p align=\"center\">\n  <img src=\"images/zdCAkB3.png\">\n  <br/>\n</p>\n\nThe provided [Anki flashcard decks](https://apps.ankiweb.net/) use spaced repetition to help you retain key system design concepts.\n\n* [System design deck](https://github.com/donnemartin/system-design-primer/tree/master/resources/flash_cards/System%20Design.apkg)\n* [System design exercises deck](https://github.com/donnemartin/system-design-primer/tree/master/resources/flash_cards/System%20Design%20Exercises.apkg)\n* [Object oriented design exercises deck](https://github.com/donnemartin/system-design-primer/tree/master/resources/flash_cards/OO%20Design.apkg)\n\nGreat for use while on-the-go.",
+    "difficulty": "mixed",
+    "tags": [
+      "system_design",
+      "architecture",
+      "distributed_systems"
+    ],
+    "source": "system_design_primer",
+    "source_name": "System Design Primer",
+    "source_url": "https://raw.githubusercontent.com/donnemartin/system-design-primer/master/README.md#anki_flashcards",
+    "type": "reference",
+    "topic": "system_design",
+    "topic_family": "system_design"
+  },
+  {
+    "id": "ext_656dd07a8329",
+    "title": "System Design Primer \u2014 Coding Resource: Interactive Coding Challenges",
+    "description": "Looking for resources to help you prep for the [**Coding Interview**](https://github.com/donnemartin/interactive-coding-challenges)?\n\n<p align=\"center\">\n  <img src=\"images/b4YtAEN.png\">\n  <br/>\n</p>\n\nCheck out the sister repo [**Interactive Coding Challenges**](https://github.com/donnemartin/interactive-coding-challenges), which contains an additional Anki deck:\n\n* [Coding deck](https://github.com/donnemartin/interactive-coding-challenges/tree/master/anki_cards/Coding.apkg)",
+    "difficulty": "mixed",
+    "tags": [
+      "system_design",
+      "architecture",
+      "distributed_systems"
+    ],
+    "source": "system_design_primer",
+    "source_name": "System Design Primer",
+    "source_url": "https://raw.githubusercontent.com/donnemartin/system-design-primer/master/README.md#coding_resource_interactive_coding_challenges",
+    "type": "reference",
+    "topic": "system_design",
+    "topic_family": "system_design"
+  },
+  {
+    "id": "ext_88bd3add08cf",
+    "title": "System Design Primer \u2014 Contributing",
+    "description": "> Learn from the community.\n\nFeel free to submit pull requests to help:\n\n* Fix errors\n* Improve sections\n* Add new sections\n* [Translate](https://github.com/donnemartin/system-design-primer/issues/28)\n\nContent that needs some polishing is placed [under development](#under-development).\n\nReview the [Contributing Guidelines](CONTRIBUTING.md).",
+    "difficulty": "mixed",
+    "tags": [
+      "system_design",
+      "architecture",
+      "distributed_systems"
+    ],
+    "source": "system_design_primer",
+    "source_name": "System Design Primer",
+    "source_url": "https://raw.githubusercontent.com/donnemartin/system-design-primer/master/README.md#contributing",
+    "type": "reference",
+    "topic": "system_design",
+    "topic_family": "system_design"
+  },
+  {
+    "id": "ext_f0a3aaf52fc8",
+    "title": "System Design Primer \u2014 Index of system design topics",
+    "description": "> Summaries of various system design topics, including pros and cons.  **Everything is a trade-off**.\n>\n> Each section contains links to more in-depth resources.\n\n<p align=\"center\">\n  <img src=\"images/jrUBAF7.png\">\n  <br/>\n</p>\n\n* [System design topics: start here](#system-design-topics-start-here)\n    * [Step 1: Review the scalability video lecture](#step-1-review-the-scalability-video-lecture)\n    * [Step 2: Review the scalability article](#step-2-review-the-scalability-article)\n    * [Next steps](#next-steps)\n* [Performance vs scalability](#performance-vs-scalability)\n* [Latency vs throughput](#latency-vs-throughput)\n* [Availability vs consistency](#availability-vs-consistency)\n    * [CAP theorem](#cap-theorem)\n        * [CP - consistency and partition tolerance](#cp---consistency-and-partition-tolerance)\n        * [AP - availability and partition tolerance](#ap---availability-and-partition-tolerance)\n* [Consistency patterns](#consistency-patterns)\n    * [Weak consistency](#weak-consistency)\n    * [Eventual consistency](#eventual-consistency)\n    * [Strong consistency](#strong-consistency)\n* [Availability patterns](#availability-patterns)\n    * [Fail-over](#fail-over)\n    * [Replication](#replication)\n    * [Availability in numbers](#availability-in-numbers)\n* [Domain name system](#domain-name-system)\n* [Content delivery network](#content-delivery-network)\n    * [Push CDNs](#push-cdns)\n    * [Pull CDNs](#pull-cdns)\n* [Load balancer](#load-balancer)\n    * [Active-passive](#active-passive)\n    * [Active-active](#active-active)\n    * [Layer 4 load balancing](#layer-4-load-balancing)\n    * [Layer 7 load balancing](#layer-7-load-balancing)\n    * [Horizontal scaling](#horizontal-scaling)\n* [Reverse proxy (web server)](#reverse-proxy-web-server)\n    * [Load balancer vs reverse proxy](#load-balancer-vs-reverse-proxy)\n* [Application layer](#application-layer)\n    * [Microservices](#microservices)\n    * [Service discovery](#service-discovery)\n* [Database](#database)\n    * [Relational database management system (RDBMS)](#relational-database-management-system-rdbms)\n        * [Master-slave replication](#master-slave-replication)\n        * [Master-master replication](#master-master-replication)\n        * [Federation](#federation)\n        * [Sharding](#sharding)\n        * [Denormalization](#denormalization)\n        * [SQL tuning](#sql-tuning)\n    * [NoSQL](#nosql)\n    ",
+    "difficulty": "mixed",
+    "tags": [
+      "system_design",
+      "architecture",
+      "distributed_systems"
+    ],
+    "source": "system_design_primer",
+    "source_name": "System Design Primer",
+    "source_url": "https://raw.githubusercontent.com/donnemartin/system-design-primer/master/README.md#index_of_system_design_topics",
+    "type": "reference",
+    "topic": "system_design",
+    "topic_family": "system_design"
+  },
+  {
+    "id": "ext_05514d7c3723",
+    "title": "System Design Primer \u2014 Study guide",
+    "description": "> Suggested topics to review based on your interview timeline (short, medium, long).\n\n![Imgur](images/OfVllex.png)\n\n**Q: For interviews, do I need to know everything here?**\n\n**A: No, you don't need to know everything here to prepare for the interview**.\n\nWhat you are asked in an interview depends on variables such as:\n\n* How much experience you have\n* What your technical background is\n* What positions you are interviewing for\n* Which companies you are interviewing with\n* Luck\n\nMore experienced candidates are generally expected to know more about system design.  Architects or team leads might be expected to know more than individual contributors.  Top tech companies are likely to have one or more design interview rounds.\n\nStart broad and go deeper in a few areas.  It helps to know a little about various key system design topics.  Adjust the following guide based on your timeline, experience, what positions you are interviewing for, and which companies you are interviewing with.\n\n* **Short timeline** - Aim for **breadth** with system design topics.  Practice by solving **some** interview questions.\n* **Medium timeline** - Aim for **breadth** and **some depth** with system design topics.  Practice by solving **many** interview questions.\n* **Long timeline** - Aim for **breadth** and **more depth** with system design topics.  Practice by solving **most** interview questions.\n\n| | Short | Medium | Long |\n|---|---|---|---|\n| Read through the [System design topics](#index-of-system-design-topics) to get a broad understanding of how systems work | :+1: | :+1: | :+1: |\n| Read through a few articles in the [Company engineering blogs](#company-engineering-blogs) for the companies you are interviewing with | :+1: | :+1: | :+1: |\n| Read through a few [Real world architectures](#real-world-architectures) | :+1: | :+1: | :+1: |\n| Review [How to approach a system design interview question](#how-to-approach-a-system-design-interview-question) | :+1: | :+1: | :+1: |\n| Work through [System design interview questions with solutions](#system-design-interview-questions-with-solutions) | Some | Many | Most |\n| Work through [Object-oriented design interview questions with solutions](#object-oriented-design-interview-questions-with-solutions) | Some | Many | Most |\n| Review [Additional system design interview questions](#additional-system-design-interview-questions) | Some | Many |",
+    "difficulty": "mixed",
+    "tags": [
+      "system_design",
+      "architecture",
+      "distributed_systems"
+    ],
+    "source": "system_design_primer",
+    "source_name": "System Design Primer",
+    "source_url": "https://raw.githubusercontent.com/donnemartin/system-design-primer/master/README.md#study_guide",
+    "type": "reference",
+    "topic": "system_design",
+    "topic_family": "system_design"
+  },
+  {
+    "id": "ext_1bf907942710",
+    "title": "System Design Primer \u2014 How to approach a system design interview question",
+    "description": "> How to tackle a system design interview question.\n\nThe system design interview is an **open-ended conversation**.  You are expected to lead it.\n\nYou can use the following steps to guide the discussion.  To help solidify this process, work through the [System design interview questions with solutions](#system-design-interview-questions-with-solutions) section using the following steps.",
+    "difficulty": "mixed",
+    "tags": [
+      "system_design",
+      "architecture",
+      "distributed_systems"
+    ],
+    "source": "system_design_primer",
+    "source_name": "System Design Primer",
+    "source_url": "https://raw.githubusercontent.com/donnemartin/system-design-primer/master/README.md#how_to_approach_a_system_design_interview_question",
+    "type": "reference",
+    "topic": "system_design",
+    "topic_family": "system_design"
+  },
+  {
+    "id": "ext_a1fefb133baa",
+    "title": "System Design Primer \u2014 Step 1: Outline use cases, constraints, and assumptions",
+    "description": "Gather requirements and scope the problem.  Ask questions to clarify use cases and constraints.  Discuss assumptions.\n\n* Who is going to use it?\n* How are they going to use it?\n* How many users are there?\n* What does the system do?\n* What are the inputs and outputs of the system?\n* How much data do we expect to handle?\n* How many requests per second do we expect?\n* What is the expected read to write ratio?",
+    "difficulty": "mixed",
+    "tags": [
+      "system_design",
+      "architecture",
+      "distributed_systems"
+    ],
+    "source": "system_design_primer",
+    "source_name": "System Design Primer",
+    "source_url": "https://raw.githubusercontent.com/donnemartin/system-design-primer/master/README.md#step_1_outline_use_cases_constraints_and_assumptions",
+    "type": "reference",
+    "topic": "system_design",
+    "topic_family": "system_design"
+  },
+  {
+    "id": "ext_374fb286bcd1",
+    "title": "System Design Primer \u2014 Step 2: Create a high level design",
+    "description": "Outline a high level design with all important components.\n\n* Sketch the main components and connections\n* Justify your ideas",
+    "difficulty": "mixed",
+    "tags": [
+      "system_design",
+      "architecture",
+      "distributed_systems"
+    ],
+    "source": "system_design_primer",
+    "source_name": "System Design Primer",
+    "source_url": "https://raw.githubusercontent.com/donnemartin/system-design-primer/master/README.md#step_2_create_a_high_level_design",
+    "type": "reference",
+    "topic": "system_design",
+    "topic_family": "system_design"
+  },
+  {
+    "id": "ext_8aab45538f01",
+    "title": "System Design Primer \u2014 Step 3: Design core components",
+    "description": "Dive into details for each core component.  For example, if you were asked to [design a url shortening service](solutions/system_design/pastebin/README.md), discuss:\n\n* Generating and storing a hash of the full url\n    * [MD5](solutions/system_design/pastebin/README.md) and [Base62](solutions/system_design/pastebin/README.md)\n    * Hash collisions\n    * SQL or NoSQL\n    * Database schema\n* Translating a hashed url to the full url\n    * Database lookup\n* API and object-oriented design",
+    "difficulty": "mixed",
+    "tags": [
+      "system_design",
+      "architecture",
+      "distributed_systems"
+    ],
+    "source": "system_design_primer",
+    "source_name": "System Design Primer",
+    "source_url": "https://raw.githubusercontent.com/donnemartin/system-design-primer/master/README.md#step_3_design_core_components",
+    "type": "reference",
+    "topic": "system_design",
+    "topic_family": "system_design"
+  },
+  {
+    "id": "ext_91dbb29d0f97",
+    "title": "System Design Primer \u2014 Step 4: Scale the design",
+    "description": "Identify and address bottlenecks, given the constraints.  For example, do you need the following to address scalability issues?\n\n* Load balancer\n* Horizontal scaling\n* Caching\n* Database sharding\n\nDiscuss potential solutions and trade-offs.  Everything is a trade-off.  Address bottlenecks using [principles of scalable system design](#index-of-system-design-topics).",
+    "difficulty": "mixed",
+    "tags": [
+      "system_design",
+      "architecture",
+      "distributed_systems"
+    ],
+    "source": "system_design_primer",
+    "source_name": "System Design Primer",
+    "source_url": "https://raw.githubusercontent.com/donnemartin/system-design-primer/master/README.md#step_4_scale_the_design",
+    "type": "reference",
+    "topic": "system_design",
+    "topic_family": "system_design"
+  },
+  {
+    "id": "ext_70283212dd06",
+    "title": "System Design Primer \u2014 Back-of-the-envelope calculations",
+    "description": "You might be asked to do some estimates by hand.  Refer to the [Appendix](#appendix) for the following resources:\n\n* [Use back of the envelope calculations](http://highscalability.com/blog/2011/1/26/google-pro-tip-use-back-of-the-envelope-calculations-to-choo.html)\n* [Powers of two table](#powers-of-two-table)\n* [Latency numbers every programmer should know](#latency-numbers-every-programmer-should-know)",
+    "difficulty": "mixed",
+    "tags": [
+      "system_design",
+      "architecture",
+      "distributed_systems"
+    ],
+    "source": "system_design_primer",
+    "source_name": "System Design Primer",
+    "source_url": "https://raw.githubusercontent.com/donnemartin/system-design-primer/master/README.md#back_of_the_envelope_calculations",
+    "type": "reference",
+    "topic": "system_design",
+    "topic_family": "system_design"
+  },
+  {
+    "id": "ext_f2f3865e0924",
+    "title": "System Design Primer \u2014 Source(s) and further reading",
+    "description": "Check out the following links to get a better idea of what to expect:\n\n* [How to ace a systems design interview](https://web.archive.org/web/20210505130322/https://www.palantir.com/2011/10/how-to-rock-a-systems-design-interview/)\n* [The system design interview](http://www.hiredintech.com/system-design)\n* [Intro to Architecture and Systems Design Interviews](https://www.youtube.com/watch?v=ZgdS0EUmn70)\n* [System design template](https://leetcode.com/discuss/career/229177/My-System-Design-Template)",
+    "difficulty": "mixed",
+    "tags": [
+      "system_design",
+      "architecture",
+      "distributed_systems"
+    ],
+    "source": "system_design_primer",
+    "source_name": "System Design Primer",
+    "source_url": "https://raw.githubusercontent.com/donnemartin/system-design-primer/master/README.md#source_s_and_further_reading",
+    "type": "reference",
+    "topic": "system_design",
+    "topic_family": "system_design"
+  },
+  {
+    "id": "ext_9c852dc47e37",
+    "title": "System Design Primer \u2014 System design interview questions with solutions",
+    "description": "> Common system design interview questions with sample discussions, code, and diagrams.\n>\n> Solutions linked to content in the `solutions/` folder.\n\n| Question | |\n|---|---|\n| Design Pastebin.com (or Bit.ly) | [Solution](solutions/system_design/pastebin/README.md) |\n| Design the Twitter timeline and search (or Facebook feed and search) | [Solution](solutions/system_design/twitter/README.md) |\n| Design a web crawler | [Solution](solutions/system_design/web_crawler/README.md) |\n| Design Mint.com | [Solution](solutions/system_design/mint/README.md) |\n| Design the data structures for a social network | [Solution](solutions/system_design/social_graph/README.md) |\n| Design a key-value store for a search engine | [Solution](solutions/system_design/query_cache/README.md) |\n| Design Amazon's sales ranking by category feature | [Solution](solutions/system_design/sales_rank/README.md) |\n| Design a system that scales to millions of users on AWS | [Solution](solutions/system_design/scaling_aws/README.md) |\n| Add a system design question | [Contribute](#contributing) |",
+    "difficulty": "mixed",
+    "tags": [
+      "system_design",
+      "architecture",
+      "distributed_systems"
+    ],
+    "source": "system_design_primer",
+    "source_name": "System Design Primer",
+    "source_url": "https://raw.githubusercontent.com/donnemartin/system-design-primer/master/README.md#system_design_interview_questions_with_solutions",
+    "type": "reference",
+    "topic": "system_design",
+    "topic_family": "system_design"
+  },
+  {
+    "id": "ext_b8f6510b2162",
+    "title": "System Design Primer \u2014 Design Pastebin.com (or Bit.ly)",
+    "description": "[View exercise and solution](solutions/system_design/pastebin/README.md)\n\n![Imgur](images/4edXG0T.png)",
+    "difficulty": "mixed",
+    "tags": [
+      "system_design",
+      "architecture",
+      "distributed_systems"
+    ],
+    "source": "system_design_primer",
+    "source_name": "System Design Primer",
+    "source_url": "https://raw.githubusercontent.com/donnemartin/system-design-primer/master/README.md#design_pastebin_com_or_bit_ly",
+    "type": "reference",
+    "topic": "system_design",
+    "topic_family": "system_design"
+  },
+  {
+    "id": "ext_5e66e292a2de",
+    "title": "System Design Primer \u2014 Design the Twitter timeline and search (or Facebook feed and search)",
+    "description": "[View exercise and solution](solutions/system_design/twitter/README.md)\n\n![Imgur](images/jrUBAF7.png)",
+    "difficulty": "mixed",
+    "tags": [
+      "system_design",
+      "architecture",
+      "distributed_systems"
+    ],
+    "source": "system_design_primer",
+    "source_name": "System Design Primer",
+    "source_url": "https://raw.githubusercontent.com/donnemartin/system-design-primer/master/README.md#design_the_twitter_timeline_and_search_or_facebook_feed_and_search",
+    "type": "reference",
+    "topic": "system_design",
+    "topic_family": "system_design"
+  },
+  {
+    "id": "ext_5bdec71f81e9",
+    "title": "System Design Primer \u2014 Design a web crawler",
+    "description": "[View exercise and solution](solutions/system_design/web_crawler/README.md)\n\n![Imgur](images/bWxPtQA.png)",
+    "difficulty": "mixed",
+    "tags": [
+      "system_design",
+      "architecture",
+      "distributed_systems"
+    ],
+    "source": "system_design_primer",
+    "source_name": "System Design Primer",
+    "source_url": "https://raw.githubusercontent.com/donnemartin/system-design-primer/master/README.md#design_a_web_crawler",
+    "type": "reference",
+    "topic": "system_design",
+    "topic_family": "system_design"
+  },
+  {
+    "id": "ext_642588f3e1c4",
+    "title": "System Design Primer \u2014 Design Mint.com",
+    "description": "[View exercise and solution](solutions/system_design/mint/README.md)\n\n![Imgur](images/V5q57vU.png)",
+    "difficulty": "mixed",
+    "tags": [
+      "system_design",
+      "architecture",
+      "distributed_systems"
+    ],
+    "source": "system_design_primer",
+    "source_name": "System Design Primer",
+    "source_url": "https://raw.githubusercontent.com/donnemartin/system-design-primer/master/README.md#design_mint_com",
+    "type": "reference",
+    "topic": "system_design",
+    "topic_family": "system_design"
+  },
+  {
+    "id": "ext_f214c3a990f2",
+    "title": "System Design Primer \u2014 Design the data structures for a social network",
+    "description": "[View exercise and solution](solutions/system_design/social_graph/README.md)\n\n![Imgur](images/cdCv5g7.png)",
+    "difficulty": "mixed",
+    "tags": [
+      "system_design",
+      "architecture",
+      "distributed_systems"
+    ],
+    "source": "system_design_primer",
+    "source_name": "System Design Primer",
+    "source_url": "https://raw.githubusercontent.com/donnemartin/system-design-primer/master/README.md#design_the_data_structures_for_a_social_network",
+    "type": "reference",
+    "topic": "system_design",
+    "topic_family": "system_design"
+  },
+  {
+    "id": "ext_5e1c55b5c609",
+    "title": "System Design Primer \u2014 Design a key-value store for a search engine",
+    "description": "[View exercise and solution](solutions/system_design/query_cache/README.md)\n\n![Imgur](images/4j99mhe.png)",
+    "difficulty": "mixed",
+    "tags": [
+      "system_design",
+      "architecture",
+      "distributed_systems"
+    ],
+    "source": "system_design_primer",
+    "source_name": "System Design Primer",
+    "source_url": "https://raw.githubusercontent.com/donnemartin/system-design-primer/master/README.md#design_a_key_value_store_for_a_search_engine",
+    "type": "reference",
+    "topic": "system_design",
+    "topic_family": "system_design"
+  },
+  {
+    "id": "ext_31be083a9cfd",
+    "title": "System Design Primer \u2014 Design Amazon's sales ranking by category feature",
+    "description": "[View exercise and solution](solutions/system_design/sales_rank/README.md)\n\n![Imgur](images/MzExP06.png)",
+    "difficulty": "mixed",
+    "tags": [
+      "system_design",
+      "architecture",
+      "distributed_systems"
+    ],
+    "source": "system_design_primer",
+    "source_name": "System Design Primer",
+    "source_url": "https://raw.githubusercontent.com/donnemartin/system-design-primer/master/README.md#design_amazon_s_sales_ranking_by_category_feature",
+    "type": "reference",
+    "topic": "system_design",
+    "topic_family": "system_design"
+  },
+  {
+    "id": "ext_65c7ec214edc",
+    "title": "System Design Primer \u2014 Design a system that scales to millions of users on AWS",
+    "description": "[View exercise and solution](solutions/system_design/scaling_aws/README.md)\n\n![Imgur](images/jj3A5N8.png)",
+    "difficulty": "mixed",
+    "tags": [
+      "system_design",
+      "architecture",
+      "distributed_systems"
+    ],
+    "source": "system_design_primer",
+    "source_name": "System Design Primer",
+    "source_url": "https://raw.githubusercontent.com/donnemartin/system-design-primer/master/README.md#design_a_system_that_scales_to_millions_of_users_on_aws",
+    "type": "reference",
+    "topic": "system_design",
+    "topic_family": "system_design"
+  },
+  {
+    "id": "ext_2334fd37c1bf",
+    "title": "System Design Primer \u2014 Object-oriented design interview questions with solutions",
+    "description": "> Common object-oriented design interview questions with sample discussions, code, and diagrams.\n>\n> Solutions linked to content in the `solutions/` folder.\n\n>**Note: This section is under development**\n\n| Question | |\n|---|---|\n| Design a hash map | [Solution](solutions/object_oriented_design/hash_table/hash_map.ipynb)  |\n| Design a least recently used cache | [Solution](solutions/object_oriented_design/lru_cache/lru_cache.ipynb)  |\n| Design a call center | [Solution](solutions/object_oriented_design/call_center/call_center.ipynb)  |\n| Design a deck of cards | [Solution](solutions/object_oriented_design/deck_of_cards/deck_of_cards.ipynb)  |\n| Design a parking lot | [Solution](solutions/object_oriented_design/parking_lot/parking_lot.ipynb)  |\n| Design a chat server | [Solution](solutions/object_oriented_design/online_chat/online_chat.ipynb)  |\n| Design a circular array | [Contribute](#contributing)  |\n| Add an object-oriented design question | [Contribute](#contributing) |",
+    "difficulty": "mixed",
+    "tags": [
+      "system_design",
+      "architecture",
+      "distributed_systems"
+    ],
+    "source": "system_design_primer",
+    "source_name": "System Design Primer",
+    "source_url": "https://raw.githubusercontent.com/donnemartin/system-design-primer/master/README.md#object_oriented_design_interview_questions_with_solutions",
+    "type": "reference",
+    "topic": "system_design",
+    "topic_family": "system_design"
+  },
+  {
+    "id": "ext_c892008a5164",
+    "title": "System Design Primer \u2014 System design topics: start here",
+    "description": "New to system design?\n\nFirst, you'll need a basic understanding of common principles, learning about what they are, how they are used, and their pros and cons.",
+    "difficulty": "mixed",
+    "tags": [
+      "system_design",
+      "architecture",
+      "distributed_systems"
+    ],
+    "source": "system_design_primer",
+    "source_name": "System Design Primer",
+    "source_url": "https://raw.githubusercontent.com/donnemartin/system-design-primer/master/README.md#system_design_topics_start_here",
+    "type": "reference",
+    "topic": "system_design",
+    "topic_family": "system_design"
+  },
+  {
+    "id": "ext_2cfff4292c6c",
+    "title": "System Design Primer \u2014 Step 1: Review the scalability video lecture",
+    "description": "[Scalability Lecture at Harvard](https://www.youtube.com/watch?v=-W9F__D3oY4)\n\n* Topics covered:\n    * Vertical scaling\n    * Horizontal scaling\n    * Caching\n    * Load balancing\n    * Database replication\n    * Database partitioning",
+    "difficulty": "mixed",
+    "tags": [
+      "system_design",
+      "architecture",
+      "distributed_systems"
+    ],
+    "source": "system_design_primer",
+    "source_name": "System Design Primer",
+    "source_url": "https://raw.githubusercontent.com/donnemartin/system-design-primer/master/README.md#step_1_review_the_scalability_video_lecture",
+    "type": "reference",
+    "topic": "system_design",
+    "topic_family": "system_design"
+  },
+  {
+    "id": "ext_ce7d452f59b0",
+    "title": "System Design Primer \u2014 Step 2: Review the scalability article",
+    "description": "[Scalability](https://web.archive.org/web/20221030091841/http://www.lecloud.net/tagged/scalability/chrono)\n\n* Topics covered:\n    * [Clones](https://web.archive.org/web/20220530193911/https://www.lecloud.net/post/7295452622/scalability-for-dummies-part-1-clones)\n    * [Databases](https://web.archive.org/web/20220602114024/https://www.lecloud.net/post/7994751381/scalability-for-dummies-part-2-database)\n    * [Caches](https://web.archive.org/web/20230126233752/https://www.lecloud.net/post/9246290032/scalability-for-dummies-part-3-cache)\n    * [Asynchronism](https://web.archive.org/web/20220926171507/https://www.lecloud.net/post/9699762917/scalability-for-dummies-part-4-asynchronism)",
+    "difficulty": "mixed",
+    "tags": [
+      "system_design",
+      "architecture",
+      "distributed_systems"
+    ],
+    "source": "system_design_primer",
+    "source_name": "System Design Primer",
+    "source_url": "https://raw.githubusercontent.com/donnemartin/system-design-primer/master/README.md#step_2_review_the_scalability_article",
+    "type": "reference",
+    "topic": "system_design",
+    "topic_family": "system_design"
+  },
+  {
+    "id": "ext_5f9500033391",
+    "title": "System Design Primer \u2014 Next steps",
+    "description": "Next, we'll look at high-level trade-offs:\n\n* **Performance** vs **scalability**\n* **Latency** vs **throughput**\n* **Availability** vs **consistency**\n\nKeep in mind that **everything is a trade-off**.\n\nThen we'll dive into more specific topics such as DNS, CDNs, and load balancers.",
+    "difficulty": "mixed",
+    "tags": [
+      "system_design",
+      "architecture",
+      "distributed_systems"
+    ],
+    "source": "system_design_primer",
+    "source_name": "System Design Primer",
+    "source_url": "https://raw.githubusercontent.com/donnemartin/system-design-primer/master/README.md#next_steps",
+    "type": "reference",
+    "topic": "system_design",
+    "topic_family": "system_design"
+  },
+  {
+    "id": "ext_0601dd5f5c21",
+    "title": "System Design Primer \u2014 Performance vs scalability",
+    "description": "A service is **scalable** if it results in increased **performance** in a manner proportional to resources added. Generally, increasing performance means serving more units of work, but it can also be to handle larger units of work, such as when datasets grow.<sup><a href=http://www.allthingsdistributed.com/2006/03/a_word_on_scalability.html>1</a></sup>\n\nAnother way to look at performance vs scalability:\n\n* If you have a **performance** problem, your system is slow for a single user.\n* If you have a **scalability** problem, your system is fast for a single user but slow under heavy load.",
+    "difficulty": "mixed",
+    "tags": [
+      "system_design",
+      "architecture",
+      "distributed_systems"
+    ],
+    "source": "system_design_primer",
+    "source_name": "System Design Primer",
+    "source_url": "https://raw.githubusercontent.com/donnemartin/system-design-primer/master/README.md#performance_vs_scalability",
+    "type": "reference",
+    "topic": "system_design",
+    "topic_family": "system_design"
+  },
+  {
+    "id": "ext_ce9ad7fe735e",
+    "title": "System Design Primer \u2014 Latency vs throughput",
+    "description": "**Latency** is the time to perform some action or to produce some result.\n\n**Throughput** is the number of such actions or results per unit of time.\n\nGenerally, you should aim for **maximal throughput** with **acceptable latency**.",
+    "difficulty": "mixed",
+    "tags": [
+      "system_design",
+      "architecture",
+      "distributed_systems"
+    ],
+    "source": "system_design_primer",
+    "source_name": "System Design Primer",
+    "source_url": "https://raw.githubusercontent.com/donnemartin/system-design-primer/master/README.md#latency_vs_throughput",
+    "type": "reference",
+    "topic": "system_design",
+    "topic_family": "system_design"
+  },
+  {
+    "id": "ext_00da0b9ad0c9",
+    "title": "System Design Primer \u2014 CAP theorem",
+    "description": "<p align=\"center\">\n  <img src=\"images/bgLMI2u.png\">\n  <br/>\n  <i><a href=\"https://robertgreiner.com/cap-theorem-revisited\">Source: CAP theorem revisited</a></i>\n</p>\n\nIn a distributed computer system, you can only support two of the following guarantees:\n\n* **Consistency** - Every read receives the most recent write or an error\n* **Availability** - Every request receives a response, without guarantee that it contains the most recent version of the information\n* **Partition Tolerance** - The system continues to operate despite arbitrary partitioning due to network failures\n\n*Networks aren't reliable, so you'll need to support partition tolerance.  You'll need to make a software tradeoff between consistency and availability.*\n\n#### CP - consistency and partition tolerance\n\nWaiting for a response from the partitioned node might result in a timeout error.  CP is a good choice if your business needs require atomic reads and writes.\n\n#### AP - availability and partition tolerance\n\nResponses return the most readily available version of the data available on any node, which might not be the latest.  Writes might take some time to propagate when the partition is resolved.\n\nAP is a good choice if the business needs to allow for [eventual consistency](#eventual-consistency) or when the system needs to continue working despite external errors.",
+    "difficulty": "mixed",
+    "tags": [
+      "system_design",
+      "architecture",
+      "distributed_systems"
+    ],
+    "source": "system_design_primer",
+    "source_name": "System Design Primer",
+    "source_url": "https://raw.githubusercontent.com/donnemartin/system-design-primer/master/README.md#cap_theorem",
+    "type": "reference",
+    "topic": "system_design",
+    "topic_family": "system_design"
+  },
+  {
+    "id": "ext_13faea1acd84",
+    "title": "System Design Primer \u2014 Consistency patterns",
+    "description": "With multiple copies of the same data, we are faced with options on how to synchronize them so clients have a consistent view of the data.  Recall the definition of consistency from the [CAP theorem](#cap-theorem) - Every read receives the most recent write or an error.",
+    "difficulty": "mixed",
+    "tags": [
+      "system_design",
+      "architecture",
+      "distributed_systems"
+    ],
+    "source": "system_design_primer",
+    "source_name": "System Design Primer",
+    "source_url": "https://raw.githubusercontent.com/donnemartin/system-design-primer/master/README.md#consistency_patterns",
+    "type": "reference",
+    "topic": "system_design",
+    "topic_family": "system_design"
+  },
+  {
+    "id": "ext_beadae096827",
+    "title": "System Design Primer \u2014 Weak consistency",
+    "description": "After a write, reads may or may not see it.  A best effort approach is taken.\n\nThis approach is seen in systems such as memcached.  Weak consistency works well in real time use cases such as VoIP, video chat, and realtime multiplayer games.  For example, if you are on a phone call and lose reception for a few seconds, when you regain connection you do not hear what was spoken during connection loss.",
+    "difficulty": "mixed",
+    "tags": [
+      "system_design",
+      "architecture",
+      "distributed_systems"
+    ],
+    "source": "system_design_primer",
+    "source_name": "System Design Primer",
+    "source_url": "https://raw.githubusercontent.com/donnemartin/system-design-primer/master/README.md#weak_consistency",
+    "type": "reference",
+    "topic": "system_design",
+    "topic_family": "system_design"
+  },
+  {
+    "id": "ext_7953260aca00",
+    "title": "System Design Primer \u2014 Eventual consistency",
+    "description": "After a write, reads will eventually see it (typically within milliseconds).  Data is replicated asynchronously.\n\nThis approach is seen in systems such as DNS and email.  Eventual consistency works well in highly available systems.",
+    "difficulty": "mixed",
+    "tags": [
+      "system_design",
+      "architecture",
+      "distributed_systems"
+    ],
+    "source": "system_design_primer",
+    "source_name": "System Design Primer",
+    "source_url": "https://raw.githubusercontent.com/donnemartin/system-design-primer/master/README.md#eventual_consistency",
+    "type": "reference",
+    "topic": "system_design",
+    "topic_family": "system_design"
+  },
+  {
+    "id": "ext_f5982751938f",
+    "title": "Tech Interview Handbook \u2014 overview",
+    "description": "<h1 align=\"center\">Tech Interview Handbook</h1>\n\n<div align=\"center\">\n  <a href=\"https://www.techinterviewhandbook.org/\">\n    <img src=\"assets/logo.svg\" alt=\"Tech Interview Handbook\" width=\"400\" />\n  </a>\n  <br />\n  <h3>\n    <a href=\"https://www.techinterviewhandbook.org/\">Read on the website</a>\n  </h3>\n  <p>\n    Join/follow us on <a href=\"https://discord.com/invite/usMqNaPczq\" target=\"_blank\">Discord</a> | <a href=\"https://twitter.com/techinterviewhb\" target=\"_blank\">\ud835\udd4f (Twitter)</a> | <a href=\"https://t.me/techinterviewhandbook\" target=\"_blank\">Telegram</a> |  <a href=\"https://facebook.com/techinterviewhandbook\" target=\"_blank\">Facebook</a>\n  </p>\n</div>\n\n---\n\n<a href=\"https://www.techinterviewhandbook.org/software-engineering-interview-guide/\" target=\"_blank\">\n  <img src=\"assets/start-reading-button.jpg\" alt=\"Start Reading Tech Interview Handbook\" />\n</a>",
+    "difficulty": "mixed",
+    "tags": [
+      "coding",
+      "behavioral",
+      "system_design"
+    ],
+    "source": "tech_interview_handbook",
+    "source_name": "Tech Interview Handbook",
+    "source_url": "https://raw.githubusercontent.com/yangshun/tech-interview-handbook/master/README.md#overview",
+    "type": "reference",
+    "topic": "coding_interview",
+    "topic_family": "coding_interview"
+  },
+  {
+    "id": "ext_b3a9cf72457f",
+    "title": "Tech Interview Handbook \u2014 What is this?",
+    "description": "Not everyone has the time to do a few hundred LeetCode questions. Here are _free and curated_ technical interview preparation materials for busy engineers, brought to you by me, the author of [Blind 75](https://www.teamblind.com/post/New-Year-Gift---Curated-List-of-Top-75-LeetCode-Questions-to-Save-Your-Time-OaM1orEU). Over 1,000,000 people have benefitted from this handbook!\n\nBesides the usual algorithm questions, other **awesome** stuff includes:\n\n- [Best practice questions](https://www.techinterviewhandbook.org/coding-interview-study-plan/) for coding interviews\n- [Grind 75](https://www.techinterviewhandbook.org/grind75/) - the next evolution of Blind 75, bigger and better\n- [How to prepare](https://www.techinterviewhandbook.org/coding-interview-prep/) for coding interviews\n- [Coding interview best practices](https://www.techinterviewhandbook.org/coding-interview-cheatsheet/) - Straight-to-the-point Do's and Don'ts\n- [Algorithm cheatsheets and tips](https://www.techinterviewhandbook.org/algorithms/study-cheatsheet/) categorized by topic\n- [Step-by-step Software Engineer resume guide](https://www.techinterviewhandbook.org/resume/) to prepare a FAANG-ready resume\n- [Behavioral questions](https://www.techinterviewhandbook.org/behavioral-interview-questions/) asked by the top tech companies\n- [Front end interview preparation](https://www.frontendinterviewhandbook.com)\n\nHelp from you in contributing content would be very much appreciated!",
+    "difficulty": "mixed",
+    "tags": [
+      "coding",
+      "behavioral",
+      "system_design"
+    ],
+    "source": "tech_interview_handbook",
+    "source_name": "Tech Interview Handbook",
+    "source_url": "https://raw.githubusercontent.com/yangshun/tech-interview-handbook/master/README.md#what_is_this",
+    "type": "reference",
+    "topic": "coding_interview",
+    "topic_family": "coding_interview"
+  },
+  {
+    "id": "ext_ac7dc86bdaa8",
+    "title": "Tech Interview Handbook \u2014 Why would you read this?",
+    "description": "This repository has **practical** content that covers all phases of a technical interview, from applying for a job to passing the interviews to offer negotiation. Technically competent candidates might still find the non-technical content helpful.\n\nThe information in this repository is condensed. Ultimately, the key to succeeding in technical interviews is consistent practice and I don't want to bore you with too many words. I tell you the minimum you need to know on how to go about navigating the interview process, you go and practice and land your dream job.",
+    "difficulty": "mixed",
+    "tags": [
+      "coding",
+      "behavioral",
+      "system_design"
+    ],
+    "source": "tech_interview_handbook",
+    "source_name": "Tech Interview Handbook",
+    "source_url": "https://raw.githubusercontent.com/yangshun/tech-interview-handbook/master/README.md#why_would_you_read_this",
+    "type": "reference",
+    "topic": "coding_interview",
+    "topic_family": "coding_interview"
+  },
+  {
+    "id": "ext_d51b7bf99dec",
+    "title": "Tech Interview Handbook \u2014 Who is this for?",
+    "description": "Anybody who wants to land a job at a tech company but is new to technical interviews, seasoned engineers who have not been on the other side of the interviewing table in a while and want to get back into the game, or anyone who wants to be better at technical interviewing.\n\n---\n\n<div align=\"center\">\n  <h3>\ud83d\udca1 Stop grinding mindlessly! Study coding question patterns efficiently with\n    <a href=\"https://www.designgurus.io/course/grokking-the-coding-interview?aff=kJSIoU\">Grokking the Coding Interview</a> by Design Gurus \ud83d\udca1\n  </h3>\n</div>\n\n---",
+    "difficulty": "mixed",
+    "tags": [
+      "coding",
+      "behavioral",
+      "system_design"
+    ],
+    "source": "tech_interview_handbook",
+    "source_name": "Tech Interview Handbook",
+    "source_url": "https://raw.githubusercontent.com/yangshun/tech-interview-handbook/master/README.md#who_is_this_for",
+    "type": "reference",
+    "topic": "coding_interview",
+    "topic_family": "coding_interview"
+  },
+  {
+    "id": "ext_6019a8c762e2",
+    "title": "Tech Interview Handbook \u2014 How is this repository different?",
+    "description": "There are many awesome books like \"Cracking the Coding Interview\" and interview-related repositories out there on GitHub, what makes this repository different? The difference is that many existing interview repositories contain mainly links to external resources whereas this repository contains top-quality curated content directly for your consumption.\n\nAlso, existing resources focus mainly on algorithm questions and lack coverage for more domain-specific and non-technical questions. This handbook aims to cover content beyond the typical algorithmic coding questions. \ud83d\ude0e",
+    "difficulty": "mixed",
+    "tags": [
+      "coding",
+      "behavioral",
+      "system_design"
+    ],
+    "source": "tech_interview_handbook",
+    "source_name": "Tech Interview Handbook",
+    "source_url": "https://raw.githubusercontent.com/yangshun/tech-interview-handbook/master/README.md#how_is_this_repository_different",
+    "type": "reference",
+    "topic": "coding_interview",
+    "topic_family": "coding_interview"
+  },
+  {
+    "id": "ext_fb593764f66c",
+    "title": "Tech Interview Handbook \u2014 [AlgoMonster](https://shareasale.com/r.cfm?b=1873647&u=3114753&m=114505&urllink=&afftrack=)",
+    "description": "AlgoMonster aims to help you ace the technical interview **in the shortest time possible**. By Google engineers, AlgoMonster uses a data-driven approach to teach you the most useful key question patterns and has contents to help you quickly revise basic data structures and algorithms. Best of all, AlgoMonster is not subscription-based - pay a one-time fee and get **lifetime access**. [**Join today for a 70% discount \u2192**](https://shareasale.com/r.cfm?b=1873647&u=3114753&m=114505&urllink=&afftrack=)",
+    "difficulty": "mixed",
+    "tags": [
+      "coding",
+      "behavioral",
+      "system_design"
+    ],
+    "source": "tech_interview_handbook",
+    "source_name": "Tech Interview Handbook",
+    "source_url": "https://raw.githubusercontent.com/yangshun/tech-interview-handbook/master/README.md#algomonster_https_shareasale_com_r_cfm_b_1873647_u_3114753_m_114505_urllink_afftrack",
+    "type": "reference",
+    "topic": "coding_interview",
+    "topic_family": "coding_interview"
+  },
+  {
+    "id": "ext_0ee30f532d74",
+    "title": "Tech Interview Handbook \u2014 [Grokking the Coding Interview: Patterns for Coding Questions](https://www.designgurus.io/course/grokking-the-coding-interview?aff=kJSIoU)",
+    "description": "This course by Design Gurus expands upon the questions on the recommended practice questions but approaches the practicing from a questions pattern perspective, which is an approach I also agree with for learning and have personally used to get better at coding interviews. The course allows you to practice selected questions in Java, Python, C++, JavaScript and also provides sample solutions in those languages. **Learn and understand patterns, not memorize answers!** [**Get lifetime access today \u2192**](https://www.designgurus.io/course/grokking-the-coding-interview?aff=kJSIoU)",
+    "difficulty": "mixed",
+    "tags": [
+      "coding",
+      "behavioral",
+      "system_design"
+    ],
+    "source": "tech_interview_handbook",
+    "source_name": "Tech Interview Handbook",
+    "source_url": "https://raw.githubusercontent.com/yangshun/tech-interview-handbook/master/README.md#grokking_the_coding_interview_patterns_for_coding_questions_https_www_designgurus_io_course_grokking_the_coding_interview_aff_kjsiou",
+    "type": "reference",
+    "topic": "coding_interview",
+    "topic_family": "coding_interview"
+  },
+  {
+    "id": "ext_dfe52afdccc2",
+    "title": "Tech Interview Handbook \u2014 Looking for Front End content?",
+    "description": "Front-end-related content has been moved to a separate website - [Front End Interview Handbook](https://frontendinterviewhandbook.com).",
+    "difficulty": "mixed",
+    "tags": [
+      "coding",
+      "behavioral",
+      "system_design"
+    ],
+    "source": "tech_interview_handbook",
+    "source_name": "Tech Interview Handbook",
+    "source_url": "https://raw.githubusercontent.com/yangshun/tech-interview-handbook/master/README.md#looking_for_front_end_content",
+    "type": "reference",
+    "topic": "coding_interview",
+    "topic_family": "coding_interview"
+  },
+  {
+    "id": "ext_0cbd223bf453",
+    "title": "Tech Interview Handbook \u2014 Looking for System Design content?",
+    "description": "We're still working on System Design content. In the meanwhile, check out [ByteByteGo's System Design Interview course](https://bytebytego.com?fpr=techinterviewhandbook) or Design Gurus' [Grokking the System Design Interview course](https://www.designgurus.io/course/grokking-the-system-design-interview?aff=kJSIoU), which in our opinion are among the most useful resources for getting started on system design interviews preparation.",
+    "difficulty": "mixed",
+    "tags": [
+      "coding",
+      "behavioral",
+      "system_design"
+    ],
+    "source": "tech_interview_handbook",
+    "source_name": "Tech Interview Handbook",
+    "source_url": "https://raw.githubusercontent.com/yangshun/tech-interview-handbook/master/README.md#looking_for_system_design_content",
+    "type": "reference",
+    "topic": "coding_interview",
+    "topic_family": "coding_interview"
+  },
+  {
+    "id": "ext_f576d4717f90",
+    "title": "Tech Interview Handbook \u2014 Contents",
+    "description": "A [Docusaurus](https://github.com/facebook/docusaurus) website has been created to provide a better reading experience. Check out the website [here](https://www.techinterviewhandbook.org)!\n\n---\n\n<div align=\"center\">\n  <h3>\ud83d\udca1 Stop the grind and study with a plan! Developed by Google engineers, <a href=\"https://shareasale.com/r.cfm?b=1873647&u=3114753&m=114505&urllink=&afftrack=\">AlgoMonster</a> is the fastest way to get a software engineering job. <a href=\"https://shareasale.com/r.cfm?b=1873647&u=3114753&m=114505&urllink=&afftrack=\">Join today for a 70% discount!</a> \ud83d\udca1</h3>\n</div>\n\n---",
+    "difficulty": "mixed",
+    "tags": [
+      "coding",
+      "behavioral",
+      "system_design"
+    ],
+    "source": "tech_interview_handbook",
+    "source_name": "Tech Interview Handbook",
+    "source_url": "https://raw.githubusercontent.com/yangshun/tech-interview-handbook/master/README.md#contents",
+    "type": "reference",
+    "topic": "coding_interview",
+    "topic_family": "coding_interview"
+  },
+  {
+    "id": "ext_338860f61547",
+    "title": "Tech Interview Handbook \u2014 Related",
+    "description": "If you are interested in how data structures are implemented, check out [Lago](https://github.com/yangshun/lago), a Data Structures and Algorithms library for JavaScript. It is pretty much still WIP but I intend to make it into a library that can be used in production and also a reference resource for revising Data Structures and Algorithms.",
+    "difficulty": "mixed",
+    "tags": [
+      "coding",
+      "behavioral",
+      "system_design"
+    ],
+    "source": "tech_interview_handbook",
+    "source_name": "Tech Interview Handbook",
+    "source_url": "https://raw.githubusercontent.com/yangshun/tech-interview-handbook/master/README.md#related",
+    "type": "reference",
+    "topic": "coding_interview",
+    "topic_family": "coding_interview"
+  },
+  {
+    "id": "ext_dfb3d064db6a",
+    "title": "Tech Interview Handbook \u2014 Contributing",
+    "description": "There are no formal contributing guidelines at the moment as things are still in flux and we might find a better approach to structure content as we go along. You are welcome to contribute whatever you think will be helpful to fellow engineers. If you would like to contribute content for different domains, feel free to create an issue or submit a pull request and we can discuss further.",
+    "difficulty": "mixed",
+    "tags": [
+      "coding",
+      "behavioral",
+      "system_design"
+    ],
+    "source": "tech_interview_handbook",
+    "source_name": "Tech Interview Handbook",
+    "source_url": "https://raw.githubusercontent.com/yangshun/tech-interview-handbook/master/README.md#contributing",
+    "type": "reference",
+    "topic": "coding_interview",
+    "topic_family": "coding_interview"
+  },
+  {
+    "id": "ext_0c4b89b24ed9",
+    "title": "Tech Interview Handbook \u2014 Contributors",
+    "description": "This project exists thanks to all the people who contributed. [[Contribute](CONTRIBUTING.md)]. <a href=\"https://github.com/yangshun/tech-interview-handbook/graphs/contributors\"><img src=\"https://opencollective.com/tech-interview-handbook/contributors.svg?width=890&button=false\"></a>",
+    "difficulty": "mixed",
+    "tags": [
+      "coding",
+      "behavioral",
+      "system_design"
+    ],
+    "source": "tech_interview_handbook",
+    "source_name": "Tech Interview Handbook",
+    "source_url": "https://raw.githubusercontent.com/yangshun/tech-interview-handbook/master/README.md#contributors",
+    "type": "reference",
+    "topic": "coding_interview",
+    "topic_family": "coding_interview"
+  },
+  {
+    "id": "ext_ed7db745c39e",
+    "title": "Tech Interview Handbook \u2014 Backers",
+    "description": "Thank you to all our backers! \ud83d\ude4f [[Become a backer](https://opencollective.com/tech-interview-handbook#backer)]\n\n<a href=\"https://opencollective.com/tech-interview-handbook#backers\" target=\"_blank\"><img src=\"https://opencollective.com/tech-interview-handbook/backers.svg?width=890\"></a>\n\n<a href=\"https://www.buymeacoffee.com/yangshun\" target=\"_blank\"><img src=\"https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png\" alt=\"Buy Me A Coffee\" style=\"height: auto !important; width: auto !important;\"></a>",
+    "difficulty": "mixed",
+    "tags": [
+      "coding",
+      "behavioral",
+      "system_design"
+    ],
+    "source": "tech_interview_handbook",
+    "source_name": "Tech Interview Handbook",
+    "source_url": "https://raw.githubusercontent.com/yangshun/tech-interview-handbook/master/README.md#backers",
+    "type": "reference",
+    "topic": "coding_interview",
+    "topic_family": "coding_interview"
+  },
+  {
+    "id": "ext_f084eb478894",
+    "title": "Tech Interview Handbook \u2014 Sponsors",
+    "description": "Support this project by becoming a sponsor. Your logo/profile picture will show up here with a link to your website. [[Become a sponsor](https://opencollective.com/tech-interview-handbook#sponsor)]\n\n<a href=\"https://opencollective.com/tech-interview-handbook/sponsor/0/website\" target=\"_blank\"><img src=\"https://opencollective.com/tech-interview-handbook/sponsor/0/avatar.svg\"></a> <a href=\"https://opencollective.com/tech-interview-handbook/sponsor/1/website\" target=\"_blank\"><img src=\"https://opencollective.com/tech-interview-handbook/sponsor/1/avatar.svg\"></a> <a href=\"https://opencollective.com/tech-interview-handbook/sponsor/2/website\" target=\"_blank\"><img src=\"https://opencollective.com/tech-interview-handbook/sponsor/2/avatar.svg\"></a> <a href=\"https://opencollective.com/tech-interview-handbook/sponsor/3/website\" target=\"_blank\"><img src=\"https://opencollective.com/tech-interview-handbook/sponsor/3/avatar.svg\"></a> <a href=\"https://opencollective.com/tech-interview-handbook/sponsor/4/website\" target=\"_blank\"><img src=\"https://opencollective.com/tech-interview-handbook/sponsor/4/avatar.svg\"></a> <a href=\"https://opencollective.com/tech-interview-handbook/sponsor/5/website\" target=\"_blank\"><img src=\"https://opencollective.com/tech-interview-handbook/sponsor/5/avatar.svg\"></a> <a href=\"https://opencollective.com/tech-interview-handbook/sponsor/6/website\" target=\"_blank\"><img src=\"https://opencollective.com/tech-interview-handbook/sponsor/6/avatar.svg\"></a> <a href=\"https://opencollective.com/tech-interview-handbook/sponsor/7/website\" target=\"_blank\"><img src=\"https://opencollective.com/tech-interview-handbook/sponsor/7/avatar.svg\"></a> <a href=\"https://opencollective.com/tech-interview-handbook/sponsor/8/website\" target=\"_blank\"><img src=\"https://opencollective.com/tech-interview-handbook/sponsor/8/avatar.svg\"></a> <a href=\"https://opencollective.com/tech-interview-handbook/sponsor/9/website\" target=\"_blank\"><img src=\"https://opencollective.com/tech-interview-handbook/sponsor/9/avatar.svg\"></a>",
+    "difficulty": "mixed",
+    "tags": [
+      "coding",
+      "behavioral",
+      "system_design"
+    ],
+    "source": "tech_interview_handbook",
+    "source_name": "Tech Interview Handbook",
+    "source_url": "https://raw.githubusercontent.com/yangshun/tech-interview-handbook/master/README.md#sponsors",
+    "type": "reference",
+    "topic": "coding_interview",
+    "topic_family": "coding_interview"
+  },
+  {
+    "id": "ext_bfabb28afbe8",
+    "title": "Tech Interview Handbook \u2014 Disclaimer",
+    "description": "I am providing code in the repository to you under an open source license. Because this is my personal repository, the license you receive to my code is from me and not my employer (Meta).",
+    "difficulty": "mixed",
+    "tags": [
+      "coding",
+      "behavioral",
+      "system_design"
+    ],
+    "source": "tech_interview_handbook",
+    "source_name": "Tech Interview Handbook",
+    "source_url": "https://raw.githubusercontent.com/yangshun/tech-interview-handbook/master/README.md#disclaimer",
+    "type": "reference",
+    "topic": "coding_interview",
+    "topic_family": "coding_interview"
+  },
+  {
+    "id": "ext_5900f5a94327",
+    "title": "Awesome Interview Questions \u2014 overview",
+    "description": "<div align=\"center\">\t\n\t<p>\t\n\t\t<a href=\"https://doppler.com?utm_campaign=github_repo&utm_medium=referral&utm_content=awesome-interview&utm_source=github\">\t\n      <div>\t\n\t\t\t\t<img src=\"https://dashboard.doppler.com/imgs/logo-long.svg\" width=\"260\"  alt=\"Doppler\">\t\n\t\t\t</div>\t\n      <br>\n\t\t\t<b>All your environment variables, in one place</b>\t\n\t\t\t<div>Stop struggling with scattered API keys, hacking together home-brewed tools,</div>\n\t\t\t<div>and avoiding access controls. Keep your team and servers in sync with Doppler.</div>\n\t\t\t</br>\n\t\t</a>\t\n\t</p>\t\n</div>\t\n\n# Awesome Interviews [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)\n\nThis project is no longer actively supported.\n\n> A curated list of lists of technical interview questions.\n\n[What makes for an awesome list?](awesome.md)\n\nPlease read the [contribution guidelines](contributing.md) or [creating a list guide](create-list.md) if you want to contribute.",
+    "difficulty": "mixed",
+    "tags": [
+      "interview",
+      "question_bank",
+      "curated"
+    ],
+    "source": "awesome_interview_questions",
+    "source_name": "Awesome Interview Questions",
+    "source_url": "https://raw.githubusercontent.com/DopplerHQ/awesome-interview-questions/master/README.md#overview",
+    "type": "reference",
+    "topic": "interview_prep",
+    "topic_family": "interview_prep"
+  },
+  {
+    "id": "ext_277084678834",
+    "title": "Awesome Interview Questions \u2014 Table of Contents",
+    "description": "- [Programming Languages/Frameworks/Platforms](#programming-languagesframeworksplatforms)\n  - [Android](#android)\n  - [AngularJS](#angularjs)\n  - [Angular](#angular)\n  - [BackboneJS](#backbonejs)\n  - [C++](#c)\n  - [C](#c-1)\n  - [C\u266f](#c-2)\n  - [.NET](#net)\n  - [Clojure](#clojure)\n  - [CSS](#css)\n  - [Cucumber](#cucumber)\n  - [Django](#django)\n  - [Docker](#docker)\n  - [Elastic](#elastic)\n  - [EmberJS](#emberjs)\n  - [Erlang](#erlang)\n  - [Golang](#golang)\n  - [GraphQl](#graphql)\n  - [HTML](#html)\n  - [Ionic](#ionic)\n  - [iOS](#ios)\n  - [Java](#java)\n  - [JavaScript](#javascript)\n  - [jQuery](#jquery)\n  - [Front-end build tools](#front-end-build-tools)\n  - [KnockoutJS](#knockoutjs)\n  - [Less](#less)\n  - [Lisp](#lisp)\n  - [NodeJS](#nodejs)\n  - [Objective-C](#objective-c)\n  - [PHP](#php)\n  - [Python](#python)\n  - [ReactJS](#reactjs)\n  - [Rails](#ruby-on-rails)\n  - [Ruby](#ruby)\n  - [Rust](#rust)\n  - [Sass](#sass)\n  - [Scala](#scala)\n  - [Shell](#shell)\n  - [Spark](#spark)\n  - [Swift](#swift)\n  - [Vue.js](#vuejs)\n  - [Wordpress](#wordpress)\n  - [TypeScript](#typescript)\n\n- [Database technologies](#database-technologies)\n  - [Cassandra](#cassandra)\n  - [Microsoft Access](#microsoft-access)\n  - [MongoDB](#mongodb)\n  - [MySQL](#mysql)\n  - [Neo4j](#neo4j)\n  - [Oracle](#oracle)\n  - [Postgres](#postgres)\n  - [SQL](#sql)\n  - [SQL Lite](#sql-lite)\n- [Caching technologies](#caching-technologies)\n  - [Memcached](#memcached)\n  - [Redis](#redis)\n\n- [OS](#os)\n  - [Linux](#linux)\n  - [Windows](#windows)\n- [Algorithms](#algorithms)\n- [Blockchain](#blockchain)\n- [Coding exercises](#coding-exercises)\n- [Comprehensive lists](#comprehensive-lists)\n- [Design patterns](#design-patterns)\n- [Data structures](#data-structures)\n- [Networks](#networks)\n- [Security](#security)\n- [Data Science](#data-science)",
+    "difficulty": "mixed",
+    "tags": [
+      "interview",
+      "question_bank",
+      "curated"
+    ],
+    "source": "awesome_interview_questions",
+    "source_name": "Awesome Interview Questions",
+    "source_url": "https://raw.githubusercontent.com/DopplerHQ/awesome-interview-questions/master/README.md#table_of_contents",
+    "type": "reference",
+    "topic": "interview_prep",
+    "topic_family": "interview_prep"
+  },
+  {
+    "id": "ext_41a4155f8743",
+    "title": "Awesome Interview Questions \u2014 Android",
+    "description": "* [10 Android interview question answers for Freshers](http://www.careerride.com/android-interview-questions.aspx)\n* [20 Essential Android Interview Questions from Toptal](http://www.toptal.com/android/interview-questions)\n* [25 Essential Android Interview Questions from Adeva](https://adevait.com/android/interview-questions)\n* [A couple of Android questions posted by Quora users](https://www.quora.com/What-are-good-job-interview-questions-for-an-Android-developer)\n* [A great list of Android interview questions covering all the aspects of this career](http://www.tutorialspoint.com/android/android_interview_questions.htm)\n* [Collection of Android and Java related questions and topics, including general developer questions, Java core, Data structures, Build Tools, Programming Paradigms, Core Android, Databases and etc](https://github.com/derekargueta/Android-Interview-Questions)\n* [Collection of Android and Java questions divided by experience](https://medium.com/@neteinstein/not-another-android-interviews-article-the-questions-3dedafa30bec)\n* [RocketSkill App Android Interview Questions](https://github.com/mindash/android-structured-interview)\n* [Android cheat sheet: Coding program, Data structure, Android and Java interview questions with answers and categorized by topics](https://github.com/anitaa1990/Android-Cheat-sheet)\n* [Android Interview Questions And Answers From Beginner To Advanced](https://www.andreasschrade.com/2017/02/23/android-interview-questions/)\n* [Interview Questions for Senior Android Developers](https://github.com/mohsenoid/Android-Interview-Questions)\n* [35+ Android Interview Questions](https://www.interviewbit.com/android-interview-questions/)",
+    "difficulty": "mixed",
+    "tags": [
+      "interview",
+      "question_bank",
+      "curated"
+    ],
+    "source": "awesome_interview_questions",
+    "source_name": "Awesome Interview Questions",
+    "source_url": "https://raw.githubusercontent.com/DopplerHQ/awesome-interview-questions/master/README.md#android",
+    "type": "reference",
+    "topic": "interview_prep",
+    "topic_family": "interview_prep"
+  },
+  {
+    "id": "ext_34a2b2407b94",
+    "title": "Awesome Interview Questions \u2014 AngularJS",
+    "description": "* [12 Essential AngularJS Interview Questions from Toptal](http://www.toptal.com/angular-js/interview-questions)\n* [An AngularJS exam with questions from beginner to expert by @gdi2290 from @AngularClass](https://github.com/gdi2290/ngExam)\n* [29 AngularJS Interview Questions \u2013 Can You Answer Them All? Great Article from Codementor](https://www.codementor.io/angularjs/tutorial/angularjs-interview-questions-sample-answers)\n* [AngularJS interview questions and answers for experienced developers](http://www.web-technology-experts-notes.in/2014/11/angularjs-interview-questions-and-answers-for-experienced.html)\n* [AngularJS Interview Questions which have been designed specially to get you acquainted with the nature of questions you may encounter during your interview for the subject of AngularJS](http://www.tutorialspoint.com/angularjs/angularjs_interview_questions.htm)\n* [This article discusses the top 50 Most occurred AngularJS interview question with answers](http://www.codeproject.com/Articles/891718/AngularJS-Interview-Questions-and-Answers)\n* [Top 25 Angularjs Interview Questions and Quiz](http://career.guru99.com/top-25-angular-js-interview-questions/)\n* [100 AngularJS Interview Questions - Quick Refresher](https://www.techbeamers.com/latest-angularjs-interview-questions-answers/)",
+    "difficulty": "mixed",
+    "tags": [
+      "interview",
+      "question_bank",
+      "curated"
+    ],
+    "source": "awesome_interview_questions",
+    "source_name": "Awesome Interview Questions",
+    "source_url": "https://raw.githubusercontent.com/DopplerHQ/awesome-interview-questions/master/README.md#angularjs",
+    "type": "reference",
+    "topic": "interview_prep",
+    "topic_family": "interview_prep"
+  },
+  {
+    "id": "ext_74eb0afe538a",
+    "title": "Awesome Interview Questions \u2014 Angular",
+    "description": "* [A list of helpful Angular related questions you can use to interview potential candidates, test yourself or completely ignore](https://github.com/Yonet/Angular-Interview-Questions)\n* [Angular 2 Interview Questions](https://www.onlineinterviewquestions.com/angular2-interview-questions/)\n* [List of 300 Angular Interview Questions and Answers](https://github.com/sudheerj/angular-interview-questions)\n* [Angular Interview Questions (2020)](https://www.interviewbit.com/angular-interview-questions/)\n* [Top Angular Interview Questions and Answers in 2021](https://hackr.io/blog/angular-interview-questions)",
+    "difficulty": "mixed",
+    "tags": [
+      "interview",
+      "question_bank",
+      "curated"
+    ],
+    "source": "awesome_interview_questions",
+    "source_name": "Awesome Interview Questions",
+    "source_url": "https://raw.githubusercontent.com/DopplerHQ/awesome-interview-questions/master/README.md#angular",
+    "type": "reference",
+    "topic": "interview_prep",
+    "topic_family": "interview_prep"
+  },
+  {
+    "id": "ext_7e8c62c74440",
+    "title": "Awesome Interview Questions \u2014 BackboneJS",
+    "description": "* [8 Essential Backbonejs Interview Questions from Toptal](http://www.toptal.com/backbone-js/interview-questions)\n* [Backbonejs Interview Questions And Answers from web technology experts notes](http://www.web-technology-experts-notes.in/2015/01/backbone-js-interview-questions-and-answers.html)\n* [Top 25 Backbone.js interview questions](http://career.guru99.com/top-25-backbone-js-interview-questions/)",
+    "difficulty": "mixed",
+    "tags": [
+      "interview",
+      "question_bank",
+      "curated"
+    ],
+    "source": "awesome_interview_questions",
+    "source_name": "Awesome Interview Questions",
+    "source_url": "https://raw.githubusercontent.com/DopplerHQ/awesome-interview-questions/master/README.md#backbonejs",
+    "type": "reference",
+    "topic": "interview_prep",
+    "topic_family": "interview_prep"
+  },
+  {
+    "id": "ext_42dd92abfc35",
+    "title": "Awesome Interview Questions \u2014 C++",
+    "description": "* [1000+ Multiple Choice Questions & Answers in C++ with explanations](http://www.sanfoundry.com/cplusplus-interview-questions-answers/)\n* [200 C++ interview questions and answers](http://www.careerride.com/C++-Interview-questions-Answer.aspx)\n* [24 Essential C++ Interview Questions from Toptal](http://www.toptal.com/c-plus-plus/interview-questions)\n* [C++ Interview Questions from GeekInterview](http://www.geekinterview.com/Interview-Questions/Languages/C-Plus-Plus)\n* [C++ Programming Q&A and quizzes from computer science portal for geeks](http://www.geeksforgeeks.org/c-plus-plus/)\n* [C++ Programming Questions and Answers related to such topics as OOPs concepts, Object and Classes, Functions, Constructors and Destructors, Inheritance and etc](http://www.indiabix.com/cpp-programming/questions-and-answers/)\n* [LeetCode Problems' Solutions written in C++](https://github.com/haoel/leetcode)",
+    "difficulty": "mixed",
+    "tags": [
+      "interview",
+      "question_bank",
+      "curated"
+    ],
+    "source": "awesome_interview_questions",
+    "source_name": "Awesome Interview Questions",
+    "source_url": "https://raw.githubusercontent.com/DopplerHQ/awesome-interview-questions/master/README.md#c",
+    "type": "reference",
+    "topic": "interview_prep",
+    "topic_family": "interview_prep"
+  },
+  {
+    "id": "ext_7774b008e4ba",
+    "title": "Awesome Interview Questions \u2014 C",
+    "description": "* [Basic C language technical frequently asked interview questions and answers It includes data structures, pointers interview questions and answers for experienced](http://www.cquestions.com/2010/10/c-interview-questions-and-answers.html)\n* [C Programming Interview Questions and Answers for such topics as Bits and Bytes, Preprocessors, Functions, Strings, Language basics and etc](http://www.indiabix.com/technical/c/)\n* [C Programming Interview Questions have been designed specially to get you acquainted with the nature of questions you may encounter during your interview for the subject of C Programming](http://www.tutorialspoint.com/cprogramming/cprogramming_interview_questions.htm)\n* [First set of commonly asked C programming interview questions from computer science portal for geeks](http://geeksquiz.com/commonly-asked-c-programming-interview-questions-set-1/)\n* [Second set of commonly asked C programming interview questions from computer science portal for geeks](http://geeksquiz.com/commonly-asked-c-programming-interview-questions-set-2/)\n* [9 Essential C Interview Questions with answers](https://www.toptal.com/c/interview-questions)\n* [Top C Interview Questions and Answers](https://www.interviewbit.com/c-interview-questions/)",
+    "difficulty": "mixed",
+    "tags": [
+      "interview",
+      "question_bank",
+      "curated"
+    ],
+    "source": "awesome_interview_questions",
+    "source_name": "Awesome Interview Questions",
+    "source_url": "https://raw.githubusercontent.com/DopplerHQ/awesome-interview-questions/master/README.md#c",
+    "type": "reference",
+    "topic": "interview_prep",
+    "topic_family": "interview_prep"
+  },
+  {
+    "id": "ext_0c196496cc3b",
+    "title": "Awesome Interview Questions \u2014 C#",
+    "description": "* [15 Essential C# Interview Question from Toptal](http://www.toptal.com/c-sharp/interview-questions)\n* [C# interview questions from dotnetfunda.com](http://www.dotnetfunda.com/interviews/cat/6/csharp)\n* [Top 50 C# Interview Questions & Answers](http://career.guru99.com/top-50-c-sharp-interview-questions-answers/)\n* [50 C# Coding Interview Questions and Answers](https://www.techbeamers.com/csharp-coding-interview-questions-developers/)\n* [20 C# OOPS Interview Questions and Answers](https://www.techbeamers.com/csharp-oops-interview-questions-answers/)\n* [30+ C# Interview Questions](https://www.interviewbit.com/c-sharp-interview-questions/)",
+    "difficulty": "mixed",
+    "tags": [
+      "interview",
+      "question_bank",
+      "curated"
+    ],
+    "source": "awesome_interview_questions",
+    "source_name": "Awesome Interview Questions",
+    "source_url": "https://raw.githubusercontent.com/DopplerHQ/awesome-interview-questions/master/README.md#c",
+    "type": "reference",
+    "topic": "interview_prep",
+    "topic_family": "interview_prep"
+  },
+  {
+    "id": "ext_8061450a78c6",
+    "title": "Awesome Interview Questions \u2014 .NET",
+    "description": "* [300 ASPNET interview questions and answers](http://www.careerride.com/ASPNet-Questions.aspx)\n* [ASP.NET Core Interview Questions](https://www.talkingdotnet.com/asp-net-core-interview-questions/)\n* [Great list of NET interview questions covering all the NET platform topics](http://www.indiabix.com/technical/dotnet/)\n* [NET Interview Questions and Answers for Beginners which consists of the most frequently asked questions in NET This list of 100+ questions and answers gauge your familiarity with the NET platform](http://www.dotnetcurry.com/dotnetinterview/70/dotnet-interview-questions-answers-beginners)\n* [Questions gathered by community of the StackOverflow](http://stackoverflow.com/questions/365489/questions-every-good-net-developer-should-be-able-to-answer)\n* [What Great NET Developers Ought To Know (More NET Interview Questions)](http://www.hanselman.com/blog/WhatGreatNETDevelopersOughtToKnowMoreNETInterviewQuestions.aspx)",
+    "difficulty": "mixed",
+    "tags": [
+      "interview",
+      "question_bank",
+      "curated"
+    ],
+    "source": "awesome_interview_questions",
+    "source_name": "Awesome Interview Questions",
+    "source_url": "https://raw.githubusercontent.com/DopplerHQ/awesome-interview-questions/master/README.md#net",
+    "type": "reference",
+    "topic": "interview_prep",
+    "topic_family": "interview_prep"
+  },
+  {
+    "id": "ext_eae778832b64",
+    "title": "Awesome Interview Questions \u2014 Clojure",
+    "description": "* [Classic 'Fizz Buzz' interview question for Clojure developers](http://www.learningclojure.com/2014/05/fizz-buzz-interview-question.html)\n* [Clojure Interview Questions for experienced devs](http://ita2zguide.blogspot.com.by/p/cc.html)\n* [Coding exercises in Clojure, handy practice for technical interview questions](https://github.com/dpetrovics/coding-exercises)\n* [Experience and questions from Clojure developer interview collected by Reddit users](https://www.reddit.com/r/Clojure/comments/34qhha/clojure_coding_job_interview_experience/)\n* [Interview cake Clojure solutions](https://github.com/DerekCuevas/interview-cake-clj)",
+    "difficulty": "mixed",
+    "tags": [
+      "interview",
+      "question_bank",
+      "curated"
+    ],
+    "source": "awesome_interview_questions",
+    "source_name": "Awesome Interview Questions",
+    "source_url": "https://raw.githubusercontent.com/DopplerHQ/awesome-interview-questions/master/README.md#clojure",
+    "type": "reference",
+    "topic": "interview_prep",
+    "topic_family": "interview_prep"
+  },
+  {
+    "id": "ext_46d885bb53a2",
+    "title": "Awesome Interview Questions \u2014 CSS",
+    "description": "* [CSS interview questions and answers for freshers and experienced candidates Also there you can find CSS online practice tests to fight written tests and certification exams on CSS](http://www.careerride.com/Interview-Questions-CSS.aspx)\n* [Development hiring managers and potential interviewees may find there sample CSS proficiency interview Q&As and code snippets useful](http://www.techrepublic.com/blog/software-engineer/css-interview-questions-and-answers/)\n* [Interview Questions and Exercises About CSS](https://css-tricks.com/interview-questions-css/)\n* [Top 50 CSS(Cascading Style Sheet) Interview Questions covering the most of tricky CSS moments](http://career.guru99.com/top-50-csscascading-style-sheet-interview-questions/)\n* [Front End Interview Handbook - CSS Questions and Answers](https://frontendinterviewhandbook.com/css-questions/)",
+    "difficulty": "mixed",
+    "tags": [
+      "interview",
+      "question_bank",
+      "curated"
+    ],
+    "source": "awesome_interview_questions",
+    "source_name": "Awesome Interview Questions",
+    "source_url": "https://raw.githubusercontent.com/DopplerHQ/awesome-interview-questions/master/README.md#css",
+    "type": "reference",
+    "topic": "interview_prep",
+    "topic_family": "interview_prep"
+  },
+  {
+    "id": "ext_756bf49293aa",
+    "title": "Awesome Interview Questions \u2014 Cucumber",
+    "description": "* [Cucumber Web Application BDD Sample Interview Questions](https://ratedr05.wordpress.com/2017/09/22/cucumber-interview-questions/)\n* [Guide to building a simple Cucumber + Watir page object pattern framework](http://watir.com/simple-cucumber-watir-page-object-pattern-framework/)",
+    "difficulty": "mixed",
+    "tags": [
+      "interview",
+      "question_bank",
+      "curated"
+    ],
+    "source": "awesome_interview_questions",
+    "source_name": "Awesome Interview Questions",
+    "source_url": "https://raw.githubusercontent.com/DopplerHQ/awesome-interview-questions/master/README.md#cucumber",
+    "type": "reference",
+    "topic": "interview_prep",
+    "topic_family": "interview_prep"
+  },
+  {
+    "id": "ext_db30687f2782",
+    "title": "Awesome Interview Questions \u2014 Django",
+    "description": "* [Some abstract interview questions for Python/Django developers](http://insights.dice.com/2014/04/30/interview-questions-pythondjango-developers/)\n* [Some Django basic interview questions to establish the basic level of the candidates](http://www.ilian.io/django-interview-questions/)\n* [Top 16 Django Interview Questions for both freshers and experienced developers](http://career.guru99.com/top-16-django-interview-questions/)",
+    "difficulty": "mixed",
+    "tags": [
+      "interview",
+      "question_bank",
+      "curated"
+    ],
+    "source": "awesome_interview_questions",
+    "source_name": "Awesome Interview Questions",
+    "source_url": "https://raw.githubusercontent.com/DopplerHQ/awesome-interview-questions/master/README.md#django",
+    "type": "reference",
+    "topic": "interview_prep",
+    "topic_family": "interview_prep"
+  },
+  {
+    "id": "ext_f5ca36cc8d56",
+    "title": "Awesome Interview Questions \u2014 Docker",
+    "description": "* [Docker Interview Questions](https://mindmajix.com/docker-interview-questions)\n* [Top Docker Interview Questions You Must Prepare In 2019](https://www.edureka.co/blog/interview-questions/docker-interview-questions/)\n* [Top Docker Interview Questions And Answers](https://intellipaat.com/interview-question/docker-interview-questions/)\n* [DOCKER (SOFTWARE) INTERVIEW QUESTIONS & ANSWERS](https://www.wisdomjobs.com/e-university/docker-software-interview-questions.html)\n* [30 Docker Interview Questions and Answers in 2019](https://www.fullstack.cafe/blog/docker-interview-questions-and-answers)\n* [Docker Interview Questions & Answers](https://www.interviewbit.com/docker-interview-questions/)\n* [Top 50 Docker Interview Questions & Answers](https://www.wissenhive.com/blogs/top-50-docker-interview-questions-and-answers)\n* [Top 50+ Docker Interview Questions and Answers in 2021](https://www.techgeekbuzz.com/top-docker-interview-questions/)",
+    "difficulty": "mixed",
+    "tags": [
+      "interview",
+      "question_bank",
+      "curated"
+    ],
+    "source": "awesome_interview_questions",
+    "source_name": "Awesome Interview Questions",
+    "source_url": "https://raw.githubusercontent.com/DopplerHQ/awesome-interview-questions/master/README.md#docker",
+    "type": "reference",
+    "topic": "interview_prep",
+    "topic_family": "interview_prep"
+  },
+  {
+    "id": "ext_5ff39004204f",
+    "title": "Awesome Interview Questions \u2014 Elastic",
+    "description": "* [Top Elastic Stack Interview Questions](https://logit.io/blog/post/the-top-50-elk-stack-and-elasticsearch-interview-questions)",
+    "difficulty": "mixed",
+    "tags": [
+      "interview",
+      "question_bank",
+      "curated"
+    ],
+    "source": "awesome_interview_questions",
+    "source_name": "Awesome Interview Questions",
+    "source_url": "https://raw.githubusercontent.com/DopplerHQ/awesome-interview-questions/master/README.md#elastic",
+    "type": "reference",
+    "topic": "interview_prep",
+    "topic_family": "interview_prep"
+  },
+  {
+    "id": "ext_7d25ccf59da5",
+    "title": "Awesome Interview Questions \u2014 EmberJS",
+    "description": "* [8 Essential Emberjs Interview Questions from Toptal](http://www.toptal.com/emberjs/interview-questions)\n* [Top 25 Emberjs Interview Questions for both freshers and experienced developers](http://career.guru99.com/top-25-ember-js-interview-questions/)",
+    "difficulty": "mixed",
+    "tags": [
+      "interview",
+      "question_bank",
+      "curated"
+    ],
+    "source": "awesome_interview_questions",
+    "source_name": "Awesome Interview Questions",
+    "source_url": "https://raw.githubusercontent.com/DopplerHQ/awesome-interview-questions/master/README.md#emberjs",
+    "type": "reference",
+    "topic": "interview_prep",
+    "topic_family": "interview_prep"
+  },
+  {
+    "id": "ext_cc56ecb530ee",
+    "title": "Awesome Interview Questions \u2014 Erlang",
+    "description": "* [Top 22 Erlang Interview Questions for both freshers and experienced developers](http://career.guru99.com/top-22-erlang-interview-questions/)",
+    "difficulty": "mixed",
+    "tags": [
+      "interview",
+      "question_bank",
+      "curated"
+    ],
+    "source": "awesome_interview_questions",
+    "source_name": "Awesome Interview Questions",
+    "source_url": "https://raw.githubusercontent.com/DopplerHQ/awesome-interview-questions/master/README.md#erlang",
+    "type": "reference",
+    "topic": "interview_prep",
+    "topic_family": "interview_prep"
+  },
+  {
+    "id": "ext_3edaee1800c4",
+    "title": "Awesome Interview Questions \u2014 Golang",
+    "description": "* [Solutions for Elements of Programming Interviews problems written in Golang](https://github.com/mrekucci/epi)\n* [Solutions for some basic coding interview tasks written in Go](https://github.com/efischer19/golang_ctci)\n* [Top 20 GO Programming Interview Questions for both freshers and experienced developers](http://career.guru99.com/top-20-go-programming-interview-questions/)",
+    "difficulty": "mixed",
+    "tags": [
+      "interview",
+      "question_bank",
+      "curated"
+    ],
+    "source": "awesome_interview_questions",
+    "source_name": "Awesome Interview Questions",
+    "source_url": "https://raw.githubusercontent.com/DopplerHQ/awesome-interview-questions/master/README.md#golang",
+    "type": "reference",
+    "topic": "interview_prep",
+    "topic_family": "interview_prep"
+  },
+  {
+    "id": "ext_bb983ab7f9c4",
+    "title": "Awesome Interview Questions \u2014 GraphQl",
+    "description": "* [8 GraphQl Interview Questions To Know](https://www.fullstack.cafe/blog/5-graphql-interview-questions-you-should-know)\n* [How to GraphQl - Common Questions](https://www.howtographql.com/advanced/5-common-questions/)",
+    "difficulty": "mixed",
+    "tags": [
+      "interview",
+      "question_bank",
+      "curated"
+    ],
+    "source": "awesome_interview_questions",
+    "source_name": "Awesome Interview Questions",
+    "source_url": "https://raw.githubusercontent.com/DopplerHQ/awesome-interview-questions/master/README.md#graphql",
+    "type": "reference",
+    "topic": "interview_prep",
+    "topic_family": "interview_prep"
+  },
+  {
+    "id": "ext_0abb24523e40",
+    "title": "Awesome Interview Questions \u2014 HTML",
+    "description": "* [10 Typical HTML Interview Exercises from SitePoint.com](http://www.sitepoint.com/10-typical-html-interview-exercises/)\n* [16 Essential HTML5 Interview Questions from Toptal](http://www.toptal.com/html5/interview-questions)\n* [40 important HTML 5 Interview questions with answers](http://www.codeproject.com/Articles/702051/important-HTML-Interview-questions-with-answe)\n* [HTML interview questions and answers for freshers and experienced candidates Also find HTML online practice tests to fight written tests and certification exams on HTML](http://www.careerride.com/Interview-Questions-HTML.aspx)\n* [Top 50 HTML Interview Questions for both freshers and experienced developers](http://career.guru99.com/top-50-html-interview-questions/)\n* [Common HTML interview questions for freshers](http://www.javatpoint.com/html-interview-questions)\n* [Front End Interview Handbook - HTML Questions and Answers](https://frontendinterviewhandbook.com/html-questions/)\n* [30 HTML Interview Questions and Answers](https://www.techbeamers.com/latest-html-interview-questions/)\n* [30+ HTML Interview Questions (2021)](https://www.interviewbit.com/html-interview-questions/)",
+    "difficulty": "mixed",
+    "tags": [
+      "interview",
+      "question_bank",
+      "curated"
+    ],
+    "source": "awesome_interview_questions",
+    "source_name": "Awesome Interview Questions",
+    "source_url": "https://raw.githubusercontent.com/DopplerHQ/awesome-interview-questions/master/README.md#html",
+    "type": "reference",
+    "topic": "interview_prep",
+    "topic_family": "interview_prep"
+  },
+  {
+    "id": "ext_3ba74ac59e8d",
+    "title": "Awesome Interview Questions \u2014 Ionic",
+    "description": "* [23 Beginner Level Ionic Framework Questions](http://www.codeandyou.com/p/ionic-interview-questions.html)\n* [12 Essential Ionic Interview Questions](https://www.toptal.com/ionic/interview-questions)\n* [45 Ionic Interview Questions](https://www.javatpoint.com/ionic-interview-questions)\n* [Most Asked Ionic Interview Questions](https://www.maheshbhusanoor.com/article/ionic-interview-questions-answers.html)",
+    "difficulty": "mixed",
+    "tags": [
+      "interview",
+      "question_bank",
+      "curated"
+    ],
+    "source": "awesome_interview_questions",
+    "source_name": "Awesome Interview Questions",
+    "source_url": "https://raw.githubusercontent.com/DopplerHQ/awesome-interview-questions/master/README.md#ionic",
+    "type": "reference",
+    "topic": "interview_prep",
+    "topic_family": "interview_prep"
+  },
+  {
+    "id": "ext_8d087993a2e9",
+    "title": "Awesome Interview Questions \u2014 iOS",
+    "description": "* [14 Essential iOS Interview Questions from Toptal](http://www.toptal.com/ios/interview-questions)\n* [20 iOS Developer Interview Questions and Answers for getting you ready for your interview](https://www.codementor.io/ios/tutorial/ios-interview-tips-questions-answers-objective-c)\n* [25 Essential iOS Interview Questions from Adeva](https://adevait.com/ios/interview-questions)\n* [A small guide to help those looking to hire a developer or designer for iOS work While tailored for iOS, many questions could be used for Android developers or designers as well A great self-test if you're looking to keep current or practice for your own interview](https://github.com/CameronBanga/iOS-Developer-and-Designer-Interview-Questions)\n* [All you need to know about iOS technical interview including some tips for preparing, questions and some coding exercises](http://www.raywenderlich.com/53962/ios-interview-questions)\n* [Interview Questions for iOS and Mac Developers from the CEO of Black Pixel](https://blackpixel.com/writing/2013/04/interview-questions-for-ios-and-mac-developers-1.html)\n* [iOS Interview Questions and Answers including such topics as Development Basics, App states and multitasking, App states, Core app objects](http://www.geekinterview.com/Interview-Questions/iOS)\n* [iOS Interview Questions For Senior Developers](https://m.smartcloud.io/ios-interview-questions-for-senior-developers-in-2017-a94cc81c8205)\n* [50 iOS Interview Questions And Answers 1](https://medium.com/ios-os-x-development/ios-interview-questions-13840247a57a)\n* [50 iOS Interview Questions And Answers Part 2](https://medium.com/ios-os-x-development/50-ios-interview-questions-and-answers-part-2-45f952230b9f)\n* [50 iOS Interview Questions And Answers Part 3](https://medium.com/ios-os-x-development/50-ios-interview-questions-and-answers-part-3-3fad146b6c3d)\n* [50 iOS Interview Questions And Answers Part 4](https://medium.com/@duruldalkanat/50-ios-interview-questions-and-answers-part-4-6f26b26341a)\n* [50 iOS Interview Questions And Answers Part 5](https://medium.com/@duruldalkanat/50-ios-interview-questions-and-answers-part-5-de6241374a8f)\n* [10 iOS interview questions and answers](https://www.upwork.com/i/interview-questions/ios/)\n* [iOS Developer and Designer Interview Questions](https://github.com/9magnets/iOS-Developer-and-Designer-Interview-Questions#tech)\n* [IOS Interview Questions and Answer",
+    "difficulty": "mixed",
+    "tags": [
+      "interview",
+      "question_bank",
+      "curated"
+    ],
+    "source": "awesome_interview_questions",
+    "source_name": "Awesome Interview Questions",
+    "source_url": "https://raw.githubusercontent.com/DopplerHQ/awesome-interview-questions/master/README.md#ios",
+    "type": "reference",
+    "topic": "interview_prep",
+    "topic_family": "interview_prep"
+  },
+  {
+    "id": "ext_b549e1ad5b19",
+    "title": "Awesome Interview Questions \u2014 Java",
+    "description": "* [List of Java programs for interview Categoriwise](https://onurdesk.com/category/interview/interview-program-java/)\n* [115 Java Interview Questions and Answers \u2013 The ULTIMATE List](http://www.javacodegeeks.com/2014/04/java-interview-questions-and-answers.html)\n* [37 Java Interview Questions to Practice With from Codementor](https://www.codementor.io/java/tutorial/java-interview-sample-questions-answers)\n* [21 Essential Java Interview Questions](http://www.toptal.com/java/interview-questions)\n* [Top 30 Core Java Interview Questions](https://www.janbasktraining.com/blog/core-java-interview-questions-answers/)\n* [29 Essential Java Interview Questions from Adeva](https://adevait.com/java/interview-questions)\n* [A collection of Java interview questions and answers to them](https://github.com/svozniuk/java-interviews)\n* [Data Structures and Algorithms in Java which can be useful in interview process](https://github.com/donbeave/interview)\n* [Java Interview Questions: How to crack the TOP 15 questions](https://blog.udemy.com/java-interview-questions/)\n* [300 Core Java Interview Questions](http://www.javatpoint.com/corejava-interview-questions)\n* [Top 10 Tricky Java interview questions and Answers](http://java67.blogspot.com.by/2012/09/top-10-tricky-java-interview-questions-answers.html)\n* [Top 25 Most Frequently Asked Interview Core Java Interview Questions And Answers](http://javahungry.blogspot.com/2013/06/top-25-most-frequently-asked-core-java.html)\n* [Top 40 Core Java Interview Questions Answers from Telephonic Round](http://java67.blogspot.sg/2015/03/top-40-core-java-interview-questions-answers-telephonic-round.html)\n* [Top 50 Spring Interview Questions You Must Prepare For In 2020](https://www.edureka.co/blog/interview-questions/spring-interview-questions/)\n* [Spring Interview Questions And Answers](https://www.journaldev.com/2696/spring-interview-questions-and-answers)\n* [Interview Cake Java Interview Questions](https://www.interviewcake.com/java-interview-questions)\n* [Java Interview Questions & Quizzes](https://www.techbeamers.com/java-interview-questions/)\n* [Essetial Java Interview Questions](https://fdk.codes/some-java-interview-questions/)\n* [Fundamental Java Interview Questions](https://www.interviewbit.com/java-interview-questions/)",
+    "difficulty": "mixed",
+    "tags": [
+      "interview",
+      "question_bank",
+      "curated"
+    ],
+    "source": "awesome_interview_questions",
+    "source_name": "Awesome Interview Questions",
+    "source_url": "https://raw.githubusercontent.com/DopplerHQ/awesome-interview-questions/master/README.md#java",
+    "type": "reference",
+    "topic": "interview_prep",
+    "topic_family": "interview_prep"
+  },
+  {
+    "id": "ext_c25f7ad8fa5a",
+    "title": "Awesome Interview Questions \u2014 JavaScript",
+    "description": "* [Practice common algorithms using JavaScript](https://github.com/ignacio-chiazzo/Algorithms-Leetcode-Javascript)\n* [10 Interview Questions Every JavaScript Developer Should Know](https://medium.com/javascript-scene/10-interview-questions-every-javascript-developer-should-know-6fa6bdf5ad95)\n* [21 Essential JavaScript Interview Questions from best mentors all over the world](https://www.codementor.io/javascript/tutorial/21-essential-javascript-tech-interview-practice-questions-answers)\n* [20 Essential JavaScript Interview Questions from Adeva](https://adevait.com/javascript-developers/interview-questions)\n* [37 Essential JavaScript Interview Questions from Toptal](http://www.toptal.com/javascript/interview-questions)\n* [5 More JavaScript Interview Exercises](http://www.sitepoint.com/5-javascript-interview-exercises/)\n* [5 Typical JavaScript Interview Exercises](http://www.sitepoint.com/5-typical-javascript-interview-exercises/)\n* [Development hiring managers and potential interviewees may find these sample JavaScript proficiency interview Q&As and code snippets useful](http://www.techrepublic.com/blog/software-engineer/javascript-interview-questions-and-answers/)\n* [123 Essential JavaScript Interview Question](https://github.com/nishant8BITS/123-Essential-JavaScript-Interview-Question)\n* [JavaScript Interview Questions have been designed specially to get you acquainted with the nature of questions you may encounter during your interview for the subject of JavaScript](http://www.tutorialspoint.com/javascript/javascript_interview_questions.htm)\n* [JS: Basics and Tricky Questions](http://www.thatjsdude.com/interview/js2.html)\n* [JS: Interview Algorithm](http://thatjsdude.com/interview/js1.html)\n* [Some basic javascript coding challenges and interview questions](https://github.com/kolodny/exercises)\n* [Some JavaScript interview exercises](https://github.com/csvenja/javascript-exercises)\n* [Ten Questions I've Been Asked, Most More Than Once, Over Six Technical JavaScript / Front-End Engineer Job Interviews.](https://www.reddit.com/r/javascript/comments/3rb88w/ten_questions_ive_been_asked_most_more_than_once)\n* [Top 85 JavaScript Interview Questions](http://career.guru99.com/top-85-javascript-interview-questions/)\n* [Interview Cake JavaScript Interview Questions](https://www.interviewcake.com/javascript-interview-questions)\n* [The Best Frontend JavaScript Intervie",
+    "difficulty": "mixed",
+    "tags": [
+      "interview",
+      "question_bank",
+      "curated"
+    ],
+    "source": "awesome_interview_questions",
+    "source_name": "Awesome Interview Questions",
+    "source_url": "https://raw.githubusercontent.com/DopplerHQ/awesome-interview-questions/master/README.md#javascript",
+    "type": "reference",
+    "topic": "interview_prep",
+    "topic_family": "interview_prep"
+  },
+  {
+    "id": "ext_23b3fb423a99",
+    "title": "Awesome Interview Questions \u2014 jQuery",
+    "description": "* [Top 50 jquery interview questions](https://career.guru99.com/top-50-jquery-interview-questions/)\n* [17 Essential jQuery Interview Questions From Toptal](https://www.toptal.com/jquery/interview-questions)\n* [Top JQuery Interview Questions and Answers](https://www.techgeekbuzz.com/top-jquery-interview-questions/)",
+    "difficulty": "mixed",
+    "tags": [
+      "interview",
+      "question_bank",
+      "curated"
+    ],
+    "source": "awesome_interview_questions",
+    "source_name": "Awesome Interview Questions",
+    "source_url": "https://raw.githubusercontent.com/DopplerHQ/awesome-interview-questions/master/README.md#jquery",
+    "type": "reference",
+    "topic": "interview_prep",
+    "topic_family": "interview_prep"
+  },
+  {
+    "id": "ext_e0014903a8bd",
+    "title": "Awesome Interview Questions \u2014 Front-end build tools",
+    "description": "* [Webpack interview questions & answers](https://github.com/styopdev/webpack-interview-questions)\n* [Gulp js interview questions](https://www.codeproject.com/Articles/1065184/Latest-Gulp-js-interview-questions)\n* [Grunt js interview questions for beginners](http://www.talkingdotnet.com/grunt-js-interview-questions/)\n* [Grunt js interview questions](https://mindmajix.com/grunt-interview-questions)",
+    "difficulty": "mixed",
+    "tags": [
+      "interview",
+      "question_bank",
+      "curated"
+    ],
+    "source": "awesome_interview_questions",
+    "source_name": "Awesome Interview Questions",
+    "source_url": "https://raw.githubusercontent.com/DopplerHQ/awesome-interview-questions/master/README.md#front_end_build_tools",
+    "type": "reference",
+    "topic": "interview_prep",
+    "topic_family": "interview_prep"
+  },
+  {
+    "id": "ext_01cae2a8e675",
+    "title": "Awesome Interview Questions \u2014 KnockoutJS",
+    "description": "* [15 interview questions from CodeSample.com](http://www.code-sample.com/2014/01/knockout-js-interview-questions-and.html)\n* [20 questions you might be asked about KnockoutJS in an interview for both freshers and experienced developers](http://www.codeproject.com/Articles/987899/KnockoutJS-interview-questions)",
+    "difficulty": "mixed",
+    "tags": [
+      "interview",
+      "question_bank",
+      "curated"
+    ],
+    "source": "awesome_interview_questions",
+    "source_name": "Awesome Interview Questions",
+    "source_url": "https://raw.githubusercontent.com/DopplerHQ/awesome-interview-questions/master/README.md#knockoutjs",
+    "type": "reference",
+    "topic": "interview_prep",
+    "topic_family": "interview_prep"
+  },
+  {
+    "id": "ext_d90b6ff52ec8",
+    "title": "Awesome Interview Questions \u2014 Less",
+    "description": "* [Top 25 LESS Interview Questions](http://career.guru99.com/top-25-less-interview-questions/)",
+    "difficulty": "mixed",
+    "tags": [
+      "interview",
+      "question_bank",
+      "curated"
+    ],
+    "source": "awesome_interview_questions",
+    "source_name": "Awesome Interview Questions",
+    "source_url": "https://raw.githubusercontent.com/DopplerHQ/awesome-interview-questions/master/README.md#less",
+    "type": "reference",
+    "topic": "interview_prep",
+    "topic_family": "interview_prep"
+  },
+  {
+    "id": "ext_8801a8de2ce6",
+    "title": "Awesome Interview Questions \u2014 Lisp",
+    "description": "* [10 LISP Questions & Answers](http://www.sanfoundry.com/lisp-mcqs-class/)\n* [Top 18 Lisp Interview Questions from Career Guru](http://career.guru99.com/top-18-lisp-interview-questions/)",
+    "difficulty": "mixed",
+    "tags": [
+      "interview",
+      "question_bank",
+      "curated"
+    ],
+    "source": "awesome_interview_questions",
+    "source_name": "Awesome Interview Questions",
+    "source_url": "https://raw.githubusercontent.com/DopplerHQ/awesome-interview-questions/master/README.md#lisp",
+    "type": "reference",
+    "topic": "interview_prep",
+    "topic_family": "interview_prep"
+  },
+  {
+    "id": "ext_0d26b5313043",
+    "title": "Awesome Interview Questions \u2014 NodeJS",
+    "description": "* [25 Essential Node.js Interview Questions from Adeva](https://adevait.com/nodejs/interview-questions) \n* [8 Essential Nodejs Interview Questions from Toptal](http://www.toptal.com/nodejs/interview-questions)\n* [Node.JS Interview Questions have been designed specially to get you acquainted with the nature of questions you may encounter during your interview for the subject of Node.JS](http://www.tutorialspoint.com/nodejs/nodejs_interview_questions.htm)\n* [Node.js Interview Questions and Answers](https://blog.risingstack.com/node-js-interview-questions/)\n* [Top 25 Nodejs Interview Questions & Answers from Career Guru](http://career.guru99.com/top-25-interview-questions-on-node-js/)\n* [Top 30 Node.Js Interview Questions With Answers](https://www.techbeamers.com/top-30-node-js-interview-questions-answers/)\n* [Top Nodejs Interview Questions & Answers](https://www.interviewbit.com/node-js-interview-questions/)\n* [Node.js Interview Questions in Chinese](https://github.com/haizlin/fe-interview/blob/master/category/nodejs.md)\n* [Node.js Interview Questions by learning-zone](https://github.com/learning-zone/nodejs-interview-questions)",
+    "difficulty": "mixed",
+    "tags": [
+      "interview",
+      "question_bank",
+      "curated"
+    ],
+    "source": "awesome_interview_questions",
+    "source_name": "Awesome Interview Questions",
+    "source_url": "https://raw.githubusercontent.com/DopplerHQ/awesome-interview-questions/master/README.md#nodejs",
+    "type": "reference",
+    "topic": "interview_prep",
+    "topic_family": "interview_prep"
+  },
+  {
+    "id": "ext_816954f7850d",
+    "title": "Awesome Interview Questions \u2014 Objective-C",
+    "description": "* [Interview Qs for Objective-C and Swift](http://insights.dice.com/2015/07/21/interview-qs-objective-c-swift/)\n* [iOS Interview Questions For Beginners](http://ichuiphonedev.blogspot.com/2014/05/iphone-latest-interview-questions-and.html)",
+    "difficulty": "mixed",
+    "tags": [
+      "interview",
+      "question_bank",
+      "curated"
+    ],
+    "source": "awesome_interview_questions",
+    "source_name": "Awesome Interview Questions",
+    "source_url": "https://raw.githubusercontent.com/DopplerHQ/awesome-interview-questions/master/README.md#objective_c",
+    "type": "reference",
+    "topic": "interview_prep",
+    "topic_family": "interview_prep"
+  },
+  {
+    "id": "ext_3359975e0393",
+    "title": "Awesome Interview Questions \u2014 PHP",
+    "description": "* [100 PHP interview questions and answers from CareerRide.com](http://www.careerride.com/PHP-Interview-Questions.aspx)\n* [21 Essential PHP Interview Questions from Toptal](http://www.toptal.com/php/interview-questions)\n* [20 Common PHP Job Interview Questions and Answers](http://www.woodstitch.com/resources/php-interview-questions.php)\n* [25 Essential PHP Interview Questions from Adeva](https://adevait.com/php/interview-questions)\n* [PHP interview questions and answers for freshers](http://phpinterviewquestions.co.in/)\n* [Top 100 PHP Interview Questions & Answers from CareerGuru](http://career.guru99.com/top-100-php-interview-questions-answers/)\n* [25 PHP Interview Questions](https://www.codementor.io/php/tutorial/php-interview-questions-sample-answers)\n* [26 Essential PHP Interview Questions for 2018](https://pangara.com/blog/php-interview-questions)\n* [Cracking PHP Interviews Questions ebook 300+ Q&A](https://bootsity.com/books)\n* [PHP Interview Questions - Quick Refresher](https://www.techbeamers.com/latest-php-interview-questions-answers/)\n* [30+ PHP Interview Questions](https://www.interviewbit.com/php-interview-questions/)",
+    "difficulty": "mixed",
+    "tags": [
+      "interview",
+      "question_bank",
+      "curated"
+    ],
+    "source": "awesome_interview_questions",
+    "source_name": "Awesome Interview Questions",
+    "source_url": "https://raw.githubusercontent.com/DopplerHQ/awesome-interview-questions/master/README.md#php",
+    "type": "reference",
+    "topic": "interview_prep",
+    "topic_family": "interview_prep"
+  },
+  {
+    "id": "ext_f2c8d7a0ba2b",
+    "title": "Awesome Interview Questions \u2014 Python",
+    "description": "* [26 Essential Python Interview Questions from Adeva](https://adevait.com/python/interview-questions)\n* [20 Python interview questions and answers](http://www.careerride.com/python-interview-questions.aspx)\n* [11 Essential Python Interview Questions from Toptal](http://www.toptal.com/python/interview-questions)\n* [A listing of questions that could potentially be asked for a python job listing](https://github.com/sigmavirus24/python-interview-questions)\n* [Interview Questions for both beginners and experts](http://www.bogotobogo.com/python/python_interview_questions.php)\n* [Interview Cake Python Interview Questions](https://www.interviewcake.com/python-interview-questions)\n* [Python Frequently Asked Questions (Programming)](https://docs.python.org/2/faq/programming.html)\n* [Python interview questions collected by Reddit users](https://www.reddit.com/r/Python/comments/1knw7z/python_interview_questions)\n* [Top 25 Python Interview Questions from Career Guru](http://career.guru99.com/top-25-python-interview-questions/)\n* [Python Interview 10 questions from Corey Schafer](https://www.youtube.com/watch?v=DEwgZNC-KyE)\n* [Python interview questions. Part I. Junior](https://luminousmen.com/post/6)\n* [Python interview questions. Part II. Middle](https://luminousmen.com/post/7)\n* [Python interview questions. Part III. Senior](https://luminousmen.com/post/8)\n* [Python Interview Questions and Answers (2019)](https://www.interviewbit.com/python-interview-questions/)\n* [100 Python Interview Questions - Quick Refresher](https://www.techbeamers.com/python-interview-questions-programmers/)\n* [Top 100 Python Interview Questions from Edureka (2021)](https://www.edureka.co/blog/interview-questions/python-interview-questions/)",
+    "difficulty": "mixed",
+    "tags": [
+      "interview",
+      "question_bank",
+      "curated"
+    ],
+    "source": "awesome_interview_questions",
+    "source_name": "Awesome Interview Questions",
+    "source_url": "https://raw.githubusercontent.com/DopplerHQ/awesome-interview-questions/master/README.md#python",
+    "type": "reference",
+    "topic": "interview_prep",
+    "topic_family": "interview_prep"
+  },
+  {
+    "id": "ext_8436be5bddbc",
+    "title": "Awesome Interview Questions \u2014 Ruby on Rails",
+    "description": "* [20 Ruby on Rails interview questions and answers from CareerRide.com](http://www.careerride.com/ruby-on-rails-interview-questions.aspx)\n* [9 Essential Ruby on Rails Interview Questions from Toptal](http://www.toptal.com/ruby-on-rails/interview-questions)\n* [High-level Ruby on Rails Interview Questions](https://github.com/rishiip/ruby-on-rails-interview-questions)\n* [Ruby And Ruby On Rails interview Q&A](http://anilpunjabi.tumblr.com/post/25948339235/ruby-and-rails-interview-questions-and-answers)\n* [Some of the most frequently asked Ruby on Rails questions and how to answer them confidently](https://srikantmahapatra.wordpress.com/2013/11/07/ruby-on-rails-interview-questions-and-answers/)\n* [11 Ruby on Rails Interview Practice Questions](https://www.codementor.io/ruby-on-rails/tutorial/ruby-on-rails-interview-questions)\n* [Top 53 Ruby on Rails Interview Questions & Answers](https://career.guru99.com/top-34-ruby-on-rail-interview-questions/)\n* [10 Ruby on Rails interview questions and answers](https://www.upwork.com/i/interview-questions/ruby-on-rails/)",
+    "difficulty": "mixed",
+    "tags": [
+      "interview",
+      "question_bank",
+      "curated"
+    ],
+    "source": "awesome_interview_questions",
+    "source_name": "Awesome Interview Questions",
+    "source_url": "https://raw.githubusercontent.com/DopplerHQ/awesome-interview-questions/master/README.md#ruby_on_rails",
+    "type": "reference",
+    "topic": "interview_prep",
+    "topic_family": "interview_prep"
+  },
+  {
+    "id": "ext_8c457abe3ae3",
+    "title": "Awesome Interview Questions \u2014 ReactJS",
+    "description": "* [Reddit users share their expectations from ReactJS interview](https://www.reddit.com/r/reactjs/comments/3m5equ/react_what_interview_questions_to_expect/)\n* [5 Essential React.js Interview Questions](https://www.codementor.io/reactjs/tutorial/5-essential-reactjs-interview-questions)\n* [React Interview Questions](https://tylermcginnis.com/react-interview-questions/)\n* [Toptal's 21 Essential React.js Interview Questions](https://www.toptal.com/react/interview-questions)\n* [19 Essential ReactJs Interview Questions](https://www.educba.com/reactjs-interview-questions/)\n* [React Interview Questions & Answers](https://github.com/sudheerj/reactjs-interview-questions)",
+    "difficulty": "mixed",
+    "tags": [
+      "interview",
+      "question_bank",
+      "curated"
+    ],
+    "source": "awesome_interview_questions",
+    "source_name": "Awesome Interview Questions",
+    "source_url": "https://raw.githubusercontent.com/DopplerHQ/awesome-interview-questions/master/README.md#reactjs",
+    "type": "reference",
+    "topic": "interview_prep",
+    "topic_family": "interview_prep"
+  },
+  {
+    "id": "ext_a277c1a4ebef",
+    "title": "Awesome Interview Questions \u2014 Ruby",
+    "description": "* [21 Essential Ruby Interview Questions from Toptal](http://www.toptal.com/ruby/interview-questions)\n* [15 Questions to Ask During a Ruby Interview](https://gist.github.com/ryansobol/5252653)\n* [A list of questions about Ruby programming you can use to quiz yourself](https://github.com/undr/ruby-trivia)\n* [The Art of Ruby Technical Interview](http://technology.customink.com/blog/2015/11/23/the-art-of-ruby-technical-interviews/)\n* [Interview Cake Ruby Interview Questions](https://www.interviewcake.com/ruby-interview-questions)\n* [Frequently Asked Ruby Interview Questions](https://www.javatpoint.com/ruby-interview-questions)",
+    "difficulty": "mixed",
+    "tags": [
+      "interview",
+      "question_bank",
+      "curated"
+    ],
+    "source": "awesome_interview_questions",
+    "source_name": "Awesome Interview Questions",
+    "source_url": "https://raw.githubusercontent.com/DopplerHQ/awesome-interview-questions/master/README.md#ruby",
+    "type": "reference",
+    "topic": "interview_prep",
+    "topic_family": "interview_prep"
+  },
+  {
+    "id": "ext_f1afb6d56269",
+    "title": "Awesome Interview Questions \u2014 Rust",
+    "description": "* [Top 250+ Rust Programming Language Interview Questions](https://www.wisdomjobs.com/e-university/rust-programming-language-interview-questions.html)\n* [Rust Programming Interview Questions and Answers](https://www.code-sample.com/2018/02/rust-programming-interview-questions.html)\n* [rust-exam: A set of questions about the Rust programming language](https://github.com/jean553/rust-exam)\n* [Best Rust Programming Language Interview Questions and answers](https://www.bestinterviewquestion.com/rust-programming-language-interview-questions)",
+    "difficulty": "mixed",
+    "tags": [
+      "interview",
+      "question_bank",
+      "curated"
+    ],
+    "source": "awesome_interview_questions",
+    "source_name": "Awesome Interview Questions",
+    "source_url": "https://raw.githubusercontent.com/DopplerHQ/awesome-interview-questions/master/README.md#rust",
+    "type": "reference",
+    "topic": "interview_prep",
+    "topic_family": "interview_prep"
+  },
+  {
+    "id": "ext_4acb3a742e6f",
+    "title": "Awesome Interview Questions \u2014 Sass",
+    "description": "* [Top 17 Sass Interview Questions from Career Guru](http://career.guru99.com/top-17-sass-interview-questions/)\n* [Top 10 Sass Interview Questions from educba](https://www.educba.com/sass-interview-questions/)",
+    "difficulty": "mixed",
+    "tags": [
+      "interview",
+      "question_bank",
+      "curated"
+    ],
+    "source": "awesome_interview_questions",
+    "source_name": "Awesome Interview Questions",
+    "source_url": "https://raw.githubusercontent.com/DopplerHQ/awesome-interview-questions/master/README.md#sass",
+    "type": "reference",
+    "topic": "interview_prep",
+    "topic_family": "interview_prep"
+  },
+  {
+    "id": "ext_d162f04aee5d",
+    "title": "Awesome Interview Questions \u2014 Scala",
+    "description": "* [4 Interview Questions for Scala Developers](http://insights.dice.com/2014/09/12/4-interview-questions-scala-developers/)\n* [A list of Frequently Asked Questions and their answers, sorted by category](http://www.scala-lang.org/old/faq)\n* [A list of helpful Scala related questions you can use to interview potential candidates](https://github.com/Jarlakxen/Scala-Interview-Questions)\n* [How Scala Developers Are Being Interviewed](http://programmers.stackexchange.com/questions/58145/how-scala-developers-are-being-interviewed)\n* [Top 25 Scala Interview Questions & Answers from Toptal](http://career.guru99.com/top-25-interview-questions-on-scala/)",
+    "difficulty": "mixed",
+    "tags": [
+      "interview",
+      "question_bank",
+      "curated"
+    ],
+    "source": "awesome_interview_questions",
+    "source_name": "Awesome Interview Questions",
+    "source_url": "https://raw.githubusercontent.com/DopplerHQ/awesome-interview-questions/master/README.md#scala",
+    "type": "reference",
+    "topic": "interview_prep",
+    "topic_family": "interview_prep"
+  },
+  {
+    "id": "ext_b61d907b615a",
+    "title": "LeetScrape \u2014 overview",
+    "description": "# LeetScrape\n\n[![deploy-docs](https://github.com/nikhil-ravi/LeetScrape/actions/workflows/pytest-and-docs.yml/badge.svg)](https://leetscrape.nikhilravi.com) [![PYPI](https://img.shields.io/pypi/v/leetscrape)](https://pypi.org/project/leetscrape/) [![codecov](https://codecov.io/gh/nikhil-ravi/LeetScrape/branch/main/graph/badge.svg?token=GWOVLPYSUA)](https://codecov.io/gh/nikhil-ravi/LeetScrape)![PyPI - Downloads](https://img.shields.io/pypi/dm/leetscrape)\n\nIntroducing the LeetScrape - a powerful and efficient Python package designed to scrape problem statements and basic test cases from LeetCode.com. With this package, you can easily download and save LeetCode problems to your local machine, making it convenient for offline practice and studying. It is perfect for software engineers and students preparing for coding interviews. The package is lightweight, easy to use and can be integrated with other tools and IDEs. With the LeetScrape, you can boost your coding skills and improve your chances of landing your dream job.\n\nUse this package to get the list of Leetcode questions, their topic and company tags, difficulty, question body (including test cases, constraints, hints), and code stubs in any of the available programming languages.\n\nDetailed documentation available [here](https://leetscrape.nikhilravi.com/).\n\nThere is also a related Next.js web app to serve the scraped questions and your answers at [leetcode-nextjs](https://github.com/nikhil-ravi/leetscrape-ts). See the [demo](https://scuffedcode.nikhilravi.com/).",
+    "difficulty": "mixed",
+    "tags": [
+      "leetcode",
+      "scraping",
+      "problem_collection"
+    ],
+    "source": "leetscrape",
+    "source_name": "LeetScrape",
+    "source_url": "https://raw.githubusercontent.com/nikhil-ravi/LeetScrape/main/README.md#overview",
+    "type": "reference",
+    "topic": "leetcode",
+    "topic_family": "leetcode"
+  },
+  {
+    "id": "ext_228a28c12371",
+    "title": "LeetScrape \u2014 Installation",
+    "description": "Start by installing the package from pip or conda:\n\n```bash\n# Using pip\npip install leetscrape\n\n# Using conda:\nconda install leetscrape\n\n# Using poetry:\npoetry add leetscrape\n```",
+    "difficulty": "mixed",
+    "tags": [
+      "leetcode",
+      "scraping",
+      "problem_collection"
+    ],
+    "source": "leetscrape",
+    "source_name": "LeetScrape",
+    "source_url": "https://raw.githubusercontent.com/nikhil-ravi/LeetScrape/main/README.md#installation",
+    "type": "reference",
+    "topic": "leetcode",
+    "topic_family": "leetcode"
+  },
+  {
+    "id": "ext_97294492cab5",
+    "title": "LeetScrape \u2014 Usage",
+    "description": "#### Command Line\n\n* <code>leetscrape <i><b>list</b></i> [--out OUT]</code> - List all questions without generating code stub.\n\n    ```\n    options:\n    -h, --help         show a help message and exit\n    --out OUT, -o OUT  Specify the output file name to store the list of questions.\n    ```\n* <code>leetscrape <i><b>question</b></i> [--out OUT] qid [qid ...]</code> - Generate a code stub for the given question(s).\n\n    ```\n    positional arguments:\n    qid                Enter Leetcode question ID(s)\n\n    options:\n    -h, --help         show this help message and exit\n    --out OUT, -o OUT  Enter the path to the output directory\n    ```\n* <code>leetscrape <i><b>solution</b></i> [-h] [--out OUT] input</code> - Generate mdx files from solutions.\n\n    ```\n    positional arguments:\n    input              Enter the path to the solution directory with solution files or to a single\n                        solution file\n\n    options:\n    -h, --help         show this help message and exit\n    --out OUT, -o OUT  Enter the path to the output directory to save solutions mdx files\n    ```\n* <code>leetscrape <i><b>ts</b></i> [--out OUT]</code> - Create the leetscrape-ts Next.js project to host the solutions.\n\n    ```\n    options:\n    -h, --help         show this help message and exit\n    --out OUT, -o OUT  Enter the path to the output directory to save the project\n    ```\n\n#### Python API\n\n##### Get the list of problems and their information\n\n```python\nfrom leetscrape import GetQuestionsList\n\nls = GetQuestionsList()\nls.scrape() # Scrape the list of questions\nls.questions.head() # Get the list of questions\n```\n\n|    |   QID | title                                          | titleSlug                                      | difficulty   |   acceptanceRate | paidOnly   | topicTags                              | categorySlug   |\n|---:|------:|:-----------------------------------------------|:-----------------------------------------------|:-------------|-----------------:|:-----------|:---------------------------------------|:---------------|\n|  0 |     1 | Two Sum                                        | two-sum                                        | Easy         |          51.4225 | False      | array,hash-table                       | algorithms     |\n|  1 |     2 | Add Two Numbers                                | add-two-numbers                                | Medium   ",
+    "difficulty": "mixed",
+    "tags": [
+      "leetcode",
+      "scraping",
+      "problem_collection"
+    ],
+    "source": "leetscrape",
+    "source_name": "LeetScrape",
+    "source_url": "https://raw.githubusercontent.com/nikhil-ravi/LeetScrape/main/README.md#usage",
+    "type": "reference",
+    "topic": "leetcode",
+    "topic_family": "leetcode"
+  },
+  {
+    "id": "ext_6f8124c4dd74",
+    "title": "LeetScrape \u2014 Serving the solutions with [leetscrape-ts](https://github.com/nikhil-ravi/leetscrape-ts)",
+    "description": "You can use the [leetscrape-ts](https://github.com/nikhil-ravi/leetscrape-ts) Next.js template to serve the solutions. See the [demo](https://scuffedcode.nikhilravi.com/). Visit the repo for more details. You can generate the project using the `leetscrape ts` command:\n\n```bash\nleetscrape ts --out <path-to-output-directory>\n```\nThis will bootstrap the project in the given directory. Follow the instructions in the [README](https://github.com/nikhil-ravi/leetscrape-ts/blob/main/README.md) and create/modify the `.env.local` file. Then, run the following command to generate the mdx files:\n\n```bash\nleetscrape solution --out <path-to-output-directory>/src/content/solutions <path-to-your-python-solution-directory>\n```\n\nYou can then run the project using the following command:\n\n```bash\ncd <path-to-output-directory>\nnpm run dev\n# or\nyarn dev\n# or\npnpm dev\n# or\nbun dev\n```",
+    "difficulty": "mixed",
+    "tags": [
+      "leetcode",
+      "scraping",
+      "problem_collection"
+    ],
+    "source": "leetscrape",
+    "source_name": "LeetScrape",
+    "source_url": "https://raw.githubusercontent.com/nikhil-ravi/LeetScrape/main/README.md#serving_the_solutions_with_leetscrape_ts_https_github_com_nikhil_ravi_leetscrape_ts",
+    "type": "reference",
+    "topic": "leetcode",
+    "topic_family": "leetcode"
+  },
+  {
+    "id": "ext_020df3a11339",
+    "title": "LeetScrape \u2014 Changelog",
+    "description": "View the changelog [here](https://leetscrape.nikhilravi.com/CHANGELOG/).",
+    "difficulty": "mixed",
+    "tags": [
+      "leetcode",
+      "scraping",
+      "problem_collection"
+    ],
+    "source": "leetscrape",
+    "source_name": "LeetScrape",
+    "source_url": "https://raw.githubusercontent.com/nikhil-ravi/LeetScrape/main/README.md#changelog",
+    "type": "reference",
+    "topic": "leetcode",
+    "topic_family": "leetcode"
+  },
+  {
+    "id": "ext_88c5e5702fe2",
+    "title": "Data Science Interviews \u2014 overview",
+    "description": "<figure>\n    <img src=\"img/repo-logo.jpg\">\n    <figcaption>Photo by <a href=\"https://pxhere.com/en/photographer/395564\">Waseem Farooq</a> from <a href=\"http://pxhere.com/en/photo/1446003\">PxHere</a></figcaption>\n</figure>\n\n# Data Science Interviews\n\nData science interview questions - with answers\n\nThe answers are given by the community\n\n* If you know how to answer a question \u2014 please create a PR with the answer\n* If there's already an answer, but you can improve it \u2014 please create a PR with improvement suggestion\n* If you see a mistake \u2014 please create a PR with a fix\n\nFor updates, follow me on Twitter ([@Al_Grigor](https://twitter.com/Al_Grigor)) and on LinkedIn ([agrigorev](https://www.linkedin.com/in/agrigorev))\n\nDo you want to talk about data? Join [DataTalks.Club](https://DataTalks.Club)",
+    "difficulty": "mixed",
+    "tags": [
+      "machine_learning",
+      "data_science",
+      "interview_questions"
+    ],
+    "source": "data_science_interviews",
+    "source_name": "Data Science Interviews",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/README.md#overview",
+    "type": "reference",
+    "topic": "ai_ml",
+    "topic_family": "ai_ml"
+  },
+  {
+    "id": "ext_e16e827d90ba",
+    "title": "Data Science Interviews \u2014 Questions by category",
+    "description": "* Theoretical questions: [theory.md](theory.md) (linear models, trees, neural networks and others)\n* Technical questions: [technical.md](technical.md) (SQL, Python, coding)\n* More to come",
+    "difficulty": "mixed",
+    "tags": [
+      "machine_learning",
+      "data_science",
+      "interview_questions"
+    ],
+    "source": "data_science_interviews",
+    "source_name": "Data Science Interviews",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/README.md#questions_by_category",
+    "type": "reference",
+    "topic": "ai_ml",
+    "topic_family": "ai_ml"
+  },
+  {
+    "id": "ext_ed67b47e6a4b",
+    "title": "Data Science Interviews \u2014 Contributed questions",
+    "description": "The `contrib` folder contains contributed interview questions:\n\n* Probability: [contrib/probability.md](contrib/probability.md)\n* Add your questions here!",
+    "difficulty": "mixed",
+    "tags": [
+      "machine_learning",
+      "data_science",
+      "interview_questions"
+    ],
+    "source": "data_science_interviews",
+    "source_name": "Data Science Interviews",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/README.md#contributed_questions",
+    "type": "reference",
+    "topic": "ai_ml",
+    "topic_family": "ai_ml"
+  },
+  {
+    "id": "ext_9ab9b2cfe8c3",
+    "title": "Data Science Interviews \u2014 Other useful things",
+    "description": "* Awesome data science interview questions and other resources: [awesome.md](awesome.md)\n\n\nThis is a joint effort of many people. You can see the list of contributors here: [contributors.md](contributors.md)",
+    "difficulty": "mixed",
+    "tags": [
+      "machine_learning",
+      "data_science",
+      "interview_questions"
+    ],
+    "source": "data_science_interviews",
+    "source_name": "Data Science Interviews",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/README.md#other_useful_things",
+    "type": "reference",
+    "topic": "ai_ml",
+    "topic_family": "ai_ml"
+  },
+  {
+    "id": "ext_ba7ce227f593",
+    "title": "Data Science Interviews \u2014 License",
+    "description": "This work is licensed under a [Creative Commons Attribution 4.0 International License][cc-by].\n\n[![CC BY 4.0][cc-by-image]][cc-by]\n\n[cc-by]: http://creativecommons.org/licenses/by/4.0/\n[cc-by-image]: https://i.creativecommons.org/l/by/4.0/88x31.png",
+    "difficulty": "mixed",
+    "tags": [
+      "machine_learning",
+      "data_science",
+      "interview_questions"
+    ],
+    "source": "data_science_interviews",
+    "source_name": "Data Science Interviews",
+    "source_url": "https://raw.githubusercontent.com/alexeygrigorev/data-science-interviews/master/README.md#license",
+    "type": "reference",
+    "topic": "ai_ml",
+    "topic_family": "ai_ml"
+  },
+  {
+    "id": "hf_fe6d29bf20ba",
+    "title": "HF interviews \u2014 General interview question",
+    "description": "General interview question | Why should we hire you?",
+    "difficulty": "mixed",
+    "tags": [
+      "huggingface",
+      "interviews",
+      "dataset"
+    ],
+    "source": "huggingface_ali_alkhars_interviews",
+    "source_name": "ali-alkhars/interviews",
+    "source_url": "https://huggingface.co/datasets/ali-alkhars/interviews",
+    "type": "question",
+    "topic": "interview_prep",
+    "topic_family": "interview_prep"
+  },
+  {
+    "id": "hf_dba2faf16594",
+    "title": "HF interviews \u2014 Can you give me interview questions about Angular?",
+    "description": "Can you give me interview questions about Angular? | What is Angular Framework?",
+    "difficulty": "mixed",
+    "tags": [
+      "huggingface",
+      "interviews",
+      "dataset"
+    ],
+    "source": "huggingface_ali_alkhars_interviews",
+    "source_name": "ali-alkhars/interviews",
+    "source_url": "https://huggingface.co/datasets/ali-alkhars/interviews",
+    "type": "question",
+    "topic": "interview_prep",
+    "topic_family": "interview_prep"
+  },
+  {
+    "id": "hf_c926cf23d446",
+    "title": "HF interviews \u2014 Could we do a mock interview?",
+    "description": "Could we do a mock interview? | What is the difference between AngularJS and Angular?",
+    "difficulty": "mixed",
+    "tags": [
+      "huggingface",
+      "interviews",
+      "dataset"
+    ],
+    "source": "huggingface_ali_alkhars_interviews",
+    "source_name": "ali-alkhars/interviews",
+    "source_url": "https://huggingface.co/datasets/ali-alkhars/interviews",
+    "type": "question",
+    "topic": "interview_prep",
+    "topic_family": "interview_prep"
+  },
+  {
+    "id": "hf_ea96adee1203",
+    "title": "HF interviews \u2014 Prepare me for an interview for a software engineering role",
+    "description": "Prepare me for an interview for a software engineering role | Write a pictorial diagram of Angular architecture?",
+    "difficulty": "mixed",
+    "tags": [
+      "huggingface",
+      "interviews",
+      "dataset"
+    ],
+    "source": "huggingface_ali_alkhars_interviews",
+    "source_name": "ali-alkhars/interviews",
+    "source_url": "https://huggingface.co/datasets/ali-alkhars/interviews",
+    "type": "question",
+    "topic": "interview_prep",
+    "topic_family": "interview_prep"
+  },
+  {
+    "id": "hf_6fc623611ca6",
+    "title": "HF interviews \u2014 Prepare me for an interview on Angular",
+    "description": "Prepare me for an interview on Angular | What are directives?",
+    "difficulty": "mixed",
+    "tags": [
+      "huggingface",
+      "interviews",
+      "dataset"
+    ],
+    "source": "huggingface_ali_alkhars_interviews",
+    "source_name": "ali-alkhars/interviews",
+    "source_url": "https://huggingface.co/datasets/ali-alkhars/interviews",
+    "type": "question",
+    "topic": "interview_prep",
+    "topic_family": "interview_prep"
+  },
+  {
+    "id": "hf_f7918187ba6a",
+    "title": "HF interviews \u2014 I want interview questions about Angular",
+    "description": "I want interview questions about Angular | What are the differences between Component and Directive?",
+    "difficulty": "mixed",
+    "tags": [
+      "huggingface",
+      "interviews",
+      "dataset"
+    ],
+    "source": "huggingface_ali_alkhars_interviews",
+    "source_name": "ali-alkhars/interviews",
+    "source_url": "https://huggingface.co/datasets/ali-alkhars/interviews",
+    "type": "question",
+    "topic": "interview_prep",
+    "topic_family": "interview_prep"
+  },
+  {
+    "id": "hf_7210683ec407",
+    "title": "HF interviews \u2014 Provide me with interview questions about Angular",
+    "description": "Provide me with interview questions about Angular | What are lifecycle hooks available?",
+    "difficulty": "mixed",
+    "tags": [
+      "huggingface",
+      "interviews",
+      "dataset"
+    ],
+    "source": "huggingface_ali_alkhars_interviews",
+    "source_name": "ali-alkhars/interviews",
+    "source_url": "https://huggingface.co/datasets/ali-alkhars/interviews",
+    "type": "question",
+    "topic": "interview_prep",
+    "topic_family": "interview_prep"
+  },
+  {
+    "id": "hf_41180e59bba0",
+    "title": "HF interviews \u2014 Could you question me about Angular?",
+    "description": "Could you question me about Angular? | What is Angular CLI?",
+    "difficulty": "mixed",
+    "tags": [
+      "huggingface",
+      "interviews",
+      "dataset"
+    ],
+    "source": "huggingface_ali_alkhars_interviews",
+    "source_name": "ali-alkhars/interviews",
+    "source_url": "https://huggingface.co/datasets/ali-alkhars/interviews",
+    "type": "question",
+    "topic": "interview_prep",
+    "topic_family": "interview_prep"
+  },
+  {
+    "id": "hf_16c0a6fb949c",
+    "title": "HF interviews \u2014 What are common interview questions for Angular?",
+    "description": "What are common interview questions for Angular? | What is the difference between constructor and ngOnInit?",
+    "difficulty": "mixed",
+    "tags": [
+      "huggingface",
+      "interviews",
+      "dataset"
+    ],
+    "source": "huggingface_ali_alkhars_interviews",
+    "source_name": "ali-alkhars/interviews",
+    "source_url": "https://huggingface.co/datasets/ali-alkhars/interviews",
+    "type": "question",
+    "topic": "interview_prep",
+    "topic_family": "interview_prep"
+  },
+  {
+    "id": "hf_0b01bea32e8c",
+    "title": "HF interviews \u2014 I need software engineering interview questions",
+    "description": "I need software engineering interview questions | What is the purpose of *ngFor directive?",
+    "difficulty": "mixed",
+    "tags": [
+      "huggingface",
+      "interviews",
+      "dataset"
+    ],
+    "source": "huggingface_ali_alkhars_interviews",
+    "source_name": "ali-alkhars/interviews",
+    "source_url": "https://huggingface.co/datasets/ali-alkhars/interviews",
+    "type": "question",
+    "topic": "interview_prep",
+    "topic_family": "interview_prep"
+  },
+  {
+    "id": "hf_71bf43c6fdcc",
+    "title": "HF interviews \u2014 Prepare me for an interview",
+    "description": "Prepare me for an interview | What is interpolation?",
+    "difficulty": "mixed",
+    "tags": [
+      "huggingface",
+      "interviews",
+      "dataset"
+    ],
+    "source": "huggingface_ali_alkhars_interviews",
+    "source_name": "ali-alkhars/interviews",
+    "source_url": "https://huggingface.co/datasets/ali-alkhars/interviews",
+    "type": "question",
+    "topic": "interview_prep",
+    "topic_family": "interview_prep"
+  },
+  {
+    "id": "hf_f7aaa1d5aff1",
+    "title": "HF interviews \u2014 I need programming interview questions",
+    "description": "I need programming interview questions | What are observables?",
+    "difficulty": "mixed",
+    "tags": [
+      "huggingface",
+      "interviews",
+      "dataset"
+    ],
+    "source": "huggingface_ali_alkhars_interviews",
+    "source_name": "ali-alkhars/interviews",
+    "source_url": "https://huggingface.co/datasets/ali-alkhars/interviews",
+    "type": "question",
+    "topic": "interview_prep",
+    "topic_family": "interview_prep"
+  },
+  {
+    "id": "hf_21fbdc959913",
+    "title": "HF interviews \u2014 I need Angular interview questions",
+    "description": "I need Angular interview questions | What are observable creation functions?",
+    "difficulty": "mixed",
+    "tags": [
+      "huggingface",
+      "interviews",
+      "dataset"
+    ],
+    "source": "huggingface_ali_alkhars_interviews",
+    "source_name": "ali-alkhars/interviews",
+    "source_url": "https://huggingface.co/datasets/ali-alkhars/interviews",
+    "type": "question",
+    "topic": "interview_prep",
+    "topic_family": "interview_prep"
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "id": "lc_16",
+  "title": "3Sum Closest",
+  "title_slug": "3sum-closest",
+  "difficulty": "medium",
+  "description": "Given an integer array nums of length n and an integer target , find three integers at distinct indices in nums such that the sum is closest to target . Return the sum of the three integers . You may assume that each input would have exactly one solution. &nbsp; Example 1: Input: nums = [-1,2,1,-4], target = 1 Output: 2 Explanation: The sum that is closest to the target is 2. (-1 + 2 + 1 = 2). Example 2: Input: nums = [0,0,0], target = 1 Output: 0 Explanation: The sum that is closest to the target is 0. (0 + 0 + 0 = 0). &nbsp; Constraints: 3 &lt;= nums.length &lt;= 500 -1000 &lt;= nums[i] &lt;= 1000 -10 4 &lt;= target &lt;= 10 4",
+  "examples": [],
+  "constraints": [],
+  "tags": [
+    "Array",
+    "Two Pointers",
+    "Sorting"
+  ],
+  "hints": [],
+  "source": "leetcode",
+  "source_url": "https://leetcode.com/problems/3sum-closest/"
+}

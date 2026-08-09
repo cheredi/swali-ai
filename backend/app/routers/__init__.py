@@ -15,5 +15,7 @@ This separation makes the codebase easier to navigate and test.
 
 from .search import router as search_router
 from .chat import router as chat_router
+from .auth import router as auth_router
+from .learning import router as learning_router
 
-__all__ = ["search_router", "chat_router"]
+__all__ = ["search_router", "chat_router", "auth_router", "learning_router"]

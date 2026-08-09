@@ -10,8 +10,16 @@ additional signals to improve precision in top-k.
 
 from __future__ import annotations
 
+import asyncio
 import re
 from typing import Any
+
+from app.config import settings
+
+try:
+    from sentence_transformers import CrossEncoder
+except Exception:  # pragma: no cover
+    CrossEncoder = None
 
 
 class HybridReranker:
@@ -93,3 +101,91 @@ class HybridReranker:
             "metadatas": [[candidate["metadata"] for candidate in selected]],
             "distances": [[candidate["distance"] for candidate in selected]],
         }
+
+
+class CrossEncoderReranker:
+    """Cross-encoder reranker for improved top-k precision."""
+
+    def __init__(self, model_name: str = "cross-encoder/ms-marco-MiniLM-L-6-v2"):
+        self.model_name = model_name
+        self._model = None
+        self._hybrid_fallback = HybridReranker()
+
+    def _get_model(self):
+        if self._model is not None:
+            return self._model
+        if CrossEncoder is None:
+            return None
+        self._model = CrossEncoder(self.model_name)
+        return self._model
+
+    def rerank_search_results(
+        self,
+        query: str,
+        search_results: dict[str, Any],
+        top_k: int,
+    ) -> dict[str, Any]:
+        if not search_results.get("ids") or not search_results["ids"][0]:
+            return search_results
+
+        model = self._get_model()
+        if model is None:
+            return self._hybrid_fallback.rerank_search_results(query, search_results, top_k)
+
+        pairs = []
+        for document, metadata in zip(search_results["documents"][0], search_results["metadatas"][0]):
+            title = str(metadata.get("title", ""))
+            pairs.append([query, f"{title}\n{document}"])
+
+        scores = model.predict(pairs)
+        candidates = []
+        for i, (doc_id, document, metadata, distance, score) in enumerate(
+            zip(
+                search_results["ids"][0],
+                search_results["documents"][0],
+                search_results["metadatas"][0],
+                search_results["distances"][0],
+                scores,
+            )
+        ):
+            candidates.append(
+                {
+                    "idx": i,
+                    "id": doc_id,
+                    "document": document,
+                    "metadata": metadata,
+                    "distance": distance,
+                    "score": float(score),
+                }
+            )
+
+        candidates.sort(key=lambda candidate: candidate["score"], reverse=True)
+        selected = candidates[:top_k]
+
+        return {
+            "ids": [[candidate["id"] for candidate in selected]],
+            "documents": [[candidate["document"] for candidate in selected]],
+            "metadatas": [[candidate["metadata"] for candidate in selected]],
+            "distances": [[candidate["distance"] for candidate in selected]],
+            "scores": [[candidate["score"] for candidate in selected]],
+        }
+
+    async def rerank_search_results_async(
+        self,
+        query: str,
+        search_results: dict[str, Any],
+        top_k: int,
+    ) -> dict[str, Any]:
+        return await asyncio.to_thread(
+            self.rerank_search_results,
+            query,
+            search_results,
+            top_k,
+        )
+
+
+def get_default_reranker() -> CrossEncoderReranker | HybridReranker:
+    model_name = settings.reranker_model
+    if model_name:
+        return CrossEncoderReranker(model_name=model_name)
+    return HybridReranker()

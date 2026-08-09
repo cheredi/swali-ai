@@ -17,7 +17,11 @@ Why ChromaDB?
 - Supports metadata filtering
 """
 
-from typing import Any, Optional
+import asyncio
+import math
+import re
+from collections import Counter
+from typing import Any, Optional, cast
 
 import chromadb
 from chromadb.config import Settings as ChromaSettings
@@ -87,7 +91,7 @@ class VectorStore:
         embeddings = EmbeddingService.embed_batch(documents)
 
         # Add to ChromaDB
-        self.collection.add(
+        self.collection.add(  # type: ignore[arg-type]
             ids=ids,
             embeddings=embeddings,
             documents=documents,
@@ -111,7 +115,7 @@ class VectorStore:
         This method allows direct insertion without re-embedding through the
         default model.
         """
-        self.collection.add(
+        self.collection.add(  # type: ignore[arg-type]
             ids=ids,
             embeddings=embeddings,
             documents=documents,
@@ -148,15 +152,167 @@ class VectorStore:
         query_embedding = EmbeddingService.embed_text(query)
 
         # Search ChromaDB
-        results = self.collection.query(
+        results = self.collection.query(  # type: ignore[arg-type]
             query_embeddings=[query_embedding],
             n_results=n_results,
             where=where,
             where_document=where_document,
             include=["documents", "metadatas", "distances"]
         )
+        return cast(dict[str, Any], results)
 
-        return results
+    @staticmethod
+    def _tokenize(text: str) -> list[str]:
+        return re.findall(r"[a-z0-9_+#.-]+", text.lower())
+
+    def search_keyword(
+        self,
+        query: str,
+        n_results: int = 5,
+        where: Optional[dict] = None,
+    ) -> dict[str, Any]:
+        """Sparse lexical retrieval using lightweight BM25-style scoring."""
+        records = cast(dict[str, Any], self.collection.get(include=["documents", "metadatas"]))  # type: ignore[arg-type]
+        ids = records.get("ids", []) or []
+        documents = records.get("documents", []) or []
+        metadatas = records.get("metadatas", []) or []
+
+        if not ids:
+            return {"ids": [[]], "documents": [[]], "metadatas": [[]], "distances": [[]]}
+
+        query_terms = self._tokenize(query)
+        if not query_terms:
+            return {"ids": [[]], "documents": [[]], "metadatas": [[]], "distances": [[]]}
+
+        doc_term_freqs: list[Counter] = []
+        doc_lengths: list[int] = []
+        filtered: list[tuple[str, str, dict[str, Any]]] = []
+
+        for doc_id, document, metadata in zip(ids, documents, metadatas):
+            if where and any(str(metadata.get(k)) != str(v) for k, v in where.items()):
+                continue
+            tokens = self._tokenize(f"{metadata.get('title', '')} {document}")
+            tf = Counter(tokens)
+            doc_term_freqs.append(tf)
+            doc_lengths.append(len(tokens) or 1)
+            filtered.append((doc_id, document, metadata))
+
+        total_docs = len(filtered)
+        if total_docs == 0:
+            return {"ids": [[]], "documents": [[]], "metadatas": [[]], "distances": [[]]}
+
+        avg_doc_len = sum(doc_lengths) / total_docs
+        k1 = 1.5
+        b = 0.75
+
+        doc_freq: Counter = Counter()
+        for tf in doc_term_freqs:
+            for term in set(query_terms):
+                if term in tf:
+                    doc_freq[term] += 1
+
+        scored: list[tuple[float, str, str, dict[str, Any]]] = []
+        for idx, (doc_id, document, metadata) in enumerate(filtered):
+            score = 0.0
+            tf = doc_term_freqs[idx]
+            doc_len = doc_lengths[idx]
+            for term in query_terms:
+                if tf[term] == 0:
+                    continue
+                idf = math.log((total_docs - doc_freq[term] + 0.5) / (doc_freq[term] + 0.5) + 1.0)
+                denom = tf[term] + k1 * (1 - b + b * (doc_len / (avg_doc_len or 1)))
+                score += idf * ((tf[term] * (k1 + 1)) / (denom or 1))
+            if score > 0:
+                distance = 1.0 / (1.0 + score)
+                scored.append((score, doc_id, document, metadata | {"keyword_score": round(score, 4)}))
+
+        scored.sort(key=lambda item: item[0], reverse=True)
+        selected = scored[:n_results]
+        return {
+            "ids": [[item[1] for item in selected]],
+            "documents": [[item[2] for item in selected]],
+            "metadatas": [[item[3] for item in selected]],
+            "distances": [[1.0 / (1.0 + item[0]) for item in selected]],
+        }
+
+    def search_hybrid(
+        self,
+        query: str,
+        n_results: int = 5,
+        where: Optional[dict] = None,
+        dense_weight: float = 0.65,
+    ) -> dict[str, Any]:
+        """Hybrid retrieval by combining dense and sparse rank signals."""
+        candidate_pool = max(n_results * 4, n_results)
+        dense = self.search(query=query, n_results=candidate_pool, where=where)
+        sparse = self.search_keyword(query=query, n_results=candidate_pool, where=where)
+
+        scored: dict[str, dict[str, Any]] = {}
+
+        for rank, (doc_id, doc, metadata, distance) in enumerate(
+            zip(
+                dense.get("ids", [[]])[0],
+                dense.get("documents", [[]])[0],
+                dense.get("metadatas", [[]])[0],
+                dense.get("distances", [[]])[0],
+            ),
+            start=1,
+        ):
+            score = dense_weight * (1.0 / (60 + rank)) + (1 - dense_weight) * (1.0 / (1.0 + float(distance)))
+            scored[doc_id] = {
+                "id": doc_id,
+                "doc": doc,
+                "metadata": metadata,
+                "distance": float(distance),
+                "score": score,
+            }
+
+        for rank, (doc_id, doc, metadata, distance) in enumerate(
+            zip(
+                sparse.get("ids", [[]])[0],
+                sparse.get("documents", [[]])[0],
+                sparse.get("metadatas", [[]])[0],
+                sparse.get("distances", [[]])[0],
+            ),
+            start=1,
+        ):
+            score = (1 - dense_weight) * (1.0 / (60 + rank)) + dense_weight * (1.0 / (1.0 + float(distance)))
+            if doc_id in scored:
+                scored[doc_id]["score"] += score
+                scored[doc_id]["metadata"] = {**scored[doc_id]["metadata"], **metadata}
+                scored[doc_id]["distance"] = min(scored[doc_id]["distance"], float(distance))
+            else:
+                scored[doc_id] = {
+                    "id": doc_id,
+                    "doc": doc,
+                    "metadata": metadata,
+                    "distance": float(distance),
+                    "score": score,
+                }
+
+        ranked = sorted(scored.values(), key=lambda item: item["score"], reverse=True)[:n_results]
+        return {
+            "ids": [[row["id"] for row in ranked]],
+            "documents": [[row["doc"] for row in ranked]],
+            "metadatas": [[row["metadata"] for row in ranked]],
+            "distances": [[row["distance"] for row in ranked]],
+            "scores": [[row["score"] for row in ranked]],
+        }
+
+    async def search_hybrid_async(
+        self,
+        query: str,
+        n_results: int = 5,
+        where: Optional[dict] = None,
+        dense_weight: float = 0.65,
+    ) -> dict[str, Any]:
+        return await asyncio.to_thread(
+            self.search_hybrid,
+            query,
+            n_results,
+            where,
+            dense_weight,
+        )
 
     def search_by_embedding(
         self,
@@ -172,31 +328,33 @@ class VectorStore:
         - Re-ranking results with modified embeddings
         - Query expansion (averaging multiple query embeddings)
         """
-        results = self.collection.query(
+        results = self.collection.query(  # type: ignore[arg-type]
             query_embeddings=[embedding],
             n_results=n_results,
             where=where,
             include=["documents", "metadatas", "distances"]
         )
-        return results
+        return cast(dict[str, Any], results)
 
     def get_by_id(self, doc_id: str) -> Optional[dict[str, Any]]:
         """Retrieve a specific document by ID."""
-        result = self.collection.get(
+        result = cast(dict[str, Any], self.collection.get(  # type: ignore[arg-type]
             ids=[doc_id],
             include=["documents", "metadatas"]
-        )
+        ))
         if result["ids"]:
+            documents = result.get("documents") or []
+            metadatas = result.get("metadatas") or []
             return {
                 "id": result["ids"][0],
-                "document": result["documents"][0],
-                "metadata": result["metadatas"][0]
+                "document": documents[0] if documents else "",
+                "metadata": metadatas[0] if metadatas else {},
             }
         return None
 
     def get_all(self) -> dict[str, Any]:
         """Return all documents, metadata, and IDs from the collection."""
-        return self.collection.get(include=["documents", "metadatas"])
+        return cast(dict[str, Any], self.collection.get(include=["documents", "metadatas"]))  # type: ignore[arg-type]
 
     def delete_all(self) -> None:
         """Clear all documents (useful for re-indexing)."""

@@ -1,0 +1,34 @@
+{
+  "score": 1.0,
+  "hits": 3,
+  "total": 3,
+  "details": [
+    {
+      "query": "O(log n) binary search",
+      "matched": true,
+      "titles": [
+        "binary search",
+        "search in rotated sorted array",
+        "find minimum in rotated sorted array"
+      ]
+    },
+    {
+      "query": "hash map two sum",
+      "matched": true,
+      "titles": [
+        "two sum",
+        "two sum",
+        "two sum ii"
+      ]
+    },
+    {
+      "query": "design scalable feed service",
+      "matched": true,
+      "titles": [
+        "design twitter",
+        "design a chat system (whatsapp/messenger)",
+        "design netflix/video streaming"
+      ]
+    }
+  ]
+}

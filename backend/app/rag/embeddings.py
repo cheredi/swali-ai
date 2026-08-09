@@ -18,6 +18,7 @@ Why sentence-transformers?
 """
 
 from sentence_transformers import SentenceTransformer
+from typing import Any
 
 from app.config import settings
 
@@ -31,7 +32,7 @@ class EmbeddingService:
     Loading happens once, then the model stays in memory for fast inference.
     """
 
-    _model: SentenceTransformer = None
+    _model: SentenceTransformer | None = None
     _models: dict[str, SentenceTransformer] = {}
 
     @classmethod
@@ -75,7 +76,7 @@ class EmbeddingService:
         """
         model = cls.get_model()
         embedding = model.encode(text, convert_to_numpy=True)
-        return embedding.tolist()
+        return list(getattr(embedding, "tolist", lambda: embedding)())
 
     @classmethod
     def embed_batch(cls, texts: list[str]) -> list[list[float]]:
@@ -92,27 +93,33 @@ class EmbeddingService:
         """
         model = cls.get_model()
         embeddings = model.encode(texts, convert_to_numpy=True, show_progress_bar=True)
-        return embeddings.tolist()
+        to_list = getattr(embeddings, "tolist", None)
+        if callable(to_list):
+            return to_list()
+        return [list(row) for row in embeddings]  # type: ignore[arg-type]
 
     @classmethod
     def embed_text_with_model(cls, text: str, model_name: str) -> list[float]:
         """Embed one text using a specific model name."""
         model = cls.get_model_by_name(model_name)
         embedding = model.encode(text, convert_to_numpy=True)
-        return embedding.tolist()
+        return list(getattr(embedding, "tolist", lambda: embedding)())
 
     @classmethod
     def embed_batch_with_model(cls, texts: list[str], model_name: str) -> list[list[float]]:
         """Embed a batch using a specific model name."""
         model = cls.get_model_by_name(model_name)
         embeddings = model.encode(texts, convert_to_numpy=True, show_progress_bar=True)
-        return embeddings.tolist()
+        to_list = getattr(embeddings, "tolist", None)
+        if callable(to_list):
+            return to_list()
+        return [list(row) for row in embeddings]  # type: ignore[arg-type]
 
     @classmethod
     def get_dimension(cls) -> int:
         """Get the embedding dimension (useful for vector store setup)."""
         model = cls.get_model()
-        return model.get_sentence_embedding_dimension()
+        return model.get_sentence_embedding_dimension() or 384
 
 
 # Convenience functions for quick access

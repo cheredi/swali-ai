@@ -37,11 +37,27 @@ class Settings(BaseSettings):
     # Model settings
     embedding_model: str = "all-MiniLM-L6-v2"
     llm_model: str = "models/gemini-2.0-flash"  # Fast, free tier available!
+    reranker_model: str = "cross-encoder/ms-marco-MiniLM-L-6-v2"
 
     # RAG settings
     retrieval_top_k: int = 5  # Number of documents to retrieve
     chunk_size: int = 1000    # Characters per chunk
     chunk_overlap: int = 200  # Overlap between chunks
+    dense_weight: float = 0.65
+
+    # Auth + persistence
+    jwt_secret_key: str = "change-me-in-env"
+    jwt_algorithm: str = "HS256"
+    jwt_exp_minutes: int = 120
+    app_db_path: str = str(PROJECT_ROOT / "data" / "app.db")
+
+    # Redis/caching/rate limiting
+    redis_url: str | None = None
+    rate_limit_requests: int = 40
+    rate_limit_window_seconds: int = 60
+
+    # Observability
+    enable_structured_logging: bool = True
 
     class Config:
         env_file = ".env"
